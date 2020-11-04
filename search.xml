@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Centos7下安装python以便使用pip工具</title>
+    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
+<ol>
+<li><p>首先安装epel扩展源：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新完成之后，就可安装pip：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成之后清除cache：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新pip工具</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>E2E版本安装手册</title>
     <url>/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h1 id="安装准备速查"><a href="#安装准备速查" class="headerlink" title="安装准备速查"></a>安装准备速查</h1><table>
@@ -312,9 +338,7 @@
 <p>修改<code>nginx</code>配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约64行</span></span><br><span class="line">root /opt/app/e2e/dist;</span><br></pre></td></tr></table></figure>
 
-
-
-<h2 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h2><p>启动<code>nginx</code></p>
+<h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><p>启动<code>nginx</code></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
 
 <p>启动<code>minio</code></p>
@@ -334,32 +358,6 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos7下安装python以便使用pip工具</title>
-    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
-<ol>
-<li><p>首先安装epel扩展源：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新完成之后，就可安装pip：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装完成之后清除cache：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新pip工具</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1339,22 +1337,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MAVEN设置UTF-8</title>
-    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
-    <content><![CDATA[<ol>
-<li><p>修改环境变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8 </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加pom.xml配置</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MYSQL数据类型JAVA类型对照</title>
     <url>/2020/02/23/MYSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8BJAVA%E7%B1%BB%E5%9E%8B%E5%AF%B9%E7%85%A7/</url>
     <content><![CDATA[<table>
@@ -1520,6 +1502,22 @@
       <tags>
         <tag>java</tag>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAVEN设置UTF-8</title>
+    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
+    <content><![CDATA[<ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8 </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
       </tags>
   </entry>
   <entry>
@@ -2221,21 +2219,6 @@
       </tags>
   </entry>
   <entry>
-    <title>刷新MAVEN仓库删除无用文件</title>
-    <url>/2020/02/04/%E5%88%B7%E6%96%B0MAVEN%E4%BB%93%E5%BA%93%E5%88%A0%E9%99%A4%E6%97%A0%E7%94%A8%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="删除MAVEN仓库无用数据"><a href="#删除MAVEN仓库无用数据" class="headerlink" title="删除MAVEN仓库无用数据"></a>删除MAVEN仓库无用数据</h2><p>由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的<code>jar</code>包。</p>
-<h3 id="删除由于网络原因引起的异常POM-xml"><a href="#删除由于网络原因引起的异常POM-xml" class="headerlink" title="删除由于网络原因引起的异常POM.xml"></a>删除由于网络原因引起的异常POM.xml</h3><p>linux版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -size 8933c -name <span class="string">&quot;*.pom&quot;</span> |xargs -I&#123;&#125; md5sum &#123;&#125;|grep <span class="string">&#x27;a6af53c698915601580f9079dad52b7a&#x27;</span> | awk -F <span class="string">&#x27;  &#x27;</span> <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs -I&#123;&#125; dirname &#123;&#125; | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h3 id="删除lastUpdated文件"><a href="#删除lastUpdated文件" class="headerlink" title="删除lastUpdated文件"></a>删除lastUpdated文件</h3><p>linux版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -name <span class="string">&quot;*lastUpdated*&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<p>windows版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem create by NettQun</span><br><span class="line">  </span><br><span class="line">rem 这里写你的仓库路径</span><br><span class="line"><span class="built_in">set</span> REPOSITORY_PATH=E:\jpackageHub\maven\repository</span><br><span class="line">rem 正在搜索...</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;dir /b /s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#x27;</span>) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    del /s /q <span class="string">&quot;%%i&quot;</span></span><br><span class="line">)</span><br><span class="line">rem 搜索完毕</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>同一台电脑多开tomcat</title>
     <url>/2017/12/26/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E5%A4%9A%E5%BC%80tomcat/</url>
     <content><![CDATA[<p>有些特殊情况需要在同一台电脑上多开tomcat<br>这时需要修改<code>conf\server.xml</code>文件(共3处)</p>
@@ -2254,6 +2237,21 @@
       <tags>
         <tag>java</tag>
         <tag>tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>刷新MAVEN仓库删除无用文件</title>
+    <url>/2020/02/04/%E5%88%B7%E6%96%B0MAVEN%E4%BB%93%E5%BA%93%E5%88%A0%E9%99%A4%E6%97%A0%E7%94%A8%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="删除MAVEN仓库无用数据"><a href="#删除MAVEN仓库无用数据" class="headerlink" title="删除MAVEN仓库无用数据"></a>删除MAVEN仓库无用数据</h2><p>由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的<code>jar</code>包。</p>
+<h3 id="删除由于网络原因引起的异常POM-xml"><a href="#删除由于网络原因引起的异常POM-xml" class="headerlink" title="删除由于网络原因引起的异常POM.xml"></a>删除由于网络原因引起的异常POM.xml</h3><p>linux版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -size 8933c -name <span class="string">&quot;*.pom&quot;</span> |xargs -I&#123;&#125; md5sum &#123;&#125;|grep <span class="string">&#x27;a6af53c698915601580f9079dad52b7a&#x27;</span> | awk -F <span class="string">&#x27;  &#x27;</span> <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs -I&#123;&#125; dirname &#123;&#125; | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h3 id="删除lastUpdated文件"><a href="#删除lastUpdated文件" class="headerlink" title="删除lastUpdated文件"></a>删除lastUpdated文件</h3><p>linux版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -name <span class="string">&quot;*lastUpdated*&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<p>windows版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem create by NettQun</span><br><span class="line">  </span><br><span class="line">rem 这里写你的仓库路径</span><br><span class="line"><span class="built_in">set</span> REPOSITORY_PATH=E:\jpackageHub\maven\repository</span><br><span class="line">rem 正在搜索...</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;dir /b /s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#x27;</span>) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    del /s /q <span class="string">&quot;%%i&quot;</span></span><br><span class="line">)</span><br><span class="line">rem 搜索完毕</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
       </tags>
   </entry>
   <entry>
