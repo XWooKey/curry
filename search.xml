@@ -1337,6 +1337,22 @@
       </tags>
   </entry>
   <entry>
+    <title>MAVEN设置UTF-8</title>
+    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
+    <content><![CDATA[<ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8 </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MYSQL数据类型JAVA类型对照</title>
     <url>/2020/02/23/MYSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8BJAVA%E7%B1%BB%E5%9E%8B%E5%AF%B9%E7%85%A7/</url>
     <content><![CDATA[<table>
@@ -1505,22 +1521,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MAVEN设置UTF-8</title>
-    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
-    <content><![CDATA[<ol>
-<li><p>修改环境变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8 </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加pom.xml配置</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL删除重复数据</title>
     <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">&#x27;kenyon&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">&#x27;kenyon&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">&#x27;kenyon&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">&#x27;kenyon_test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">&#x27;kenyon_test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">&#x27;jackson&#x27;</span>);</span><br></pre></td></tr></table></figure>
@@ -1561,6 +1561,11 @@
 <h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE user SET Password&#x3D;PASSWORD(&#39;root&#39;) WHERE user&#x3D;&#39;root&#39;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>hadoop本地调试环境搭建</title>
+    <url>/2018/03/21/hadoop%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>git简易总结</title>
@@ -1684,11 +1689,6 @@
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hadoop本地调试环境搭建</title>
-    <url>/2018/03/21/hadoop%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -2140,6 +2140,21 @@
       </tags>
   </entry>
   <entry>
+    <title>刷新MAVEN仓库删除无用文件</title>
+    <url>/2020/02/04/%E5%88%B7%E6%96%B0MAVEN%E4%BB%93%E5%BA%93%E5%88%A0%E9%99%A4%E6%97%A0%E7%94%A8%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="删除MAVEN仓库无用数据"><a href="#删除MAVEN仓库无用数据" class="headerlink" title="删除MAVEN仓库无用数据"></a>删除MAVEN仓库无用数据</h2><p>由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的<code>jar</code>包。</p>
+<h3 id="删除由于网络原因引起的异常POM-xml"><a href="#删除由于网络原因引起的异常POM-xml" class="headerlink" title="删除由于网络原因引起的异常POM.xml"></a>删除由于网络原因引起的异常POM.xml</h3><p>linux版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -size 8933c -name <span class="string">&quot;*.pom&quot;</span> |xargs -I&#123;&#125; md5sum &#123;&#125;|grep <span class="string">&#x27;a6af53c698915601580f9079dad52b7a&#x27;</span> | awk -F <span class="string">&#x27;  &#x27;</span> <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs -I&#123;&#125; dirname &#123;&#125; | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h3 id="删除lastUpdated文件"><a href="#删除lastUpdated文件" class="headerlink" title="删除lastUpdated文件"></a>删除lastUpdated文件</h3><p>linux版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -name <span class="string">&quot;*lastUpdated*&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<p>windows版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem create by NettQun</span><br><span class="line">  </span><br><span class="line">rem 这里写你的仓库路径</span><br><span class="line"><span class="built_in">set</span> REPOSITORY_PATH=E:\jpackageHub\maven\repository</span><br><span class="line">rem 正在搜索...</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;dir /b /s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#x27;</span>) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    del /s /q <span class="string">&quot;%%i&quot;</span></span><br><span class="line">)</span><br><span class="line">rem 搜索完毕</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客样式合集</title>
     <url>/2020/01/31/%E5%8D%9A%E5%AE%A2%E6%A0%B7%E5%BC%8F%E5%90%88%E9%9B%86/</url>
     <content><![CDATA[<h2 id="通用文件头"><a href="#通用文件头" class="headerlink" title="通用文件头"></a>通用文件头</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">XWookey</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">对hexo搭建修改过程的记录</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-01-30 22:41:12</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
@@ -2237,21 +2252,6 @@
       <tags>
         <tag>java</tag>
         <tag>tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>刷新MAVEN仓库删除无用文件</title>
-    <url>/2020/02/04/%E5%88%B7%E6%96%B0MAVEN%E4%BB%93%E5%BA%93%E5%88%A0%E9%99%A4%E6%97%A0%E7%94%A8%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="删除MAVEN仓库无用数据"><a href="#删除MAVEN仓库无用数据" class="headerlink" title="删除MAVEN仓库无用数据"></a>删除MAVEN仓库无用数据</h2><p>由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的<code>jar</code>包。</p>
-<h3 id="删除由于网络原因引起的异常POM-xml"><a href="#删除由于网络原因引起的异常POM-xml" class="headerlink" title="删除由于网络原因引起的异常POM.xml"></a>删除由于网络原因引起的异常POM.xml</h3><p>linux版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -size 8933c -name <span class="string">&quot;*.pom&quot;</span> |xargs -I&#123;&#125; md5sum &#123;&#125;|grep <span class="string">&#x27;a6af53c698915601580f9079dad52b7a&#x27;</span> | awk -F <span class="string">&#x27;  &#x27;</span> <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs -I&#123;&#125; dirname &#123;&#125; | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h3 id="删除lastUpdated文件"><a href="#删除lastUpdated文件" class="headerlink" title="删除lastUpdated文件"></a>删除lastUpdated文件</h3><p>linux版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -name <span class="string">&quot;*lastUpdated*&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<p>windows版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem create by NettQun</span><br><span class="line">  </span><br><span class="line">rem 这里写你的仓库路径</span><br><span class="line"><span class="built_in">set</span> REPOSITORY_PATH=E:\jpackageHub\maven\repository</span><br><span class="line">rem 正在搜索...</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;dir /b /s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#x27;</span>) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    del /s /q <span class="string">&quot;%%i&quot;</span></span><br><span class="line">)</span><br><span class="line">rem 搜索完毕</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
       </tags>
   </entry>
   <entry>
