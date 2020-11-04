@@ -212,7 +212,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/13/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8SpEL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A3%80%E6%9F%A5%E5%B9%B6%E8%AE%BE%E7%BD%AEBean%E9%BB%98%E8%AE%A4%E5%80%BC/">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/01/31/%E5%8D%9A%E5%AE%A2%E6%A0%B7%E5%BC%8F%E5%90%88%E9%9B%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -226,7 +226,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/13/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8SpEL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A3%80%E6%9F%A5%E5%B9%B6%E8%AE%BE%E7%BD%AEBean%E9%BB%98%E8%AE%A4%E5%80%BC/" class="post-title-link" itemprop="url">自定义注解使用SpEL表达式检查并设置Bean默认值</a>
+            <a href="/2020/01/31/%E5%8D%9A%E5%AE%A2%E6%A0%B7%E5%BC%8F%E5%90%88%E9%9B%86/" class="post-title-link" itemprop="url">博客样式合集</a>
         </h1>
 
         <div class="post-meta">
@@ -236,7 +236,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-13 16:49:39" itemprop="dateCreated datePublished" datetime="2020-03-13T16:49:39+08:00">2020-03-13</time>
+              <time title="创建时间：2020-01-31 15:28:45" itemprop="dateCreated datePublished" datetime="2020-01-31T15:28:45+08:00">2020-01-31</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -245,6 +245,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+            </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -252,14 +263,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.2k</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -271,24 +282,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>判断方法返回值是否为null<ul>
-<li>为null时 <ul>
-<li><code>@DefaultIfNull(true)</code>: 返回默认实体，需要搭配<code>@DefaultIfNullField</code>使用</li>
-<li><code>@DefaultIfNull()</code>:返回使用空构造器创建的对象    </li>
-</ul>
-</li>
-<li>不null时 <ul>
-<li><code>@DefaultIfNull(true)</code>: 逐一判断属性属性为空则返回默认值，需要搭配 <code>@DefaultIfNullField</code> 使用 </li>
-<li><code>@DefaultIfNull()</code>:不做任何处理</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <h2 id="通用文件头"><a href="#通用文件头" class="headerlink" title="通用文件头"></a>通用文件头</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">XWookey</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">对hexo搭建修改过程的记录</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-01-30 22:41:12</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/03/13/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8SpEL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A3%80%E6%9F%A5%E5%B9%B6%E8%AE%BE%E7%BD%AEBean%E9%BB%98%E8%AE%A4%E5%80%BC/#more" rel="contents">
+              <a class="btn" href="/2020/01/31/%E5%8D%9A%E5%AE%A2%E6%A0%B7%E5%BC%8F%E5%90%88%E9%9B%86/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -312,7 +309,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/11/Java8%E9%80%9A%E7%94%A8Builder/">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/01/30/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -326,7 +323,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/11/Java8%E9%80%9A%E7%94%A8Builder/" class="post-title-link" itemprop="url">Java8通用Builder</a>
+            <a href="/2020/01/30/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">HEXO主题设置</a>
         </h1>
 
         <div class="post-meta">
@@ -336,7 +333,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-11 10:50:02" itemprop="dateCreated datePublished" datetime="2020-03-11T10:50:02+08:00">2020-03-11</time>
+              <time title="创建时间：2020-01-30 22:41:12" itemprop="dateCreated datePublished" datetime="2020-01-30T22:41:12+08:00">2020-01-30</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -352,14 +349,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.2k</span>
+              <span>13k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>12 分钟</span>
             </span>
 
         </div>
@@ -372,532 +369,11 @@
 
       
           <blockquote>
-<p><span class="exturl" data-url="aHR0cDovL3d3dy5jaXBoZXJtYWdpYy5jbi9qYXZhOC1idWlsZGVyLmh0bWw=" title="http://www.ciphermagic.cn/java8-builder.html">你还在new对象吗？Java8通用Builder了解一下？<i class="fa fa-external-link"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ=" title="https://github.com/theme-next">NEXT<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZy9kb2NzL2dldHRpbmctc3RhcnRlZC8=" title="https://theme-next.org/docs/getting-started/">官方文档<i class="fa fa-external-link"></i></span></p>
 </blockquote>
-<h2 id="通用Builder类"><a href="#通用Builder类" class="headerlink" title="通用Builder类"></a>通用Builder类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Consumer;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Supplier;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 你还在new对象吗？Java8通用Builder了解一下？</span></span><br><span class="line"><span class="comment"> * http://www.ciphermagic.cn/java8-builder.html （原创）</span></span><br><span class="line"><span class="comment"> * https://blog.csdn.net/zbx931197485/article/details/101439944 （转载）</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 通用的 Builder 模式构建器</span></span><br><span class="line"><span class="comment"> * 这个示例最多支持三个参数的设置属性方法，</span></span><br><span class="line"><span class="comment"> * 也完全够用了。如果要扩展也很容易，</span></span><br><span class="line"><span class="comment"> * 依葫芦画瓢，添加多个参数的Consumer。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Supplier&lt;T&gt; instantiator;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Consumer&lt;T&gt;&gt; modifiers = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(Supplier&lt;T&gt; instantiator)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.instantiator = instantiator;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Builder&lt;T&gt; <span class="title">of</span><span class="params">(Supplier&lt;T&gt; instantiator)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Builder&lt;&gt;(instantiator);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> &lt;P1&gt; <span class="function">Builder&lt;T&gt; <span class="title">with</span><span class="params">(Consumer1&lt;T, P1&gt; consumer, P1 p1)</span> </span>&#123;</span><br><span class="line">        Consumer&lt;T&gt; c = instance -&gt; consumer.accept(instance, p1);</span><br><span class="line">        modifiers.add(c);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> &lt;P1, P2&gt; <span class="function">Builder&lt;T&gt; <span class="title">with</span><span class="params">(Consumer2&lt;T, P1, P2&gt; consumer, P1 p1, P2 p2)</span> </span>&#123;</span><br><span class="line">        Consumer&lt;T&gt; c = instance -&gt; consumer.accept(instance, p1, p2);</span><br><span class="line">        modifiers.add(c);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> &lt;P1, P2, P3&gt; <span class="function">Builder&lt;T&gt; <span class="title">with</span><span class="params">(Consumer3&lt;T, P1, P2, P3&gt; consumer, P1 p1, P2 p2, P3 p3)</span> </span>&#123;</span><br><span class="line">        Consumer&lt;T&gt; c = instance -&gt; consumer.accept(instance, p1, p2, p3);</span><br><span class="line">        modifiers.add(c);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">build</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        T value = instantiator.get();</span><br><span class="line">        modifiers.forEach(modifier -&gt; modifier.accept(value));</span><br><span class="line">        modifiers.clear();</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 1 参数 Consumer</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@FunctionalInterface</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Consumer1</span>&lt;<span class="title">T</span>, <span class="title">P1</span>&gt; </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">accept</span><span class="params">(T t, P1 p1)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 2 参数 Consumer</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@FunctionalInterface</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Consumer2</span>&lt;<span class="title">T</span>, <span class="title">P1</span>, <span class="title">P2</span>&gt; </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">accept</span><span class="params">(T t, P1 p1, P2 p2)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 3 参数 Consumer</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@FunctionalInterface</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Consumer3</span>&lt;<span class="title">T</span>, <span class="title">P1</span>, <span class="title">P2</span>, <span class="title">P3</span>&gt; </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">accept</span><span class="params">(T t, P1 p1, P2 p2, P3 p3)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>测试实体类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhaowuqing.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/3/10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GirlFriend</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> bust;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> waist;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> hips;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; hobby;</span><br><span class="line">    <span class="keyword">private</span> String birthday;</span><br><span class="line">    <span class="keyword">private</span> String address;</span><br><span class="line">    <span class="keyword">private</span> String mobile;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">    <span class="keyword">private</span> String hairColor;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, String&gt; gift;</span><br><span class="line">    <span class="comment">// 为了演示方便，加几个聚合方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addHobby</span><span class="params">(String hobby)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.hobby = Optional.ofNullable(<span class="keyword">this</span>.hobby).orElse(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">        <span class="keyword">this</span>.hobby.add(hobby);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addGift</span><span class="params">(String day, String gift)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.gift = Optional.ofNullable(<span class="keyword">this</span>.gift).orElse(<span class="keyword">new</span> HashMap&lt;&gt;());</span><br><span class="line">        <span class="keyword">this</span>.gift.put(day, gift);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setVitalStatistics</span><span class="params">(<span class="keyword">int</span> bust, <span class="keyword">int</span> waist, <span class="keyword">int</span> hips)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bust = bust;</span><br><span class="line">        <span class="keyword">this</span>.waist = waist;</span><br><span class="line">        <span class="keyword">this</span>.hips = hips;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line">GirlFriend girlFriend = Builder.of(GirlFriend::<span class="keyword">new</span>)</span><br><span class="line">        .with(GirlFriend::setAddress, <span class="string">&quot;&quot;</span>)</span><br><span class="line">        .with(GirlFriend::setVitalStatistics, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        .with(GirlFriend::addHobby, <span class="string">&quot;&quot;</span>)</span><br><span class="line">        .build();</span><br><span class="line">System.out.println(girlFriend);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二</span></span><br><span class="line">GirlFriend girlFriend2 = <span class="keyword">new</span> Builder&lt;&gt;(GirlFriend::<span class="keyword">new</span>)</span><br><span class="line">        .with(GirlFriend::setAddress, <span class="string">&quot;&quot;</span>)</span><br><span class="line">        .with(GirlFriend::setVitalStatistics, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        .with(GirlFriend::addHobby, <span class="string">&quot;&quot;</span>)</span><br><span class="line">        .build();</span><br><span class="line">System.out.println(girlFriend2);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/06/sublime%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="XWookey">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咖喱鸡扒饭">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/06/sublime%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">sublime技巧总结</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-06 13:27:59" itemprop="dateCreated datePublished" datetime="2020-03-06T13:27:59+08:00">2020-03-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>12</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><code>ctrl</code>+<code>D</code>    选中一个单词</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="XWookey">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咖喱鸡扒饭">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">markdeep使用</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-06 13:00:22" itemprop="dateCreated datePublished" datetime="2020-03-06T13:00:22+08:00">2020-03-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>364</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p><span class="exturl" data-url="aHR0cDovL2Nhc3VhbC1lZmZlY3RzLmNvbS9tYXJrZGVlcC8=" title="http://casual-effects.com/markdeep/">http://casual-effects.com/markdeep/<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<p>直接在结尾加上</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">class</span>=<span class="string">&quot;fallback&quot;</span>&gt;</span><span class="css"><span class="selector-tag">body</span>&#123;<span class="attribute">visibility</span>:hidden&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">markdeepOptions=&#123;<span class="attr">tocStyle</span>:<span class="string">&#x27;long&#x27;</span>&#125;;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Markdeep: --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://casual-effects.com/markdeep/latest/markdeep.min.js?&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="XWookey">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咖喱鸡扒饭">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/" class="post-title-link" itemprop="url">SQL删除重复数据</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-06 09:44:31" itemprop="dateCreated datePublished" datetime="2020-03-06T09:44:31+08:00">2020-03-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">&#x27;kenyon&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">&#x27;kenyon&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">&#x27;kenyon&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">&#x27;kenyon_test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">&#x27;kenyon_test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">&#x27;jackson&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/05/geoserver%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="XWookey">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咖喱鸡扒饭">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/05/geoserver%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E8%AE%B0/" class="post-title-link" itemprop="url">geoserver自定义标记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-05 14:02:58" itemprop="dateCreated datePublished" datetime="2020-03-05T14:02:58+08:00">2020-03-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdlb3NlcnZlci5vcmcvbGF0ZXN0L2VuL3VzZXIvc3R5bGluZy9zbGQvZXh0ZW5zaW9ucy9wb2ludHN5bWJvbHMuaHRtbCNtYXJrcw==" title="https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#marks">https://docs.geoserver.org/latest/en/user/styling/sld/extensions/pointsymbols.html#marks<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">StyledLayerDescriptor</span> <span class="attr">version</span>=<span class="string">&quot;1.0.0&quot;</span> </span></span><br><span class="line"><span class="tag"> <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.opengis.net/sld StyledLayerDescriptor.xsd&quot;</span> </span></span><br><span class="line"><span class="tag"> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.opengis.net/sld&quot;</span> </span></span><br><span class="line"><span class="tag"> <span class="attr">xmlns:ogc</span>=<span class="string">&quot;http://www.opengis.net/ogc&quot;</span> </span></span><br><span class="line"><span class="tag"> <span class="attr">xmlns:xlink</span>=<span class="string">&quot;http://www.w3.org/1999/xlink&quot;</span> </span></span><br><span class="line"><span class="tag"> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- a Named Layer is the basic building block of an SLD document --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">NamedLayer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Name</span>&gt;</span>experimenting transparent<span class="tag">&lt;/<span class="name">Name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">UserStyle</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Styles can have names, titles and abstracts --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">Title</span>&gt;</span>GeoServer Beginners Guide:transparent<span class="tag">&lt;/<span class="name">Title</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">Abstract</span>&gt;</span>A sample style that draws a point<span class="tag">&lt;/<span class="name">Abstract</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- FeatureTypeStyles describe how to render different features --&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- A FeatureTypeStyle for rendering points --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">FeatureTypeStyle</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Rule</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">Name</span>&gt;</span>rule1<span class="tag">&lt;/<span class="name">Name</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">Title</span>&gt;</span>Red Wingdings<span class="tag">&lt;/<span class="name">Title</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">Abstract</span>&gt;</span>A 6 pixel Wingdings with a red fill and no stroke<span class="tag">&lt;/<span class="name">Abstract</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!--&lt;MaxScaleDenominator&gt;40000&lt;/MaxScaleDenominator&gt;--&gt;</span><span class="comment">&lt;!--设置点跟着比例次的显示效果--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">And</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">PropertyIsGreaterThanOrEqualTo</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">PropertyName</span>&gt;</span>freho_ratio<span class="tag">&lt;/<span class="name">PropertyName</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Literal</span>&gt;</span>0<span class="tag">&lt;/<span class="name">Literal</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">PropertyIsGreaterThanOrEqualTo</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">And</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Filter</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">PointSymbolizer</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">Graphic</span>&gt;</span><span class="comment">&lt;!--这里可以设置为一个图片的格式--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Mark</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">WellKnownName</span>&gt;</span>ttf://Wingdings#0x0053<span class="tag">&lt;/<span class="name">WellKnownName</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">Fill</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;fill&quot;</span>&gt;</span>#92d050<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;fill-opacity&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">Fill</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">Stroke</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;stroke&quot;</span>&gt;</span>#000000<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;stroke-width&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">Stroke</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">Mark</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">Size</span>&gt;</span>40<span class="tag">&lt;/<span class="name">Size</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">Rotation</span>&gt;</span>180<span class="tag">&lt;/<span class="name">Rotation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Graphic</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">PointSymbolizer</span>&gt;</span></span><br><span class="line">          </span><br><span class="line">          <span class="tag">&lt;<span class="name">TextSymbolizer</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">PropertyName</span>&gt;</span>cell_num<span class="tag">&lt;/<span class="name">PropertyName</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Font</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;font-family&quot;</span>&gt;</span>Arial<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;font-size&quot;</span>&gt;</span>14<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;font-style&quot;</span>&gt;</span>normal<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;font-weight&quot;</span>&gt;</span>italyc<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Font</span>&gt;</span></span><br><span class="line">            </span><br><span class="line">            <span class="tag">&lt;<span class="name">LabelPlacement</span>&gt;</span>            </span><br><span class="line">                <span class="tag">&lt;<span class="name">PointPlacement</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">AnchorPoint</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">AnchorPointX</span>&gt;</span>0.5<span class="tag">&lt;/<span class="name">AnchorPointX</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">AnchorPointY</span>&gt;</span>0<span class="tag">&lt;/<span class="name">AnchorPointY</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">AnchorPoint</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">Displacement</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">DisplacementX</span>&gt;</span>0<span class="tag">&lt;/<span class="name">DisplacementX</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">DisplacementY</span>&gt;</span>0<span class="tag">&lt;/<span class="name">DisplacementY</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">Displacement</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">PointPlacement</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">LabelPlacement</span>&gt;</span></span><br><span class="line">            </span><br><span class="line">            <span class="tag">&lt;<span class="name">Fill</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">CssParameter</span> <span class="attr">name</span>=<span class="string">&quot;fill&quot;</span>&gt;</span>#000000<span class="tag">&lt;/<span class="name">CssParameter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Fill</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">TextSymbolizer</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;/<span class="name">Rule</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">FeatureTypeStyle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">UserStyle</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">NamedLayer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">StyledLayerDescriptor</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>其中最重要的就是<code>&lt;WellKnownName&gt;</code>标签包裹的字符串</p>
-<h2 id="标准符号"><a href="#标准符号" class="headerlink" title="标准符号"></a>标准符号</h2><ul>
-<li>square</li>
-<li>circle</li>
-<li>triangle</li>
-<li>star </li>
-<li>cross  (周围有空间的方形十字（不适合填充图案填充）)</li>
-<li>x (正方形X，周围有空格（不适用于填充图案填充）)</li>
-</ul>
-<h2 id="字符符号"><a href="#字符符号" class="headerlink" title="字符符号"></a>字符符号</h2><p>一般使用 <code>Wingdings</code>,<code>WebDings</code> ,或者自定义字符文件</p>
-<p>填写格式瑞安</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ttf:&#x2F;&#x2F;&lt;fontname&gt;#&lt;hexcode&gt;</span><br></pre></td></tr></table></figure>
-
-
-<p><code>fontname</code>就是字符名称<br><code>hexcode</code>可以在<code>word</code>-&gt;<code>插入</code>-&gt;<code>符号</code>-&gt;<code>选择字体</code>-&gt;<code>选择16进制</code></p>
-<p><img src="/2020/03/05/geoserver%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E8%AE%B0/image-20200305141827435.png" alt="image-20200305141827435"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/03/03/tomcat%E7%9B%91%E6%8E%A7%E3%80%81mysql%E5%A4%87%E4%BB%BD%E3%80%81jar%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E9%87%8D%E5%90%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="XWookey">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咖喱鸡扒饭">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/03/tomcat%E7%9B%91%E6%8E%A7%E3%80%81mysql%E5%A4%87%E4%BB%BD%E3%80%81jar%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2%E9%87%8D%E5%90%AF/" class="post-title-link" itemprop="url">tomcat监控、mysql备份、jar文件启动停止重启</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-03 21:02:38" itemprop="dateCreated datePublished" datetime="2020-03-03T21:02:38+08:00">2020-03-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="tomcat监控-自动重启-注意tomcat路径要根据实际情况更改"><a href="#tomcat监控-自动重启-注意tomcat路径要根据实际情况更改" class="headerlink" title="tomcat监控 自动重启 注意tomcat路径要根据实际情况更改"></a>tomcat监控 自动重启 注意tomcat路径要根据实际情况更改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment"># 获取tomcat进程ID 注意tomcat路径要根据实际情况更改</span></span><br><span class="line">TomcatID=$(ps -ef |grep <span class="string">&#x27;/root/tomcat/bin&#x27;</span>|grep -v <span class="string">&#x27;grep&#x27;</span>| awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>)</span><br><span class="line"><span class="comment"># tomcat启动程序 注意tomcat路径要根据实际情况更改</span></span><br><span class="line">StartTomcat=/root/tomcat/bin/startup.sh</span><br><span class="line"><span class="comment"># 定义要监控的页面地址 </span></span><br><span class="line">WebUrl=http://localhost:8080</span><br><span class="line"><span class="comment"># 日志输出</span></span><br><span class="line">TomcatMonitorLog=/root/logs/tomcatMonitor.log</span><br><span class="line"><span class="comment"># 监控方法主体</span></span><br><span class="line">Monitor()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;[start]---[<span class="subst">$(date +&#x27;%F %H:%M:%S&#x27;)</span>]---&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">test</span> <span class="variable">$TomcatID</span> ;<span class="keyword">then</span> <span class="comment">#这里判断Tomcat进程是否存在</span></span><br><span class="line">            <span class="comment"># 检测是否启动成功(成功的话页面会返回状态&quot;200&quot;)</span></span><br><span class="line">            TomcatServiceCode=$(curl -s -m 1000 --connect-timeout 1000 <span class="variable">$WebUrl</span> -w %&#123;http_code&#125;)</span><br><span class="line">            <span class="keyword">if</span> [[ <span class="variable">$TomcatServiceCode</span> -eq 200 || <span class="variable">$TomcatServiceCode</span> -eq 000 ]];<span class="keyword">then</span>  </span><br><span class="line">                <span class="built_in">echo</span> <span class="string">&quot;[success]tomcatid:<span class="variable">$TomcatID</span>,code:<span class="variable">$TomcatServiceCode</span>&quot;</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">&quot;[error]tomcat页面出错，状态码为<span class="variable">$TomcatServiceCode</span>&quot;</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">&quot;[error]页面访问出错，开始重启tomcat&quot;</span></span><br><span class="line">                <span class="built_in">kill</span> -9 <span class="variable">$TomcatID</span> <span class="comment"># 杀掉原tomcat进程</span></span><br><span class="line">                sleep 5</span><br><span class="line">                <span class="comment">#rm -rf $TomcatCache # 清理tomcat缓存</span></span><br><span class="line">                <span class="variable">$StartTomcat</span></span><br><span class="line">            <span class="keyword">fi</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;[error]tomcat进程不存在&quot;</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;[info]<span class="variable">$StartTomcat</span> 启动中&quot;</span></span><br><span class="line">            <span class="comment">#rm -rf $TomcatCache</span></span><br><span class="line">            <span class="variable">$StartTomcat</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;[end]---[<span class="subst">$(date +&#x27;%F %H:%M:%S&#x27;)</span>]---&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment"># 清理日志文件方法</span></span><br><span class="line">cleanLog()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ! [ -f <span class="variable">$TomcatMonitorLog</span> ];<span class="keyword">then</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;file not exist!&quot;</span></span><br><span class="line">            <span class="built_in">exit</span> 1</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="comment"># 大于10M 自动清空日志文件</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">test</span> `ls -l <span class="variable">$TomcatMonitorLog</span>|awk <span class="string">&#x27;&#123;print $5&#125;&#x27;</span>` -gt $((<span class="number">1024</span> * <span class="number">1024</span> * <span class="number">10</span>)) </span><br><span class="line">        <span class="keyword">then</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;[clean]---[<span class="subst">$(date +&#x27;%F %H:%M:%S&#x27;)</span>]---&quot;</span> &gt; <span class="variable">$TomcatMonitorLog</span> <span class="comment"># 清空</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment"># 超过10M清空日志</span></span><br><span class="line">cleanLog</span><br><span class="line"><span class="comment"># 执行监控脚本</span></span><br><span class="line">Monitor &gt;&gt; <span class="variable">$TomcatMonitorLog</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="MySql定期自动备份-需要先配置账号密码到my-cnf中"><a href="#MySql定期自动备份-需要先配置账号密码到my-cnf中" class="headerlink" title="MySql定期自动备份 需要先配置账号密码到my.cnf中"></a>MySql定期自动备份 需要先配置账号密码到my.cnf中</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># mysql 自动备份、压缩、加密</span></span><br><span class="line"><span class="comment"># 文件名为 database_日期</span></span><br><span class="line">backupDatabase=database</span><br><span class="line"><span class="comment"># 代表数据库名_年月日 也可以根据需要修改 %Y%m%d%H%M%S</span></span><br><span class="line">fileName=<span class="variable">$&#123;backupDatabase&#125;</span>_`date +%Y%m%d`</span><br><span class="line"><span class="comment"># 存放备份的目录，可以是任意位置，先创建并赋权</span></span><br><span class="line">baseDir=/root/backup/files/mysql/<span class="variable">$&#123;backupDatabase&#125;</span>/</span><br><span class="line"><span class="comment"># 备份数据库</span></span><br><span class="line">mysqldump --defaults-extra-file=/etc/my.cnf <span class="variable">$&#123;backupDatabase&#125;</span> &gt; <span class="variable">$&#123;baseDir&#125;</span><span class="variable">$&#123;fileName&#125;</span>.sql</span><br><span class="line"><span class="comment"># 加密压缩 大写P 必须填入你自己想的压缩密码，解压时需要用到</span></span><br><span class="line">tar -zcPvf - <span class="variable">$&#123;baseDir&#125;</span><span class="variable">$&#123;fileName&#125;</span>.sql | openssl des3 -salt -k 你的自定义的压缩文件密码 -out <span class="variable">$&#123;baseDir&#125;</span><span class="variable">$&#123;fileName&#125;</span>.sql.tar.gz </span><br><span class="line"><span class="comment"># 删除刚刚备份的sql文件,留下压缩的</span></span><br><span class="line">rm -f <span class="variable">$&#123;baseDir&#125;</span><span class="variable">$&#123;fileName&#125;</span>.sql;</span><br><span class="line"><span class="comment"># 删除90天前备份的数据</span></span><br><span class="line">find <span class="variable">$&#123;baseDir&#125;</span> -mtime +90 -name <span class="string">&quot;<span class="variable">$&#123;backupDatabase&#125;</span>*.tar.gz&quot;</span> -<span class="built_in">exec</span> rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-<h2 id="启动-停止-重启-Jar文件的应用-xxx改为你的项目路径或文件名"><a href="#启动-停止-重启-Jar文件的应用-xxx改为你的项目路径或文件名" class="headerlink" title="启动/停止/重启 Jar文件的应用 xxx改为你的项目路径或文件名"></a>启动/停止/重启 Jar文件的应用 xxx改为你的项目路径或文件名</h2><p>启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动脚本，nohup方式后台运行jar包，其中参数需要根据实际情况调敿<span class="comment"># 参数说明如下</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -Xms128m    JVM初始分配的堆内存</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -Xmx1024m    JVM最大允许分配的堆内孿<span class="comment"># /root/java/xxx-1.0.0.jar</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --spring.profiles.active=prod    运行application-prod.properties</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &gt; logs/api.out    实时输出控制台信息到指定文件</span></span><br><span class="line">nohup java -jar -Xms128m -Xmx1024m /root/web/java/xxx/xxx-1.0.0.jar --spring.profiles.active=prod &gt; logs/xxx.out &amp;</span><br></pre></td></tr></table></figure>
-
-<p>停止</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 停止脚本，其中 xxx-1.0.0.jar 需要替换成实际文件名，而且尽量确保名字唯一性，防止错杀</span></span><br><span class="line">xxxID=$(ps -ef |grep &#x27;xxx-1.0.0.jar&#x27;|grep -v &#x27;grep&#x27;| awk &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line"><span class="meta">#</span><span class="bash"> run</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 判断进程是否存在</span></span><br><span class="line">if test $xxxID ;then</span><br><span class="line">    # 杀死进程</span><br><span class="line">    kill -9 $xxxID</span><br><span class="line">    echo &quot;[SUCCESS] 进程已杀死&quot;</span><br><span class="line">else</span><br><span class="line">    # 提示不进程不存在</span><br><span class="line">    echo &quot;[ERROR] 进程不存在&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<p>重启</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启脚本，实际上就是结合了前面2个脚本</span></span><br><span class="line">xxxID=$(ps -ef |grep &#x27;xxx-1.0.0.jar&#x27;|grep -v &#x27;grep&#x27;| awk &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line"><span class="meta">#</span><span class="bash"> run</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 判断进程是否存在</span></span><br><span class="line">if test $xxxID ;then</span><br><span class="line">    # 杀死进程</span><br><span class="line">    kill -9 $xxxID</span><br><span class="line">    echo &quot;[SUCCESS] 进程已杀死&quot;</span><br><span class="line">else</span><br><span class="line">    # 提示不进程不存在</span><br><span class="line">    echo &quot;[ERROR] 进程不存在&quot;</span><br><span class="line">fi</span><br><span class="line">sleep 5</span><br><span class="line">nohup java -jar -Xms128m -Xmx1024m /root/web/java/xxx/xxx-1.0.0.jar --spring.profiles.active=prod &gt; logs/xxx.out &amp;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/02/24/SimpleDateFormat%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="XWookey">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咖喱鸡扒饭">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/24/SimpleDateFormat%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8/" class="post-title-link" itemprop="url">SimpleDateFormat线程不安全</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-24 21:51:40" itemprop="dateCreated datePublished" datetime="2020-02-24T21:51:40+08:00">2020-02-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="线程不安全现象"><a href="#线程不安全现象" class="headerlink" title="线程不安全现象"></a>线程不安全现象</h2><p>不可以在并发的情况下 反复的用同一个<code>SimpleDateFormat</code>实例处理不同的日期</p>
-<p><img src="/2020/02/24/SimpleDateFormat%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8/image-20200224230446276.png" alt="image-20200224230446276"></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/02/24/SimpleDateFormat%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8/#more" rel="contents">
+              <a class="btn" href="/2020/01/30/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -921,7 +397,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/02/23/MYSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8BJAVA%E7%B1%BB%E5%9E%8B%E5%AF%B9%E7%85%A7/">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -935,7 +411,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/23/MYSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8BJAVA%E7%B1%BB%E5%9E%8B%E5%AF%B9%E7%85%A7/" class="post-title-link" itemprop="url">MYSQL数据类型JAVA类型对照</a>
+            <a href="/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/" class="post-title-link" itemprop="url">MAVEN设置UTF-8</a>
         </h1>
 
         <div class="post-meta">
@@ -945,7 +421,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-23 21:44:34" itemprop="dateCreated datePublished" datetime="2020-02-23T21:44:34+08:00">2020-02-23</time>
+              <time title="创建时间：2019-04-05 09:29:55" itemprop="dateCreated datePublished" datetime="2019-04-05T09:29:55+08:00">2019-04-05</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -961,7 +437,471 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
+              <span>327</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8 </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2019/02/25/idea%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="XWookey">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咖喱鸡扒饭">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/25/idea%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">idea插件</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-02-25 21:38:47" itemprop="dateCreated datePublished" datetime="2019-02-25T21:38:47+08:00">2019-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Lombok-plugin"><a href="#Lombok-plugin" class="headerlink" title="Lombok plugin"></a>Lombok plugin</h3><p>开发神器，可以简化你的实体类，让你i不再写get/set方法，还能快速的实现builder模式，以及链式调用方法，总之就是为了简化实体类而生的插件。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-88.png" alt="upload successful"></p>
+<h3 id="CamelCase"><a href="#CamelCase" class="headerlink" title="CamelCase"></a>CamelCase</h3><p>将不是驼峰格式的名称，快速转成驼峰格式，安装好后，选中要修改的名称，按快捷键<span style="red">shift+alt+u</span>。<br>idea</p>
+<h3 id="ignore"><a href="#ignore" class="headerlink" title=".ignore"></a>.ignore</h3><p>git提交时过滤掉不需要提交的文件，很方便，有些本地文件是不需要提交到Git上的</p>
+<h3 id="JRebel-for-IntelliJ"><a href="#JRebel-for-IntelliJ" class="headerlink" title="JRebel for IntelliJ"></a>JRebel for IntelliJ</h3><p>一款热部署插件，只要不是修改了项目的配置文件，用它都可以实现热部署。收费的，破解比较麻烦。不过功能确实很强大。算是开发必备神器了。热部署快捷键是control+F9/command+F9。</p>
+<h3 id="MybatisX"><a href="#MybatisX" class="headerlink" title="MybatisX"></a>MybatisX</h3><p>Mybatis-Plus神器<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-89.png" alt="upload successful"></p>
+<h3 id="codehelper-generator"><a href="#codehelper-generator" class="headerlink" title="codehelper.generator"></a>codehelper.generator</h3><p>可以让你在创建一个对象并赋值的时候，快速的生成代码，不需要一个一个属性的向里面set,根据new关键字，自动生成掉用set方法的代码，还可以一键填入默认值。<br>可以让你在创建一个对象并赋值的时候，快速的生成代码，不需要一个一个属性的向里面set,根据new关键字，自动生成掉用set方法的代码，还可以一键填入默认值。</p>
+<p>GenAllSetter 特性</p>
+<ul>
+<li>在Java方法中, 根据 <code>new</code> 关键词, 为Java Bean 生成所有Setter方法。</li>
+<li>按GenAllSetter键两次, 会为Setter方法生成默认值。</li>
+<li>可在<code>Intellij Idea</code>中为<code>GenAllSetter</code>设置快捷键。</li>
+<li>如何使用:<ul>
+<li>将光标移动到 <code>new</code> 语句的下一行。</li>
+<li>点击主菜单Tools-&gt; Codehelper-&gt; GenAllSetter, 或者按下<code>GenAllSetter</code>快捷键。</li>
+</ul>
+</li>
+<li>GenDaoCode 特性<ul>
+<li>根据Pojo 文件一键生成 Dao，Service，Xml，Sql文件。</li>
+<li>Pojo文件更新后一键更新对应的Sql和mybatis xml文件。</li>
+<li>提供insert，insertList，update，select，delete五种方法。</li>
+<li>能够批量生成多个Pojo的对应的文件。</li>
+<li>自动将pojo的注释添加到对应的Sql文件的注释中。</li>
+<li>丰富的配置，如果没有配置文件，则会使用默认配置。</li>
+<li>可以在Intellij Idea中快捷键配置中配置快捷键。</li>
+<li>目前支持MySQL + Java，后续会支持更多的DB。</li>
+<li>如果喜欢我们的插件，非常感谢您的分享。</li>
+</ul>
+</li>
+<li>GenDaoCode 使用方法<ul>
+<li>主菜单Tools-&gt; Codehelper-&gt; GenDaoCode 按键便可生成代码。</li>
+<li>方法一：点击GenDaoCode，然后根据提示框输入Pojo名字，多个Pojo以 | 分隔。</li>
+<li>Codehelper Generator会根据默认配置为您生成代码。</li>
+<li>方法二：在工程目录下添加文件名为codehelper.properties的文件。</li>
+<li>点击GenDaoCode，Codehelper Generator会根据您的配置文件为您生成代码</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-90.png" alt="upload successful"></p>
+<p><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-91.png" alt="upload successful"></p>
+<h3 id="CodeGlance"><a href="#CodeGlance" class="headerlink" title="CodeGlance"></a>CodeGlance</h3><p>在编辑区的右侧显示的代码地图。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-93.png" alt="upload successful"></p>
+<h3 id="Rainbow-Brackets"><a href="#Rainbow-Brackets" class="headerlink" title="Rainbow Brackets"></a>Rainbow Brackets</h3><p>彩虹颜色的括号  看着很舒服 敲代码效率变高<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-94.png" alt="upload successful"></p>
+<h3 id="Grep-Console"><a href="#Grep-Console" class="headerlink" title="Grep Console"></a>Grep Console</h3><p>java 开发的过程中，日志都会输出到console，输出的内容是非常多的，所以需要有一个工具可以方便的查找日志，或者可以非常明显显示我们关注的内容，grep console就是这样的一个工具。<br>安装完成后，在console中右键就能打开。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-103.png" alt="upload successful"><br>并且可以设置不同的日志级别的显示样式。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-104.png" alt="upload successful"><br>我就把ERROR设置为红色，比较容易看到。<br>当然，也可以直接根据关键字搜索你想要的。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-105.png" alt="upload successful"><br>最赞的是，搜索条件是支持正则表达式的。基本能满足所有的需求了。</p>
+<h3 id="Maven-Helper"><a href="#Maven-Helper" class="headerlink" title="Maven Helper"></a>Maven Helper</h3><p>这个一个必须与maven一起工作的插件。它提供了运行/调试当前测试文件的功能。 如果maven-surefire-plugin配置为跳过或排除测试，“verify”目标将会被启用。它还提供了运行/调试当前文件所在模块的快捷操作，以及简化查找和排除冲突依赖关系的方法。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-96.png" alt="upload successful"><br>官方网站<span class="exturl" data-url="aHR0cDovL2xpbmsuemhpaHUuY29tLz90YXJnZXQ9aHR0cHM6Ly9wbHVnaW5zLmpldGJyYWlucy5jb20vcGx1Z2luLzcxNzktbWF2ZW4taGVscGVy" title="http://link.zhihu.com/?target=https://plugins.jetbrains.com/plugin/7179-maven-helper">http://link.zhihu.com/?target=https%3A//plugins.jetbrains.com/plugin/7179-maven-helper<i class="fa fa-external-link"></i></span></p>
+<h3 id="String-Manipulation"><a href="#String-Manipulation" class="headerlink" title="String Manipulation"></a>String Manipulation</h3><p>提供强大的文本转换操作：</p>
+<ul>
+<li>切换样式（camelCase, hyphen-lowercase, HYPHEN-UPPERCASE, snake_case, SCREAMING_SNAKE_CASE, dot.case, words lowercase, Words Capitalized, PascalCase）</li>
+<li>转换为SCREAMING_SNAKE_CASE (或转换为camelCase)</li>
+<li>转换为 snake_case (或转换为camelCase)</li>
+<li>转换为dot.case (或转换为camelCase)</li>
+<li>转换为hyphen-case (或转换为camelCase)</li>
+<li>转换为hyphen-case (或转换为snake_case)</li>
+<li>转换为camelCase (或转换为Words)</li>
+<li>转换为camelCase (或转换为lowercase words)</li>
+<li>转换为PascalCase (或转换为camelCase)</li>
+<li>选定文本大写</li>
+<li>样式反转</li>
+</ul>
+<p>Un/Escape:</p>
+<ul>
+<li>Un/Escape 选中的 java 文本</li>
+<li>Un/Escape 选中的 javascript 文本</li>
+<li>Un/Escape 选中的 HTML 文本</li>
+<li>Un/Escape 选中的 XML 文本</li>
+<li>Un/Escape 选中的 SQL 文本</li>
+<li>Un/Escape 选中的 PHP 文本</li>
+<li>将 diacritics(accents) 转换为 ASCII</li>
+<li>将非ASCII 转换为转义的Unicode</li>
+<li>将转义的Unicode转换为字符串</li>
+</ul>
+<p>Encode/Decode:</p>
+<ul>
+<li>Encode 选中的文本为 MD5 Hex16</li>
+<li>De/Encode 选中的文本为 URL</li>
+<li>De/Encode 选中的文本为 Base64</li>
+</ul>
+<p>递增/递减:</p>
+<ul>
+<li>递增/递减所有找到的数字</li>
+<li>复制行并且递增/递减所有找到的数字</li>
+<li>创建序列：保持第一个数字，递增替换所有其他数字</li>
+<li>递增重复的数字</li>
+</ul>
+<p>按自然顺序排序:</p>
+<ul>
+<li>按行倒序</li>
+<li>按行随机排序</li>
+<li>区分大小写A-z排序</li>
+<li>区分大小写z-A排序</li>
+<li>不区分大小写A-Z排序</li>
+<li>不区分大小写Z-A排序</li>
+<li>按行长度排序</li>
+<li>通过子选择行排序：每行仅处理一个选择/插入符号</li>
+</ul>
+<p>对齐：</p>
+<ul>
+<li>通过选定的分隔将选定的文本格式化为列/表格</li>
+<li>将文本对齐为左/中/右</li>
+</ul>
+<p>过滤/删除/移除：</p>
+<ul>
+<li>grep选定的文本，所有行不匹配输入文字将被删除。 （不能在列模式下工作）</li>
+<li>移除选定的文本</li>
+<li>移除选定文本中的所有空格</li>
+<li>删除选定文本中的所有空格</li>
+<li>删除重复的行</li>
+<li>只保留重复的行</li>
+<li>删除空行</li>
+<li>删除所有换行符</li>
+</ul>
+<p>其他:</p>
+<ul>
+<li>交换字符/选择/线/标记</li>
+<li>切换文件路径分隔符：Windows &lt; - &gt; UNIX</li>
+</ul>
+<h3 id="LiveEdit"><a href="#LiveEdit" class="headerlink" title="LiveEdit"></a>LiveEdit</h3><p>提供实时编辑 HTML / CSS / JavaScript的工具。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-97.png" alt="upload successful"><br>官方网站 <span class="exturl" data-url="aHR0cDovL2xpbmsuemhpaHUuY29tLz90YXJnZXQ9aHR0cHM6Ly9wbHVnaW5zLmpldGJyYWlucy5jb20vcGx1Z2luLzcwMDctbGl2ZWVkaXQ=" title="http://link.zhihu.com/?target=https://plugins.jetbrains.com/plugin/7007-liveedit">点击这里<i class="fa fa-external-link"></i></span>.</p>
+<h3 id="Shifter"><a href="#Shifter" class="headerlink" title="Shifter"></a>Shifter</h3><p>检测插入符号、行或关键字的类型，并在键盘快捷键上将其“向上”或“向下”移动。 如果一行中只有一个可移动的单词，则可以移动而不用插入它。 维持移位字的高位首字符的小写字母/大写字母或小写字母。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-98.png" alt="upload successful"></p>
+<h3 id="MyBatis-Log-Plugin"><a href="#MyBatis-Log-Plugin" class="headerlink" title="MyBatis Log Plugin"></a>MyBatis Log Plugin</h3><p>Mybatis现在是java中操作数据库的首选，在开发的时候，我们都会把Mybatis的脚本直接输出在console中，但是默认的情况下，输出的脚本不是一个可以直接执行的。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-99.png" alt="upload successful"><br>如果我们想直接执行，还需要在手动转化一下。<br>MyBatis Log Plugin 这款插件是直接将Mybatis执行的sql脚本显示出来，无需处理，可以直接复制出来执行的，如图：<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-100.png" alt="upload successful"><br>怎么样，是不是看起来很直观。执行程序后，我们可以很清晰的看到我们执行了哪些sql脚本，而且脚本可以执行拿出来运行。</p>
+<h3 id="restfultookit"><a href="#restfultookit" class="headerlink" title="restfultookit"></a>restfultookit</h3><p>Spring MVC网页开发的时候，我们都是通过requestmapping的方式来定义页面的URL地址的，为了找到这个地址我们一般都是cmd+shift+F的方式进行查找，大家都知道，我们URL的命名一个是类requestmapping+方法requestmapping，查找的时候还是有那么一点不方便的，restfultookit就能很方便的帮忙进行查找。<br>例如：我要找到/book/add 对应的controller,那么只要cmd+斜杠 ,如图：<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-101.png" alt="upload successful"><br>就能直接定位到我们想要的controller。这个也是真心方便，当然restfultookit还为我们提供的其他的功能。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-102.png" alt="upload successful"><br>居然能后根据我们的controller帮我们生成默认的测试数据，还能直接调用测试，这个可以是解决了我们每次postman调试数据时，自己傻傻的组装数据的的操作，这个更加清晰，比在console找数据包要方便多了。</p>
+<h3 id="RestfulTookit"><a href="#RestfulTookit" class="headerlink" title="RestfulTookit"></a>RestfulTookit</h3><p>Spring MVC网页开发的时候，我们都是通过requestmapping的方式来定义页面的URL地址的，为了找到这个地址我们一般都是cmd+shift+F的方式进行查找，大家都知道，我们URL的命名一个是类requestmapping+方法requestmapping，查找的时候还是有那么一点不方便的，restfultookit就能很方便的帮忙进行查找。<br>例如：我要找到/book/add 对应的controller,那么只要cmd+斜杠 ,如图：<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-106.png" alt="upload successful"><br>就能直接定位到我们想要的controller。这个也是真心方便，当然restfultookit还为我们提供的其他的功能。<br><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-107.png" alt="upload successful"><br>居然能后根据我们的controller帮我们生成默认的测试数据，还能直接调用测试，这个可以是解决了我们每次postman调试数据时，自己傻傻的组装数据的的操作，这个更加清晰，比在console找数据包要方便多了。</p>
+<hr>
+<h3 id="GsonFormat"><a href="#GsonFormat" class="headerlink" title="GsonFormat"></a>GsonFormat</h3><p>一键根据json文本生成java类  非常方便</p>
+<p><img src="/2019/02/25/idea%E6%8F%92%E4%BB%B6/image-92.png" alt="upload successful"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="XWookey">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咖喱鸡扒饭">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/" class="post-title-link" itemprop="url">IDEA查看类图</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-10 23:10:09" itemprop="dateCreated datePublished" datetime="2018-12-10T23:10:09+08:00">2018-12-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>220</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="超级无敌"><a href="#超级无敌" class="headerlink" title="超级无敌"></a>超级无敌</h2><p>ctrl + shift + alt + u 父类<br>ctrl + alt + b  子类</p>
+<h2 id="看继承关系"><a href="#看继承关系" class="headerlink" title="看继承关系"></a>看继承关系</h2><p>快捷键 <code>ctrl + H</code> 查看hierarchy,只能查看向上向下继承关系，而不能看实现了哪些接口。<br>右键选择Diagrams（也可以使用快捷键 <code>ctrl+alt+u</code> ，更快捷）</p>
+<h2 id="看接口的实现关系"><a href="#看接口的实现关系" class="headerlink" title="看接口的实现关系"></a>看接口的实现关系</h2><p>快捷键 <code>ctrl + alt + B</code> 会显示出跟这个接口有关系的类。</p>
+<h2 id="查看关系类图"><a href="#查看关系类图" class="headerlink" title="查看关系类图"></a>查看关系类图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. Ctrl + Alt + Shift + U</span><br><span class="line">2. Enter</span><br><span class="line">3. Ctrl + Alt + B</span><br><span class="line">4. Ctrl + A</span><br><span class="line">5. Enter</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/image-87.png" alt="upload successful"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="XWookey">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咖喱鸡扒饭">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/" class="post-title-link" itemprop="url">虚拟机安装mac</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-01 00:33:39" itemprop="dateCreated datePublished" datetime="2018-12-01T00:33:39+08:00">2018-12-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-03 18:55:44" itemprop="dateModified" datetime="2020-02-03T18:55:44+08:00">2020-02-03</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>243</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="准备材料"><a href="#准备材料" class="headerlink" title="准备材料"></a>准备材料</h2><ol>
+<li>unlock207(或者适配vm版本)</li>
+<li>vm12pro</li>
+<li>OS X 10.11.1(15B42).cdr（mac系统）</li>
+</ol>
+<h2 id="安装unlock207"><a href="#安装unlock207" class="headerlink" title="安装unlock207"></a>安装unlock207</h2><ol>
+<li>安装python2.7</li>
+<li>关闭vm所有进程以及服务</li>
+<li>使用管理员权限进入目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chcp 936</span><br><span class="line">win-install.cmd</span><br></pre></td></tr></table></figure>
+出现如下截图表示安装成功<br><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-78.png" alt="upload successful"></li>
+</ol>
+<h2 id="安装镜像"><a href="#安装镜像" class="headerlink" title="安装镜像"></a>安装镜像</h2><p><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-80.png" alt="upload successful"><br><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-79.png" alt="upload successful"></p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-81.png" alt="upload successful"></p>
+<p>打开vmx文件, 在<code>smc.present = &quot;TRUE&quot;</code>下一行加入<code>smc.version = 0</code><br><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-82.png" alt="upload successful"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-83.png" alt="upload successful"></p>
+<p>系统提示没有空间进行安装<br><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-84.png" alt="upload successful"></p>
+<p>实用工具 -&gt; 磁盘工具, 抹掉<br><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-85.png" alt="upload successful"></p>
+<p>选择刚才抹除的磁盘 继续安装<br><img src="/2018/12/01/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85mac/image-86.png" alt="upload successful"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="XWookey">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咖喱鸡扒饭">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">WxParse 插件 在循环时 cannot read property 'nodes' of undefined </a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-11-12 16:29:00" itemprop="dateCreated datePublished" datetime="2018-11-12T16:29:00+08:00">2018-11-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -980,166 +920,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <table>
-<thead>
-<tr>
-<th><strong>MySQL Type Name</strong></th>
-<th><strong>Return value of<code>GetColumnClassName</code></strong></th>
-<th><strong>Returned as Java Class</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>BIT(1) (new in MySQL-5.0)</td>
-<td>BIT</td>
-<td><code>java.lang.Boolean</code></td>
-</tr>
-<tr>
-<td>BIT( &gt; 1) (new in MySQL-5.0)</td>
-<td>BIT</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>TINYINT</td>
-<td>TINYINT</td>
-<td><code>java.lang.Boolean</code> if the configuration property <code>tinyInt1isBit</code> is set to <code>true</code>(the default) and the storage size is 1, or<code>java.lang.Integer</code> if not.</td>
-</tr>
-<tr>
-<td>BOOL, BOOLEAN</td>
-<td>TINYINT</td>
-<td>See TINYINT, above as these are aliases forTINYINT(1), currently.</td>
-</tr>
-<tr>
-<td>SMALLINT[(M)] [UNSIGNED]</td>
-<td>SMALLINT [UNSIGNED]</td>
-<td><code>java.lang.Integer</code> (regardless if UNSIGNED or not)</td>
-</tr>
-<tr>
-<td>MEDIUMINT[(M)] [UNSIGNED]</td>
-<td>MEDIUMINT [UNSIGNED]</td>
-<td><code>java.lang.Integer,</code> if UNSIGNED<code>java.lang.Long</code></td>
-</tr>
-<tr>
-<td>INT,INTEGER[(M)] [UNSIGNED]</td>
-<td>INTEGER [UNSIGNED]</td>
-<td><code>java.lang.Integer</code>, if UNSIGNED<code>java.lang.Long</code></td>
-</tr>
-<tr>
-<td>BIGINT[(M)] [UNSIGNED]</td>
-<td>BIGINT [UNSIGNED]</td>
-<td><code>java.lang.Long</code>, if UNSIGNED<code>java.math.BigInteger</code></td>
-</tr>
-<tr>
-<td>FLOAT[(M,D)]</td>
-<td>FLOAT</td>
-<td><code>java.lang.Float</code></td>
-</tr>
-<tr>
-<td>DOUBLE[(M,B)]</td>
-<td>DOUBLE</td>
-<td><code>java.lang.Double</code></td>
-</tr>
-<tr>
-<td>DECIMAL[(M[,D])]</td>
-<td>DECIMAL</td>
-<td><code>java.math.BigDecimal</code></td>
-</tr>
-<tr>
-<td>DATE</td>
-<td>DATE</td>
-<td><code>java.sql.Date</code></td>
-</tr>
-<tr>
-<td>DATETIME</td>
-<td>DATETIME</td>
-<td><code>java.sql.Timestamp</code></td>
-</tr>
-<tr>
-<td>TIMESTAMP[(M)]</td>
-<td>TIMESTAMP</td>
-<td><code>java.sql.Timestamp</code></td>
-</tr>
-<tr>
-<td>TIME</td>
-<td>TIME</td>
-<td><code>java.sql.Time</code></td>
-</tr>
-<tr>
-<td>YEAR[(2|4)]</td>
-<td>YEAR</td>
-<td>If <code>yearIsDateType</code> configuration property is set to false, then the returned object type is<code>java.sql.Short</code>. If set to true (the default) then an object of type <code>java.sql.Date</code> (with the date set to January 1st, at midnight).</td>
-</tr>
-<tr>
-<td>CHAR(M)</td>
-<td>CHAR</td>
-<td><code>java.lang.String</code> (unless the character set for the column is BINARY, then <code>byte[]</code>is returned.</td>
-</tr>
-<tr>
-<td>VARCHAR(M) [BINARY]</td>
-<td>VARCHAR</td>
-<td><code>java.lang.String</code> (unless the character set for the column is BINARY, then <code>byte[]</code>is returned.</td>
-</tr>
-<tr>
-<td>BINARY(M)</td>
-<td>BINARY</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>VARBINARY(M)</td>
-<td>VARBINARY</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>TINYBLOB</td>
-<td>TINYBLOB</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>TINYTEXT</td>
-<td>VARCHAR</td>
-<td><code>java.lang.String</code></td>
-</tr>
-<tr>
-<td>BLOB</td>
-<td>BLOB</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>TEXT</td>
-<td>VARCHAR</td>
-<td><code>java.lang.String</code></td>
-</tr>
-<tr>
-<td>MEDIUMBLOB</td>
-<td>MEDIUMBLOB</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>MEDIUMTEXT</td>
-<td>VARCHAR</td>
-<td><code>java.lang.String</code></td>
-</tr>
-<tr>
-<td>LONGBLOB</td>
-<td>LONGBLOB</td>
-<td><code>byte[]</code></td>
-</tr>
-<tr>
-<td>LONGTEXT</td>
-<td>VARCHAR</td>
-<td><code>java.lang.String</code></td>
-</tr>
-<tr>
-<td>ENUM(‘value1’,’value2’,…)</td>
-<td>CHAR</td>
-<td><code>java.lang.String</code></td>
-</tr>
-<tr>
-<td>SET(‘value1’,’value2’,…)</td>
-<td>CHAR</td>
-<td><code>java.lang.String</code></td>
-</tr>
-</tbody></table>
-
+          <p>项目使用wepy + wxparse 循环来渲染html页面</p>
+<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
+<p>增加代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
+<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
+<p>index.wpy 循环的例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=<span class="string">&quot;less&quot;</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">&#x27;../wxparse/wxParse.wxss&#x27;</span>;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">    &lt;button type=<span class="string">&quot;default&quot;</span> @tap=<span class="string">&quot;translate&quot;</span>&gt;点击翻译富文本&lt;/button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;content&quot;</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">&quot;name&quot;</span> <span class="attr">:parserContent.sync</span>=<span class="string">&quot;textContent&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">&quot;../wxparse/wxParse.wxml&quot;</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;replyTemArray&#125;&#125;&quot;</span> wx:key=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;wxParse&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;wxParseData:item&#125;&#125;&quot;</span>/&gt;</span></span></span><br><span class="line">      &lt;/block&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">&#x27;wepy&#x27;</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">&#x27;../wxparse/wxParse&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">onReady</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">&#x27;onReady&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="built_in">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke(&#x27;html2wxml&#x27;, &#x27;htmlParserNotice&#x27;)]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">&#x27;reply&#x27;</span> + i, <span class="string">&#x27;html&#x27;</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">&#x27;&gt;&gt;&gt;&gt;  &#x27;</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">&#x27;[[[  &#x27;</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">&#x27;replyTemArray&#x27;</span>, <span class="string">&#x27;reply&#x27;</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">&#x27;wxparseDemo&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1158,7 +945,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2020/02/23/POSTGRES%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8BJAVA%E7%B1%BB%E5%9E%8B%E5%AF%B9%E7%85%A7/">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2018/09/20/%E5%88%A9%E7%94%A8sql%E6%9D%A5%E6%9F%A5%E8%AF%A2csv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -1172,7 +959,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/23/POSTGRES%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8BJAVA%E7%B1%BB%E5%9E%8B%E5%AF%B9%E7%85%A7/" class="post-title-link" itemprop="url">POSTGRES数据类型JAVA类型对照</a>
+            <a href="/2018/09/20/%E5%88%A9%E7%94%A8sql%E6%9D%A5%E6%9F%A5%E8%AF%A2csv/" class="post-title-link" itemprop="url">利用q来查询csv</a>
         </h1>
 
         <div class="post-meta">
@@ -1182,7 +969,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-23 21:39:16" itemprop="dateCreated datePublished" datetime="2020-02-23T21:39:16+08:00">2020-02-23</time>
+              <time title="创建时间：2018-09-20 16:20:14" itemprop="dateCreated datePublished" datetime="2018-09-20T16:20:14+08:00">2018-09-20</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -1198,7 +985,93 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>759</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>利用<code>q</code>来查询csv</p>
+<blockquote>
+<ul>
+<li>官网 <span class="exturl" data-url="aHR0cDovL2hhcmVsYmEuZ2l0aHViLmlvL3EvaW5zdGFsbC5odG1s" title="http://harelba.github.io/q/install.html">http://harelba.github.io/q/install.html<i class="fa fa-external-link"></i></span>   </li>
+<li>github <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hhcmVsYmEvcQ==" title="https://github.com/harelba/q">https://github.com/harelba/q<i class="fa fa-external-link"></i></span></li>
+</ul>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/09/20/%E5%88%A9%E7%94%A8sql%E6%9D%A5%E6%9F%A5%E8%AF%A2csv/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2018/09/03/centos7%E4%B8%8B%E8%A7%A3%E5%86%B3yum-install-mysql-server%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E5%8C%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="XWookey">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咖喱鸡扒饭">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/03/centos7%E4%B8%8B%E8%A7%A3%E5%86%B3yum-install-mysql-server%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E5%8C%85/" class="post-title-link" itemprop="url">centos7下解决yum install mysql-server没有可用包</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2018-09-03 15:29:33 / 修改时间：16:25:13" itemprop="dateCreated datePublished" datetime="2018-09-03T15:29:33+08:00">2018-09-03</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>727</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1217,220 +1090,238 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <table>
-<thead>
-<tr>
-<th align="left">编号</th>
-<th align="left">数据库类型</th>
-<th align="left">JDBC类型</th>
-<th align="left">JDBC索引</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left"><code>varchar</code></td>
-<td align="left"><code>java.lang.String</code></td>
-<td align="left">12</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left"><code>bpchar</code></td>
-<td align="left"><code>java.lang.String</code></td>
-<td align="left">1</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left"><code>cidr</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left"><code>inet</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left"><code>macaddr</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left"><code>text</code></td>
-<td align="left"><code>java.lang.String</code></td>
-<td align="left">12</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left"><code>int8</code></td>
-<td align="left"><code>java.lang.Long</code></td>
-<td align="left">-5</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left"><code>int8</code></td>
-<td align="left"><code>java.lang.Long</code></td>
-<td align="left">-5</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left"><code>box</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left"><code>circle</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left"><code>float8</code></td>
-<td align="left"><code>java.lang.Double</code></td>
-<td align="left">8</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left"><code>int4</code></td>
-<td align="left"><code>java.lang.Integer</code></td>
-<td align="left">4</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">13</td>
-<td align="left"><code>interval</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left"><code>line</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">15</td>
-<td align="left"><code>lseg</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">16</td>
-<td align="left"><code>money</code></td>
-<td align="left"><code>java.lang.Double</code></td>
-<td align="left">8</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left"><code>numeric</code></td>
-<td align="left"><code>java.math.BigDecimal</code></td>
-<td align="left">2</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">18</td>
-<td align="left"><code>path</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left"><code>point</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">20</td>
-<td align="left"><code>polygon</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td align="left"><code>float4</code></td>
-<td align="left"><code>java.lang.Float</code></td>
-<td align="left">7</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">22</td>
-<td align="left"><code>int2</code></td>
-<td align="left"><code>java.lang.Integer</code></td>
-<td align="left">5</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td align="left"><code>int4</code></td>
-<td align="left"><code>java.lang.Integer</code></td>
-<td align="left">4</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td align="left"><code>time</code></td>
-<td align="left"><code>java.sql.Time</code></td>
-<td align="left">92</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">25</td>
-<td align="left"><code>timestamp</code></td>
-<td align="left"><code>java.sql.Timestamp</code></td>
-<td align="left">93</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left"><code>bit</code></td>
-<td align="left"><code>java.lang.Boolean</code></td>
-<td align="left">-7</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">27</td>
-<td align="left"><code>varbit</code></td>
-<td align="left"><code>java.lang.Object</code></td>
-<td align="left">1,111</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">28</td>
-<td align="left"><code>bool</code></td>
-<td align="left"><code>java.lang.Boolean</code></td>
-<td align="left">-7</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left"><code>bytea</code></td>
-<td align="left"><code>byte</code></td>
-<td align="left">-2</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
+          <h2 id="安装从网上下载文件的wget命令"><a href="#安装从网上下载文件的wget命令" class="headerlink" title="安装从网上下载文件的wget命令"></a>安装从网上下载文件的wget命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# yum -y install wget</span><br></pre></td></tr></table></figure>
+<h2 id="下载mysql的repo源"><a href="#下载mysql的repo源" class="headerlink" title="下载mysql的repo源"></a>下载mysql的repo源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# wget http:&#x2F;&#x2F;repo.mysql.com&#x2F;mysql-community-release-el7-5.noarch.rpm </span><br></pre></td></tr></table></figure>
+<h2 id="安装mysql-community-release-el7-5-noarch-rpm包"><a href="#安装mysql-community-release-el7-5-noarch-rpm包" class="headerlink" title="安装mysql-community-release-el7-5.noarch.rpm包"></a>安装mysql-community-release-el7-5.noarch.rpm包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br></pre></td></tr></table></figure>
+<h2 id="查看下"><a href="#查看下" class="headerlink" title="查看下"></a>查看下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# ls -1 &#x2F;etc&#x2F;yum.repos.d&#x2F;mysql-community*</span><br><span class="line">&#x2F;etc&#x2F;yum.repos.d&#x2F;mysql-community.repo</span><br><span class="line">&#x2F;etc&#x2F;yum.repos.d&#x2F;mysql-community-source.repo</span><br></pre></td></tr></table></figure>
+<p>会获得两个mysql的yum repo源：/etc/yum.repos.d/mysql-community.repo，/etc/yum.repos.d/mysql-community-source.repo。</p>
+<h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# yum install mysql-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动mysql"><a href="#启动mysql" class="headerlink" title="启动mysql"></a>启动mysql</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE user SET Password&#x3D;PASSWORD(&#39;root&#39;) WHERE user&#x3D;&#39;root&#39;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://127.0.0.1:4000/2018/08/08/maven%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="XWookey">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咖喱鸡扒饭">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/08/08/maven%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Maven基本概念与核心配置</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-08-08 01:07:00" itemprop="dateCreated datePublished" datetime="2018-08-08T01:07:00+08:00">2018-08-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-04 21:08:29" itemprop="dateModified" datetime="2020-11-04T21:08:29+08:00">2020-11-04</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>9.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="maven安装与核心概念"><a href="#maven安装与核心概念" class="headerlink" title="maven安装与核心概念"></a>maven安装与核心概念</h1><ol>
+<li>   maven 安装</li>
+<li>   maven 编译(compile)</li>
+<li>   执行测试用例(test)</li>
+<li>   maven 打包</li>
+<li>   maven  依懒管理</li>
+</ol>
+<h2 id="maven安装"><a href="#maven安装" class="headerlink" title="maven安装"></a>maven安装</h2><ol>
+<li>   官网下载 Maven <span class="exturl" data-url="aHR0cDovL21hdmVuLmFwYWNoZS5vcmcvZG93bmxvYWQuY2dp" title="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi<i class="fa fa-external-link"></i></span></li>
+<li>   解压指定目录</li>
+<li>   配置环境变量</li>
+<li>   检查安装是否成功 <code>mvn -version</code></li>
+</ol>
+<p><code>maven</code> 的基本功能是<span style="color:#FF0000">编译</span>、<span style="color:#FF0000">打包</span>、<span style="color:#FF0000">测试</span>、<span style="color:#FF0000">依赖管理</span></p>
+<h2 id="maven编译"><a href="#maven编译" class="headerlink" title="maven编译"></a>maven编译</h2><blockquote>
+<p><code>maven</code> 采用了约定的方式从指项目结构中获取源码与资源文件进行编译打包。<br>在上述配置和命令当中，我们并没有指定源码文件，也没有指定编译到哪里去 </p>
+<ol>
+<li>主源码文件：<code>$&#123;project&#125;/src/main/java</code></li>
+<li>主资源文件：<code>$&#123;project&#125;/src/main/resources</code></li>
+<li>测试源码文件：<code>$&#123;project&#125;/src/test/java</code></li>
+<li>测试资源文件：<code>$&#123;project&#125;/src/test/resources</code></li>
+</ol>
+</blockquote>
+<h3 id="创建-maven-项目"><a href="#创建-maven-项目" class="headerlink" title="创建 maven 项目"></a>创建 maven 项目</h3><p>按照以下的路径创建项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$&#123;project&#125;</span>/src/main/java</span><br><span class="line"><span class="variable">$&#123;project&#125;</span>/src/main/resources</span><br><span class="line"><span class="variable">$&#123;project&#125;</span>/src/<span class="built_in">test</span>/java</span><br><span class="line"><span class="variable">$&#123;project&#125;</span>/src/<span class="built_in">test</span>/resources</span><br></pre></td></tr></table></figure>
+<h3 id="创建-java-文件"><a href="#创建-java-文件" class="headerlink" title="创建 java 文件"></a>创建 java 文件</h3><p>在<code>$&#123;project&#125;/src/main/java</code>目录下创建<code>java</code>文件</p>
+<h3 id="编写-pom-文件基础配置"><a href="#编写-pom-文件基础配置" class="headerlink" title="编写 pom 文件基础配置"></a>编写 pom 文件基础配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0</span></span></span><br><span class="line"><span class="tag"><span class="string">                      http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.codehaus.mojo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>my-project<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="执行-mvn-编译命令"><a href="#执行-mvn-编译命令" class="headerlink" title="执行 mvn 编译命令"></a>执行 <code>mvn</code> 编译命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile</span><br></pre></td></tr></table></figure>
+<h2 id="maven打包"><a href="#maven打包" class="headerlink" title="maven打包"></a>maven打包</h2><p>mvn 打包命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
+<h2 id="maven单元测试"><a href="#maven单元测试" class="headerlink" title="maven单元测试"></a>maven单元测试</h2><blockquote>
+<p>在 <code>maven</code> 当中的测试类又做了约定，约定必须是 <code>Test</code> 开头的类名与 <code>test</code> 开头的方法才会执行。<br>通常测试我们是通 <code>junit</code> 来编译测试用例，当添加了<code>junit</code>的依赖之后上一条规则作废</p>
+</blockquote>
+<h3 id="编译测试类"><a href="#编译测试类" class="headerlink" title="编译测试类"></a>编译测试类</h3><p>创建测试目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /src/<span class="built_in">test</span>/java</span><br></pre></td></tr></table></figure>
+<h3 id="编写测试类"><a href="#编写测试类" class="headerlink" title="编写测试类"></a>编写测试类</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim TestHello.java</span><br></pre></td></tr></table></figure>
+<p>文件内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test.tuling;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHello</span></span>&#123;</span><br><span class="line">        <span class="comment">//public void sayHelloTest()&#123;  //在没有添加junit的情况下必须是以Test开头的类test开头的方法才会执行</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testsayHelloTest</span><span class="params">()</span></span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;run test .....&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn test</span><br></pre></td></tr></table></figure>
+
+<h2 id="maven-依赖管理"><a href="#maven-依赖管理" class="headerlink" title="maven 依赖管理"></a>maven 依赖管理</h2><ol start="3">
+<li>执行测试命令</li>
+</ol>
+<h3 id="在pom-文件中添加junit-依赖"><a href="#在pom-文件中添加junit-依赖" class="headerlink" title="在pom 文件中添加junit 依赖"></a>在pom 文件中添加junit 依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改测试类，加入junit-代码"><a href="#修改测试类，加入junit-代码" class="headerlink" title="修改测试类，加入junit 代码"></a>修改测试类，加入junit 代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.junit.Assert;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line">Assert.assertEquals(<span class="string">&quot;&quot;</span>,<span class="string">&quot;hi&quot;</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：当我们在 <code>classPath</code> 当中加入 <code>junit</code> ，原来以 <code>test</code> 开头的方法不会被执行，必须加入 <code>@Test</code> 注解才能被执行。</p>
+</blockquote>
+<p><strong>问：</strong>在刚才的演示过程当中 ，<code>junit jar</code>包在哪里？是怎么加入到<code>classPath</code> 当中去的？<br><strong>答：</strong>maven 是在执行 <code>test</code> 命令的时间 动态从本地仓库中去引入<code>junit jar</code> 包，如果找不到就会去远程仓库下载，然后在引入。<br><img src="/2018/08/08/maven%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E9%85%8D%E7%BD%AE/image-60.png" alt="upload successful"></p>
+<h3 id="默认远程仓库"><a href="#默认远程仓库" class="headerlink" title="默认远程仓库"></a>默认远程仓库</h3><p>默认远程仓库 <code>maven central</code> 其配置在  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">maven-model-builder-3.2.1.jar\org\apache\maven\model\pom-4.0.0.xml</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地仓库位置"><a href="#本地仓库位置" class="headerlink" title="本地仓库位置"></a>本地仓库位置</h3><p>本地仓库位置默认在 <code>~/.m2/respository</code> 下<br>要修改 <code>$&#123;M2_HOME&#125;/conf/settings.xml</code>  来指定仓库目录</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定本地仓库目录--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>G:\.m2\repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="maven核心配置"><a href="#maven核心配置" class="headerlink" title="maven核心配置"></a>maven核心配置</h1><h2 id="项目依懒"><a href="#项目依懒" class="headerlink" title="项目依懒"></a>项目依懒</h2><p>项目依赖是指 <code>maven</code> 通过依赖传播、依赖优先原则、可选依赖、排除依赖、依赖范围等特性来管理项目 <code>ClassPath</code> 。</p>
+<h3 id="依赖传播特性"><a href="#依赖传播特性" class="headerlink" title="依赖传播特性"></a>依赖传播特性</h3><p>我们的项目通常需要依赖第三方组件，而第三方组件又会依赖其它组件遇到这种情况 <code>Maven</code> 会将依赖网络中的所有节点都会加入 <code>ClassPath</code> 当中，这就是 <code>Maven</code> 的依赖传播特性。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 添加spring web mvc演示 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.0.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2018/08/08/maven%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E9%85%8D%E7%BD%AE/image-59.png" alt="upload successful"></p>
+<p>在刚刚的演示当中，项目直接依赖了 <code>spring-webmvc</code> 叫直接依赖，而对 <code>commons-logging</code> 依赖是通过 <code>webmvc</code> 传递的所以叫间接依赖。</p>
+<h3 id="依赖优先原则"><a href="#依赖优先原则" class="headerlink" title="依赖优先原则"></a>依赖优先原则</h3><p>基于依赖传播特性，导致整个依赖网络会很复杂，难免会出现相同组件不同版本的情况。<code>Maven</code> 此时会基于依赖优先原则选择其中一个版本。</p>
+<ul>
+<li>第一原则：最短路径优先。</li>
+<li>第二原则：相同路径下配置在前的优先。</li>
+</ul>
+<h4 id="第一原则：最短路径优先。"><a href="#第一原则：最短路径优先。" class="headerlink" title="第一原则：最短路径优先。"></a>第一原则：最短路径优先。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 直接添加commons-logging --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-logging&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-logging&lt;&#x2F;artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>上述例子中 <code>commons-logging</code> 通过 <code>spring-webmvc</code> 依赖了 <code>1.1.3</code> ，而项目中直接依赖了 <code>1.2</code> ，基于最短路径原则项目最终引入的是 <code>1.2</code> 版本。</p>
+<h4 id="第二原则：相同路径下配置在前的优先"><a href="#第二原则：相同路径下配置在前的优先" class="headerlink" title="第二原则：相同路径下配置在前的优先"></a>第二原则：相同路径下配置在前的优先</h4><ol>
+<li><p>   添加一个新工程 <code>Project B</code></p>
+</li>
+<li><p>   配置 <code>Project B</code> 依赖 <code>spring-web.3.2.9.RELEASE</code></p>
+</li>
+<li><p>当前工程直接依赖 <code>Project B</code>   </p>
+<p>配置完之后，当前工程 <code>project A</code> 有两条路径可以依赖 <code>spring-web</code>,选择哪一条 就取决于 对 <code>webmvc</code> 和 <code>Project B</code> 的配置先后顺序。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Project A==&gt; spring-webmvc.4.0.0.RELEASE ==&gt; spring-web.4.0.0.RELEASE</span><br><span class="line">Project A==&gt;   Project B 1.0.SNAPSHOT ==&gt;spring-web.3.2.9.RELEASE</span><br></pre></td></tr></table></figure>
+<p>注意：在同一 <code>pom</code> 文件，第二原则不在适应。如下配置，最终引用的是 <code>1.2</code> 版本，而不是配置在前面的 <code>1.1.1</code> 版本.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--  在1.2 之前添加 commons-logging --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="可选依赖"><a href="#可选依赖" class="headerlink" title="可选依赖"></a>可选依赖</h3><p>可选依赖表示这个依赖不是必须的。通过在 <code>&lt;dependency&gt;</code> 添  <code>&lt;optional&gt;true&lt;/optional&gt;</code> 表示，默认是不可选的。可选依赖不会被传递。</p>
+</li>
+</ol>
+<h3 id="排除依赖"><a href="#排除依赖" class="headerlink" title="排除依赖"></a>排除依赖</h3><p>即排除指定的间接依赖。通过配置 <code>&lt;exclusions&gt;</code> 配置排除指定组件。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 排除指定项目 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h3><p>像 <code>junit</code> 这个组件 我们只有在运行测试用例的时候去要用到，这就没有必要在打包的时候把 <code>junit.jar</code> 包过构建进去，可以通过 <code>Maven</code> 的依赖范围配置<code>&lt;scope&gt;</code>来达到这种目的。<code>maven</code> 总共支持以下四种依赖范围</p>
+<ul>
+<li><strong>compile(默认)</strong> : 编译范围，编译和打包都会依赖。</li>
+<li><strong>provided</strong> ：提供范围，编译时依赖，但不会打包进去。如：<code>servlet-api.jar</code></li>
+<li><strong>runtime</strong> ：运行时范围，打包时依赖，编译不会。如：<code>mysql-connector-java.jar</code></li>
+<li><strong>test</strong> ：测试范围，编译运行测试用例依赖，不会打包进去。如：<code>junit.jar</code></li>
+<li><strong>system</strong> ：表示由系统中<code>CLASSPATH</code>指定。编译时依赖，不会打包进去。配合 <code>&lt;systemPath&gt;</code> 一起使用。示例：<code>java.home</code> 下的<code>tool.jar</code></li>
+</ul>
+<p><code>system</code> 除了可以用于引入系统 <code>classpath</code> 中包，也可以用于引入系统非 <code>maven</code>  收录的第三方 <code>Jar</code> ，做法是将第三方 <code>Jar</code> 放置在 项目的 <code>lib</code> 目录下，然后配置 相对路径，但因 <code>system</code> 不会打包进去所以需要配合 <code>maven-dependency-plugin</code> 插件配合使用。当然推荐大家还是通过 将第三方 <code>Jar</code> 手动 <code>install</code> 到仓库。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- system 的通常使用方式--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.sun<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;java.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;java.home&#125;/../lib/tools.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- system 另外使用方式 ,将工程内的jar直接引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>jsr<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jsr<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;basedir&#125;/lib/jsr305.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 通过插件 将system 的jar 打包进去。 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-dependency-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>copy-dependencies<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>copy-dependencies<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">outputDirectory</span>&gt;</span>$&#123;project.build.directory&#125;/$&#123;project.build.finalName&#125;/WEB-INF/lib<span class="tag">&lt;/<span class="name">outputDirectory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includeScope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">includeScope</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">excludeGroupIds</span>&gt;</span>com.sun<span class="tag">&lt;/<span class="name">excludeGroupIds</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>手动加入本地仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install:install-file -Dfile=abc_client_v1.20.jar -DgroupId=tuling  -DartifactId=tuling-client -Dversion=1.20 -Dpackaging=jar</span><br></pre></td></tr></table></figure>
+<h2 id="项目聚合与继承"><a href="#项目聚合与继承" class="headerlink" title="项目聚合与继承"></a>项目聚合与继承</h2><h3 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h3><p> 聚合是指将多个模块整合在一起，统一构建，避免一个一个的构建。聚合需要个父工程，然后使用 <code>&lt;modules&gt;</code> 进行配置其中对应的是子工程的相对路径</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">modules</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">module</span>&gt;</span>tuling-client<span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">module</span>&gt;</span>tuling-server<span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">modules</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承是指子工程直接继承父工程 当中的属性、依赖、插件等配置，避免重复配置。</p>
+<ol>
+<li>   属性继承</li>
+<li>   依赖继承</li>
+<li>   插件继承<br>上面的三个配置子工程都可以进行重写，重写之后以子工程的为准。</li>
+</ol>
+<h3 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h3><p>通过继承的特性，子工程是可以间接依赖父工程的依赖，但多个子工程依赖有时并不一至，这时就可以在父工程中加入 <code>&lt;dependencyManagement&gt;</code> 声明该功程需要的 <code>JAR</code> 包，然后在子工程中引入。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">！--</span> 父工程中声明 <span class="attr">junit</span> <span class="attr">4.12</span> <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 子工程中引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h3><p>通过 <code>&lt;properties&gt;</code> 配置 属性参数，可以简化配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置proName属性 --&gt;</span><br><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;proName&gt;ddd&lt;&#x2F;proName&gt;</span><br><span class="line">&lt;&#x2F;properties&gt;</span><br></pre></td></tr></table></figure>
+<p>引用方式<code>$&#123;proName&#125;</code></p>
+<h4 id="maven-默认的属性"><a href="#maven-默认的属性" class="headerlink" title="maven 默认的属性"></a>maven 默认的属性</h4><ul>
+<li><code>$&#123;basedir&#125;</code> 项目根目录  </li>
+<li><code>$&#123;version&#125;</code> 表示项目版本 </li>
+<li><code>$&#123;project.basedir&#125;</code> 同 <code>$&#123;basedir&#125;</code> </li>
+<li><code>$&#123;project.version&#125;</code> 表示项目版本,与 <code>$&#123;version&#125;</code> 相同 </li>
+<li><code>$&#123;project.build.directory&#125;</code> 构建目录，缺省为 <code>target</code> </li>
+<li><code>$&#123;project.build.sourceEncoding&#125;</code> 表示主源码的编码格式 </li>
+<li><code>$&#123;project.build.sourceDirectory&#125;</code> 表示主源码路径</li>
+<li><code>$&#123;project.build.finalName&#125;</code>表示输出文件名称</li>
+<li><code>$&#123;project.build.outputDirectory&#125;</code> 构建过程输出目录，缺省为<code>target/classes </code></li>
+</ul>
+<h2 id="项目构建配置"><a href="#项目构建配置" class="headerlink" title="项目构建配置"></a>项目构建配置</h2><ol>
+<li>   构建资源配置</li>
+<li>   编译插件</li>
+<li>   profile 指定编译环境</li>
+</ol>
+<p>构建资源配置<br>基本配置示例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">defaultGoal</span>&gt;</span>package<span class="tag">&lt;/<span class="name">defaultGoal</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">directory</span>&gt;</span>$&#123;basedir&#125;/target2<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">finalName</span>&gt;</span>$&#123;artifactId&#125;-$&#123;version&#125;<span class="tag">&lt;/<span class="name">finalName</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><strong>defaultGoal</strong> : 执行构建时默认的 <code>goal</code> 或 <code>phase</code>，如<code>jar:jar</code>或者<code>package</code>等</li>
+<li><strong>directory</strong> : 构建的结果所在的路径，默认为$ <code>&#123;basedir&#125;/target</code> 目录</li>
+<li><strong>finalName</strong> : 构建的最终结果的名字，该名字可能在其他 <code>plugin</code> 中被改变</li>
+</ul>
+<p>配置示例 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.MF<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.XML<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>true<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">include</span>&gt;</span>*<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>true<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>说明：   </p>
+<ul>
+<li><strong>resources</strong> :<code> build</code>过程中涉及的资源文件</li>
+<li><strong>targetPath</strong> : 资源文件的目标路径</li>
+<li><strong>directory</strong> : 资源文件的路径，默认<code>$&#123;basedir&#125;/src/main/resources/</code>目录下</li>
+<li><strong>includes</strong> : 一组文件名的匹配模式，被匹配的资源文件将被构建过程处理</li>
+<li><strong>excludes</strong> : 一组文件名的匹配模式，被匹配的资源文件将被构建过程忽略。同时被includes和excludes匹配的资源文件，将被忽略。</li>
+<li><strong>filtering</strong> : 默认<code>false</code> ，<code>true</code> 表示 通过参数 对 资源文件中 的 <code>$&#123;key&#125;</code> 在编译时进行动态变更。替换源可 紧 <code>-Dkey</code> 和 <code>pom</code> 中的 <code>&lt;properties&gt;</code> 值 或  <code>&lt;filters&gt;</code> 中指定的<code>properties</code> 文件。</li>
+</ul>
 
       
     </div>
@@ -1450,7 +1341,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1518,7 +1409,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">104</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1531,7 +1422,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1598,13 +1489,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">361k</span>
+    <span title="站点总字数">84k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:28</span>
+    <span title="站点阅读时长">1:16</span>
 </div>
 
         
