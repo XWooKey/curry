@@ -186,8 +186,8 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/06/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
+    <title>E2E版本安装手册</title>
+    <url>/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h1 id="安装准备速查"><a href="#安装准备速查" class="headerlink" title="安装准备速查"></a>安装准备速查</h1><table>
 <thead>
 <tr>
@@ -437,7 +437,7 @@
 
 <h3 id="Erlang"><a href="#Erlang" class="headerlink" title="Erlang"></a>Erlang</h3><p>安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel</span><br><span class="line">tar -zxvf /opt/package/otp_src_23.1.tar.gz -C /opt/app</span><br><span class="line"><span class="built_in">cd</span> /opt/app/otp_src_23.1</span><br><span class="line">mkdir /opt/app/erlang</span><br><span class="line">./configure --prefix=/opt/app/erlang</span><br></pre></td></tr></table></figure>
-<p>如果显示这个，假装没看见<br><img src="/2020/06/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201103213022345.png" alt="image-20201103213022345"></p>
+<p>如果显示这个，假装没看见<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201103213022345.png" alt="image-20201103213022345"></p>
 <p>安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
 
@@ -471,7 +471,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rabbitmq-server -detached</span><br></pre></td></tr></table></figure>
 
 <p>登录<code>http://172.30.100.180:15672/</code><br>用户名<code>guest</code><br>密码<code>guest</code></p>
-<p>点击 <code>Admin</code> 标签，输入用户名<code>rabbit</code> , 密码 <code>123456</code>,再次重复密码<code>123456</code>,Tags<code>administrator</code> 并设置身份 , 点击<code> Add user</code>按钮<br><img src="/2020/06/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104092751871.png" alt="image-20201104092751871"><br>点击<code>用户名</code>设置<code>权限</code><br><img src="/2020/06/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093044562.png" alt="image-20201104093044562"><br>直接点击 <code>Set permission</code><br><img src="/2020/06/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093125044.png" alt="image-20201104093125044"><br>完成网页端配置<br><img src="/2020/06/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093322984.png" alt="image-20201104093322984"></p>
+<p>点击 <code>Admin</code> 标签，输入用户名<code>rabbit</code> , 密码 <code>123456</code>,再次重复密码<code>123456</code>,Tags<code>administrator</code> 并设置身份 , 点击<code> Add user</code>按钮<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104092751871.png" alt="image-20201104092751871"><br>点击<code>用户名</code>设置<code>权限</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093044562.png" alt="image-20201104093044562"><br>直接点击 <code>Set permission</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093125044.png" alt="image-20201104093125044"><br>完成网页端配置<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093322984.png" alt="image-20201104093322984"></p>
 <h2 id="版本部署"><a href="#版本部署" class="headerlink" title="版本部署"></a>版本部署</h2><h3 id="GeoServer"><a href="#GeoServer" class="headerlink" title="GeoServer"></a>GeoServer</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/web/e2e/geoserver-2.15.2-e2e /opt/app/e2e</span><br><span class="line">ln -s /opt/app/e2e/geoserver-2.15.2-e2e /opt/app/e2e/geoserver</span><br></pre></td></tr></table></figure>
 
 <h3 id="E2E"><a href="#E2E" class="headerlink" title="E2E"></a>E2E</h3><p>复制<code>jar</code>包</p>
@@ -2507,21 +2507,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WIN10 子系统Ubuntu设置</title>
-    <url>/2020/02/03/WIN10-%E5%AD%90%E7%B3%BB%E7%BB%9FUbuntu%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="设置ROOT账号密码"><a href="#设置ROOT账号密码" class="headerlink" title="设置ROOT账号密码"></a>设置ROOT账号密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd</span><br><span class="line"><span class="comment"># 输入要设置的root账号密码</span></span><br><span class="line"><span class="comment"># 再次输入要设置的root账号密码</span></span><br><span class="line">su root</span><br><span class="line"><span class="comment"># 输入刚才设置好的密码。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="vi命令方向键不可用，发出嘟嘟的声音"><a href="#vi命令方向键不可用，发出嘟嘟的声音" class="headerlink" title="vi命令方向键不可用，发出嘟嘟的声音"></a>vi命令方向键不可用，发出嘟嘟的声音</h2><p>vi命令方向键不可用，发出嘟嘟的声音，且提示E388:Couldn’t find definition解决办法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.vimrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:<span class="built_in">set</span> term=builtin_ansi</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改root用户控制台颜色"><a href="#修改root用户控制台颜色" class="headerlink" title="修改root用户控制台颜色"></a>修改root用户控制台颜色</h2><p>去除<code>39行</code> 前的注释</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 39行将注释去除</span></span><br><span class="line">force_color_prompt=yes</span><br></pre></td></tr></table></figure>
-<blockquote>
-<dl><dt>:set number #显示行号<br>:set nonumber #关闭行号</dt><dd>39 # 跳转到39行<br><img src="/2020/02/03/WIN10-%E5%AD%90%E7%B3%BB%E7%BB%9FUbuntu%E8%AE%BE%E7%BD%AE/image-20200203220348511.png" alt="image-20200203220348511"></dd></dl></blockquote>
-<p>生效<code>~/.bashrc</code>文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>WIN10安装DOCKER</title>
     <url>/2020/02/06/WIN10%E5%AE%89%E8%A3%85DOCKER/</url>
     <content><![CDATA[<h2 id="安装ubuntu"><a href="#安装ubuntu" class="headerlink" title="安装ubuntu"></a>安装ubuntu</h2><h2 id="解决vi命令方向键不可用，发出嘟嘟的声音，且提示E388-Couldn’t-find-definition"><a href="#解决vi命令方向键不可用，发出嘟嘟的声音，且提示E388-Couldn’t-find-definition" class="headerlink" title="解决vi命令方向键不可用，发出嘟嘟的声音，且提示E388:Couldn’t find definition"></a>解决vi命令方向键不可用，发出嘟嘟的声音，且提示E388:Couldn’t find definition</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim ~&#x2F;.vimrc</span><br><span class="line">:set term&#x3D;builtin_ansi</span><br></pre></td></tr></table></figure>
@@ -2540,6 +2525,32 @@
       <tags>
         <tag>docker</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WIN10 子系统Ubuntu设置</title>
+    <url>/2020/02/03/WIN10-%E5%AD%90%E7%B3%BB%E7%BB%9FUbuntu%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="设置ROOT账号密码"><a href="#设置ROOT账号密码" class="headerlink" title="设置ROOT账号密码"></a>设置ROOT账号密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd</span><br><span class="line"><span class="comment"># 输入要设置的root账号密码</span></span><br><span class="line"><span class="comment"># 再次输入要设置的root账号密码</span></span><br><span class="line">su root</span><br><span class="line"><span class="comment"># 输入刚才设置好的密码。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="vi命令方向键不可用，发出嘟嘟的声音"><a href="#vi命令方向键不可用，发出嘟嘟的声音" class="headerlink" title="vi命令方向键不可用，发出嘟嘟的声音"></a>vi命令方向键不可用，发出嘟嘟的声音</h2><p>vi命令方向键不可用，发出嘟嘟的声音，且提示E388:Couldn’t find definition解决办法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.vimrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:<span class="built_in">set</span> term=builtin_ansi</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改root用户控制台颜色"><a href="#修改root用户控制台颜色" class="headerlink" title="修改root用户控制台颜色"></a>修改root用户控制台颜色</h2><p>去除<code>39行</code> 前的注释</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 39行将注释去除</span></span><br><span class="line">force_color_prompt=yes</span><br></pre></td></tr></table></figure>
+<blockquote>
+<dl><dt>:set number #显示行号<br>:set nonumber #关闭行号</dt><dd>39 # 跳转到39行<br><img src="/2020/02/03/WIN10-%E5%AD%90%E7%B3%BB%E7%BB%9FUbuntu%E8%AE%BE%E7%BD%AE/image-20200203220348511.png" alt="image-20200203220348511"></dd></dl></blockquote>
+<p>生效<code>~/.bashrc</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
+    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
+<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
+<p>增加代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
+<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
+<p>index.wpy 循环的例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">&quot;less&quot;</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">&#x27;../wxparse/wxParse.wxss&#x27;</span>;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">    &lt;button type=<span class="string">&quot;default&quot;</span> @tap=<span class="string">&quot;translate&quot;</span>&gt;点击翻译富文本&lt;/button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;content&quot;</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">&quot;name&quot;</span> <span class="attr">:parserContent.sync</span>=<span class="string">&quot;textContent&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">&quot;../wxparse/wxParse.wxml&quot;</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;replyTemArray&#125;&#125;&quot;</span> wx:key=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;wxParse&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;wxParseData:item&#125;&#125;&quot;</span>/&gt;</span></span></span><br><span class="line">      &lt;/block&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">&#x27;wepy&#x27;</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">&#x27;../wxparse/wxParse&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">onReady</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">&#x27;onReady&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="built_in">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke(&#x27;html2wxml&#x27;, &#x27;htmlParserNotice&#x27;)]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">&#x27;reply&#x27;</span> + i, <span class="string">&#x27;html&#x27;</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">&#x27;&gt;&gt;&gt;&gt;  &#x27;</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">&#x27;[[[  &#x27;</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">&#x27;replyTemArray&#x27;</span>, <span class="string">&#x27;reply&#x27;</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">&#x27;wxparseDemo&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>YUM源更新</title>
@@ -2625,17 +2636,6 @@
         <tag>docker</tag>
         <tag>jenkins</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
-    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
-    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
-<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
-<p>增加代码如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
-<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
-<p>index.wpy 循环的例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">&quot;less&quot;</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">&#x27;../wxparse/wxParse.wxss&#x27;</span>;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">    &lt;button type=<span class="string">&quot;default&quot;</span> @tap=<span class="string">&quot;translate&quot;</span>&gt;点击翻译富文本&lt;/button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;content&quot;</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">&quot;name&quot;</span> <span class="attr">:parserContent.sync</span>=<span class="string">&quot;textContent&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">&quot;../wxparse/wxParse.wxml&quot;</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;replyTemArray&#125;&#125;&quot;</span> wx:key=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;wxParse&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;wxParseData:item&#125;&#125;&quot;</span>/&gt;</span></span></span><br><span class="line">      &lt;/block&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">&#x27;wepy&#x27;</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">&#x27;../wxparse/wxParse&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">onReady</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">&#x27;onReady&#x27;</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="built_in">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style=&quot;color: blue;&quot;&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke(&#x27;html2wxml&#x27;, &#x27;htmlParserNotice&#x27;)]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">&#x27;reply&#x27;</span> + i, <span class="string">&#x27;html&#x27;</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">&#x27;&gt;&gt;&gt;&gt;  &#x27;</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">&#x27;[[[  &#x27;</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">&#x27;replyTemArray&#x27;</span>, <span class="string">&#x27;reply&#x27;</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">&#x27;wxparseDemo&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>geoserver自定义标记</title>
@@ -3679,6 +3679,19 @@
       </tags>
   </entry>
   <entry>
+    <title>sharding-jdbc</title>
+    <url>/2018/03/03/sharding-jdbc/</url>
+    <content><![CDATA[<blockquote>
+<p>官网: <span class="exturl" data-url="aHR0cDovL3NoYXJkaW5namRiYy5pby8=" title="http://shardingjdbc.io/">http://shardingjdbc.io/<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>T</tag>
+        <tag>sharding-jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>redis学习3-集群搭建</title>
     <url>/2018/01/12/redis%E5%AD%A6%E4%B9%A03-%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<blockquote>
@@ -3758,19 +3771,6 @@
         <tag>java</tag>
         <tag>T</tag>
         <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>sharding-jdbc</title>
-    <url>/2018/03/03/sharding-jdbc/</url>
-    <content><![CDATA[<blockquote>
-<p>官网: <span class="exturl" data-url="aHR0cDovL3NoYXJkaW5namRiYy5pby8=" title="http://shardingjdbc.io/">http://shardingjdbc.io/<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>T</tag>
-        <tag>sharding-jdbc</tag>
       </tags>
   </entry>
   <entry>
@@ -4177,16 +4177,6 @@ java -jar x_springboot.jar --server.port=8888
       </tags>
   </entry>
   <entry>
-    <title>临时手机邮箱</title>
-    <url>/2020/02/03/%E4%B8%B4%E6%97%B6%E6%89%8B%E6%9C%BA%E9%82%AE%E7%AE%B1/</url>
-    <content><![CDATA[<h2 id="临时手机"><a href="#临时手机" class="headerlink" title="临时手机"></a>临时手机</h2><p><span class="exturl" data-url="aHR0cHM6Ly95dW5kdWFueGluLm5ldC8=" title="https://yunduanxin.net/">免费在线接收手机短信验证码<i class="fa fa-external-link"></i></span></p>
-<h2 id="临时邮箱"><a href="#临时邮箱" class="headerlink" title="临时邮箱"></a>临时邮箱</h2><p><span class="exturl" data-url="aHR0cHM6Ly8xMG1pbnV0ZW1haWwubmV0L3JlYWRtYWlsLmh0bWw/bWlkPUxsbXE3Qg==" title="https://10minutemail.net/readmail.html?mid=Llmq7B">十分钟邮箱<i class="fa fa-external-link"></i></span></p>
-]]></content>
-      <tags>
-        <tag>小技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>修改class方法总结</title>
     <url>/2018/05/08/%E4%BF%AE%E6%94%B9class%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h2 id="使用jclasslib工具修改"><a href="#使用jclasslib工具修改" class="headerlink" title="使用jclasslib工具修改"></a>使用<code>jclasslib</code>工具修改</h2><p>源码       <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2luZ29rZWdlbC9qY2xhc3NsaWI=" title="https://github.com/ingokegel/jclasslib">https://github.com/ingokegel/jclasslib<i class="fa fa-external-link"></i></span><br>官方下载    <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2luZ29rZWdlbC9qY2xhc3NsaWIvcmVsZWFzZXM=" title="https://github.com/ingokegel/jclasslib/releases">https://github.com/ingokegel/jclasslib/releases<i class="fa fa-external-link"></i></span></p>
@@ -4230,6 +4220,16 @@ java -jar x_springboot.jar --server.port=8888
       <tags>
         <tag>java</tag>
         <tag>class</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>临时手机邮箱</title>
+    <url>/2020/02/03/%E4%B8%B4%E6%97%B6%E6%89%8B%E6%9C%BA%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<h2 id="临时手机"><a href="#临时手机" class="headerlink" title="临时手机"></a>临时手机</h2><p><span class="exturl" data-url="aHR0cHM6Ly95dW5kdWFueGluLm5ldC8=" title="https://yunduanxin.net/">免费在线接收手机短信验证码<i class="fa fa-external-link"></i></span></p>
+<h2 id="临时邮箱"><a href="#临时邮箱" class="headerlink" title="临时邮箱"></a>临时邮箱</h2><p><span class="exturl" data-url="aHR0cHM6Ly8xMG1pbnV0ZW1haWwubmV0L3JlYWRtYWlsLmh0bWw/bWlkPUxsbXE3Qg==" title="https://10minutemail.net/readmail.html?mid=Llmq7B">十分钟邮箱<i class="fa fa-external-link"></i></span></p>
+]]></content>
+      <tags>
+        <tag>小技巧</tag>
       </tags>
   </entry>
   <entry>
