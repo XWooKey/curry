@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico">
@@ -49,12 +49,12 @@
   };
 </script>
 
-  <meta name="description" content="删除MAVEN仓库无用数据由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的jar包。 删除由于网络原因引起的异常POM.xmllinux版本 1find &#x2F;mnt&#x2F;e&#x2F;jpackageHub&#x2F;maven&#x2F;repository -size 8933c -name &quot;*.pom&quot; |xargs -I&amp;#123;&amp;#125; md5">
+  <meta name="description" content="删除MAVEN仓库无用数据由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的jar包。 删除由于网络原因引起的异常POM.xmllinux版本 1find &#x2F;mnt&#x2F;e&#x2F;jpackageHub&#x2F;maven&#x2F;repository -size 8933c -name &quot;*.pom&quot; |xargs -I&amp;#123;&amp;#125; md5sum &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="刷新MAVEN仓库删除无用文件">
 <meta property="og:url" content="http://127.0.0.1:4000/2020/02/04/%E5%88%B7%E6%96%B0MAVEN%E4%BB%93%E5%BA%93%E5%88%A0%E9%99%A4%E6%97%A0%E7%94%A8%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="咖喱鸡扒饭">
-<meta property="og:description" content="删除MAVEN仓库无用数据由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的jar包。 删除由于网络原因引起的异常POM.xmllinux版本 1find &#x2F;mnt&#x2F;e&#x2F;jpackageHub&#x2F;maven&#x2F;repository -size 8933c -name &quot;*.pom&quot; |xargs -I&amp;#123;&amp;#125; md5">
+<meta property="og:description" content="删除MAVEN仓库无用数据由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的jar包。 删除由于网络原因引起的异常POM.xmllinux版本 1find &#x2F;mnt&#x2F;e&#x2F;jpackageHub&#x2F;maven&#x2F;repository -size 8933c -name &quot;*.pom&quot; |xargs -I&amp;#123;&amp;#125; md5sum &amp;#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-04T10:19:34.000Z">
 <meta property="article:modified_time" content="2020-11-04T13:08:29.765Z">
@@ -264,7 +264,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>715</span>
+              <span>625</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -285,11 +285,11 @@
       
         <h2 id="删除MAVEN仓库无用数据"><a href="#删除MAVEN仓库无用数据" class="headerlink" title="删除MAVEN仓库无用数据"></a>删除MAVEN仓库无用数据</h2><p>由于网络限制下载MAVEN仓库中时可能存在奇奇怪怪的文件 ，由于这些文件的存在会导致项目无法下载新的<code>jar</code>包。</p>
 <h3 id="删除由于网络原因引起的异常POM-xml"><a href="#删除由于网络原因引起的异常POM-xml" class="headerlink" title="删除由于网络原因引起的异常POM.xml"></a>删除由于网络原因引起的异常POM.xml</h3><p>linux版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -size 8933c -name <span class="string">&quot;*.pom&quot;</span> |xargs -I&#123;&#125; md5sum &#123;&#125;|grep <span class="string">&#x27;a6af53c698915601580f9079dad52b7a&#x27;</span> | awk -F <span class="string">&#x27;  &#x27;</span> <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs -I&#123;&#125; dirname &#123;&#125; | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -size 8933c -name <span class="string">"*.pom"</span> |xargs -I&#123;&#125; md5sum &#123;&#125;|grep <span class="string">'a6af53c698915601580f9079dad52b7a'</span> | awk -F <span class="string">'  '</span> <span class="string">'&#123;print $2&#125;'</span> | xargs -I&#123;&#125; dirname &#123;&#125; | xargs rm -rf</span><br></pre></td></tr></table></figure>
 <h3 id="删除lastUpdated文件"><a href="#删除lastUpdated文件" class="headerlink" title="删除lastUpdated文件"></a>删除lastUpdated文件</h3><p>linux版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -name <span class="string">&quot;*lastUpdated*&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /mnt/e/jpackageHub/maven/repository -name <span class="string">"*lastUpdated*"</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
 <p>windows版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem create by NettQun</span><br><span class="line">  </span><br><span class="line">rem 这里写你的仓库路径</span><br><span class="line"><span class="built_in">set</span> REPOSITORY_PATH=E:\jpackageHub\maven\repository</span><br><span class="line">rem 正在搜索...</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">&quot;delims=&quot;</span> %%i <span class="keyword">in</span> (<span class="string">&#x27;dir /b /s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#x27;</span>) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    del /s /q <span class="string">&quot;%%i&quot;</span></span><br><span class="line">)</span><br><span class="line">rem 搜索完毕</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">rem create by NettQun</span><br><span class="line">  </span><br><span class="line">rem 这里写你的仓库路径</span><br><span class="line"><span class="built_in">set</span> REPOSITORY_PATH=E:\jpackageHub\maven\repository</span><br><span class="line">rem 正在搜索...</span><br><span class="line"><span class="keyword">for</span> /f <span class="string">"delims="</span> %%i <span class="keyword">in</span> (<span class="string">'dir /b /s "%REPOSITORY_PATH%\*lastUpdated*"'</span>) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    del /s /q <span class="string">"%%i"</span></span><br><span class="line">)</span><br><span class="line">rem 搜索完毕</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -393,7 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4MAVEN%E4%BB%93%E5%BA%93%E6%97%A0%E7%94%A8%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">删除MAVEN仓库无用数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%94%B1%E4%BA%8E%E7%BD%91%E7%BB%9C%E5%8E%9F%E5%9B%A0%E5%BC%95%E8%B5%B7%E7%9A%84%E5%BC%82%E5%B8%B8POM-xml"><span class="nav-number">1.1.</span> <span class="nav-text">删除由于网络原因引起的异常POM.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4lastUpdated%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">删除lastUpdated文件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除MAVEN仓库无用数据"><span class="nav-number">1.</span> <span class="nav-text">删除MAVEN仓库无用数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除由于网络原因引起的异常POM-xml"><span class="nav-number">1.1.</span> <span class="nav-text">删除由于网络原因引起的异常POM.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除lastUpdated文件"><span class="nav-number">1.2.</span> <span class="nav-text">删除lastUpdated文件</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -489,13 +489,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">84k</span>
+    <span title="站点总字数">81k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:16</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
 
         

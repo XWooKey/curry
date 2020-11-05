@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico">
@@ -379,7 +379,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>542</span>
+              <span>541</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -398,7 +398,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
 <h2 id="开始挂载光盘"><a href="#开始挂载光盘" class="headerlink" title="开始挂载光盘"></a>开始挂载光盘</h2><p>从上面的操作可以看到<code>cdrom</code>是光盘的名字<br>执行挂载光盘命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;mnt&#x2F;centos7</span><br><span class="line">mount &#x2F;dev&#x2F;cdrom &#x2F;mnt&#x2F;centos7</span><br></pre></td></tr></table></figure>
 
@@ -479,7 +479,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>484</span>
+              <span>482</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -498,7 +498,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
 
 <h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
 
@@ -510,7 +510,7 @@
 </ul>
 <p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
 <h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -879,13 +879,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">84k</span>
+    <span title="站点总字数">81k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:16</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
 
         

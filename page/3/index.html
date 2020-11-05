@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico">
@@ -252,14 +252,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>3.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -278,7 +278,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p>以创建新的 git 仓库。</p>
 <h3 id="检出仓库"><a href="#检出仓库" class="headerlink" title="检出仓库"></a>检出仓库</h3><p>执行如下命令以创建一个本地仓库的克隆版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> /path/to/repository </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> /path/to/repository</span><br></pre></td></tr></table></figure>
 <p>如果是远端服务器上的仓库，你的命令会是这个样子：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> username@host:/path/to/repository</span><br></pre></td></tr></table></figure>
 <h3 id="工作流"><a href="#工作流" class="headerlink" title="工作流"></a>工作流</h3><p>你的本地仓库由 git 维护的三棵“树”组成。第一个是你的<code>工作目录</code>，它持有实际文件；第二个是<code>缓存区（Index）</code>，它像个缓存区域，临时保存你的改动；最后是 <code>HEAD</code>，指向你最近一次提交后的结果。<br><img src="/2018/08/05/git%E7%AE%80%E6%98%93%E6%80%BB%E7%BB%93/image-52.png" alt="upload successful"></p>
@@ -286,7 +286,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add *</span><br></pre></td></tr></table></figure>
 <p>这是 git 基本工作流程的第一步；使用如下命令以实际提交改动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;代码提交信息&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"代码提交信息"</span></span><br></pre></td></tr></table></figure>
 <p>现在，你的改动已经提交到了<code>HEAD</code>，但是还没到你的远端仓库。</p>
 <h3 id="推送改动"><a href="#推送改动" class="headerlink" title="推送改动"></a>推送改动</h3><p>你的改动现在已经在本地仓库的<code>HEAD</code>中了。执行如下命令以将这些改动提交到远端仓库：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
@@ -332,7 +332,7 @@
 
 <h3 id="gitignore-忽略文件"><a href="#gitignore-忽略文件" class="headerlink" title=".gitignore 忽略文件"></a>.gitignore 忽略文件</h3><p>在项目根路径下添加<code>.gitignore</code>文件,在其中填写需要过滤的文件</p>
 <p>如果不生效则执行以下命令。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;comment&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"comment"</span></span><br></pre></td></tr></table></figure>
 
 
 <h4 id="通过网站生成-推荐"><a href="#通过网站生成-推荐" class="headerlink" title="通过网站生成(推荐)"></a>通过网站生成(推荐)</h4><blockquote>
@@ -364,7 +364,7 @@
 <h4 id="在Windows中安装命令行客户端"><a href="#在Windows中安装命令行客户端" class="headerlink" title="在Windows中安装命令行客户端"></a>在Windows中安装命令行客户端</h4><blockquote>
 <p>只需要添加一个cmd文件,且需要安装curl</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@rem Do not use <span class="string">&quot;echo off&quot;</span> to not affect any child calls.</span><br><span class="line">@setlocal</span><br><span class="line"></span><br><span class="line">@rem Get the abolute path to the parent directory, <span class="built_in">which</span> is assumed to be the</span><br><span class="line">@rem Git installation root.</span><br><span class="line">@<span class="keyword">for</span> /F <span class="string">&quot;delims=&quot;</span> %%I <span class="keyword">in</span> (<span class="string">&quot;%~dp0..&quot;</span>) <span class="keyword">do</span> @<span class="built_in">set</span> git_install_root=%%~fI</span><br><span class="line">@<span class="keyword">for</span> /F <span class="string">&quot;delims=&quot;</span> %%I <span class="keyword">in</span> (<span class="string">&quot;%~dp0..&quot;</span>) <span class="keyword">do</span> @<span class="built_in">set</span> git_mingw_root=%%~fI\mingw</span><br><span class="line">@<span class="keyword">if</span> not exist <span class="string">&quot;%git_mingw_root%&quot;</span> @<span class="built_in">set</span> git_mingw_root=%git_install_root%\mingw64</span><br><span class="line">@<span class="built_in">set</span> PATH=%git_install_root%\bin;%git_mingw_root%\bin;%PATH%</span><br><span class="line"></span><br><span class="line">@<span class="keyword">if</span> not exist <span class="string">&quot;%HOME%&quot;</span> @<span class="built_in">set</span> HOME=%HOMEDRIVE%%HOMEPATH%</span><br><span class="line">@<span class="keyword">if</span> not exist <span class="string">&quot;%HOME%&quot;</span> @<span class="built_in">set</span> HOME=%USERPROFILE%</span><br><span class="line"></span><br><span class="line">@curl.exe -L -s https://www.gitignore.io/api/%*</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@rem Do not use <span class="string">"echo off"</span> to not affect any child calls.</span><br><span class="line">@setlocal</span><br><span class="line"></span><br><span class="line">@rem Get the abolute path to the parent directory, <span class="built_in">which</span> is assumed to be the</span><br><span class="line">@rem Git installation root.</span><br><span class="line">@<span class="keyword">for</span> /F <span class="string">"delims="</span> %%I <span class="keyword">in</span> (<span class="string">"%~dp0.."</span>) <span class="keyword">do</span> @<span class="built_in">set</span> git_install_root=%%~fI</span><br><span class="line">@<span class="keyword">for</span> /F <span class="string">"delims="</span> %%I <span class="keyword">in</span> (<span class="string">"%~dp0.."</span>) <span class="keyword">do</span> @<span class="built_in">set</span> git_mingw_root=%%~fI\mingw</span><br><span class="line">@<span class="keyword">if</span> not exist <span class="string">"%git_mingw_root%"</span> @<span class="built_in">set</span> git_mingw_root=%git_install_root%\mingw64</span><br><span class="line">@<span class="built_in">set</span> PATH=%git_install_root%\bin;%git_mingw_root%\bin;%PATH%</span><br><span class="line"></span><br><span class="line">@<span class="keyword">if</span> not exist <span class="string">"%HOME%"</span> @<span class="built_in">set</span> HOME=%HOMEDRIVE%%HOMEPATH%</span><br><span class="line">@<span class="keyword">if</span> not exist <span class="string">"%HOME%"</span> @<span class="built_in">set</span> HOME=%USERPROFILE%</span><br><span class="line"></span><br><span class="line">@curl.exe -L -s https://www.gitignore.io/api/%*</span><br></pre></td></tr></table></figure>
 <p>将以上命令存在<code>git</code>的安装目录中的<code>cmd</code>目录下,存为<code>gi.cmd</code>   </p>
 <p>之后可以使用一下命令来添加</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gi java,python &gt;&gt; .gitignore</span><br></pre></td></tr></table></figure>
@@ -372,11 +372,11 @@
 <p>一行命令无其他依赖</p>
 </blockquote>
 <p>bash客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;function gi() &#123; curl -L -s https://www.gitignore.io/api/\$@ ;&#125;&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"function gi() &#123; curl -L -s https://www.gitignore.io/api/\$@ ;&#125;"</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
 <p>zsh客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;function gi() &#123; curl -L -s https://www.gitignore.io/api/\$@ ;&#125;&quot;</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"function gi() &#123; curl -L -s https://www.gitignore.io/api/\$@ ;&#125;"</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 <p>fish客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/fish</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">printf</span> <span class="string">&quot;function gi\n\tcurl -L -s https://www.gitignore.io/api/\$argv\nend\n&quot;</span> &gt; ~/.config/fish/<span class="built_in">functions</span>/gi.fish</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/fish</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">printf</span> <span class="string">"function gi\n\tcurl -L -s https://www.gitignore.io/api/\$argv\nend\n"</span> &gt; ~/.config/fish/<span class="built_in">functions</span>/gi.fish</span><br></pre></td></tr></table></figure>
 
 <h4 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h4><p>以上方案都来自于：   </p>
 <blockquote>
@@ -445,7 +445,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
+              <span>993</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -553,12 +553,12 @@
 
       
           <blockquote>
-<p>github <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lsYW55dQ==" title="https://github.com/ilanyu">https://github.com/ilanyu<i class="fa fa-external-link"></i></span><br>原文地址<span class="exturl" data-url="aHR0cDovL2Jsb2cubGFueXVzLmNvbS9hcmNoaXZlcy8xNzQuaHRtbA==" title="http://blog.lanyus.com/archives/174.html">http://blog.lanyus.com/archives/174.html<i class="fa fa-external-link"></i></span><br>本地备份 <a href="%5Cfiles%5CIntelliJIDEALicenseServer(v1.6).zip">IntelliJIDEALicenseServer(v1.6).zip)</a><br>反向代理工具 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lsYW55dS9SZXZlcnNlUHJveHkvcmVsZWFzZXMvbGF0ZXN0" title="https://github.com/ilanyu/ReverseProxy/releases/latest">https://github.com/ilanyu/C/releases/latest<i class="fa fa-external-link"></i></span><br>本地备份  <a href="%5Cfiles%5CReverseProxy_windows_amd64.exe">ReverseProxy_windows_amd64.exe</a>   </p>
+<p>github <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lsYW55dQ==" title="https://github.com/ilanyu">https://github.com/ilanyu<i class="fa fa-external-link"></i></span><br>原文地址<span class="exturl" data-url="aHR0cDovL2Jsb2cubGFueXVzLmNvbS9hcmNoaXZlcy8xNzQuaHRtbA==" title="http://blog.lanyus.com/archives/174.html">http://blog.lanyus.com/archives/174.html<i class="fa fa-external-link"></i></span><br>本地备份 <a href="\files\IntelliJIDEALicenseServer(v1.6).zip">IntelliJIDEALicenseServer(v1.6).zip)</a><br>反向代理工具 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lsYW55dS9SZXZlcnNlUHJveHkvcmVsZWFzZXMvbGF0ZXN0" title="https://github.com/ilanyu/ReverseProxy/releases/latest">https://github.com/ilanyu/C/releases/latest<i class="fa fa-external-link"></i></span><br>本地备份  <a href="\files\ReverseProxy_windows_amd64.exe">ReverseProxy_windows_amd64.exe</a>   </p>
 </blockquote>
 <p>已经公开的地址</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cDovL2J0c2hhLmNvbTo0MTAxNy8=" title="http://btsha.com:41017/">http://btsha.com:41017/<i class="fa fa-external-link"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovL2lkZWEuc3VubGVvbi50b3Av" title="http://idea.sunleon.top/">http://idea.sunleon.top<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL2lkZWEuc3VubGVvbi50b3A=" title="http://idea.sunleon.top">http://idea.sunleon.top<i class="fa fa-external-link"></i></span></li>
 </ul>
 <h2 id="IDEA激活方法"><a href="#IDEA激活方法" class="headerlink" title="IDEA激活方法"></a>IDEA激活方法</h2><p>得到<code>IntelliJIDEALicenseServer(v1.6).zip)</code>解压,<strong>由于127.0.0.1被封杀<span style="color
 :#FF0000">不可以在本地启动</span>,需要部署在虚拟机或者局域网内恰机器使用</strong></p>
@@ -992,7 +992,7 @@
 <p>执行这步操作会在<code>~\.ssh</code>下生成密钥</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@guyu-hadoop app]<span class="comment"># ll</span></span><br><span class="line">-rw-------. 1 root root 1671 Dec 10 03:34 id_rsa</span><br><span class="line">-rw-r--r--. 1 root root  398 Dec 10 03:34 id_rsa.pub   <span class="comment">#只需要关心这个</span></span><br><span class="line">-rw-r--r--. 1 root root  400 Dec 10 03:24 known_hosts</span><br></pre></td></tr></table></figure>
 
-<h2 id="记录公共密钥"><a href="#记录公共密钥" class="headerlink" title="记录公共密钥"></a>记录公共密钥</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cd ~/.ssh</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cat id_rsa.pub &gt;&gt; authorized_keys</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># chmod 600 authorized_keys </span></span><br></pre></td></tr></table></figure>
+<h2 id="记录公共密钥"><a href="#记录公共密钥" class="headerlink" title="记录公共密钥"></a>记录公共密钥</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cd ~/.ssh</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cat id_rsa.pub &gt;&gt; authorized_keys</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># chmod 600 authorized_keys</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="拷贝到其他机器-重复这步操作"><a href="#拷贝到其他机器-重复这步操作" class="headerlink" title="拷贝到其他机器 重复这步操作"></a>拷贝到其他机器 重复这步操作</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># scp authorized_keys root@h2:~/.ssh</span></span><br></pre></td></tr></table></figure>
 
@@ -1367,13 +1367,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">84k</span>
+    <span title="站点总字数">81k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:16</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
 
         
