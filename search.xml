@@ -228,7 +228,47 @@
   <entry>
     <title>E2E版本安装手册</title>
     <url>/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="手册安装版本速查"><a href="#手册安装版本速查" class="headerlink" title="手册安装版本速查"></a>手册安装版本速查</h3><h3 id="安装前确认"><a href="#安装前确认" class="headerlink" title="安装前确认"></a>安装前确认</h3><table>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="手册软件安装版本速查"><a href="#手册软件安装版本速查" class="headerlink" title="手册软件安装版本速查"></a>手册软件安装版本速查</h2><table>
+<thead>
+<tr>
+<th>软件</th>
+<th>端口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>CentOS</code></td>
+<td><code>7.8</code> (2003)</td>
+</tr>
+<tr>
+<td><code>java</code></td>
+<td><code>8u202</code></td>
+</tr>
+<tr>
+<td><code>mysql</code></td>
+<td><code>8.0.22</code></td>
+</tr>
+<tr>
+<td><code>nginx</code></td>
+<td><code>1.17.10</code></td>
+</tr>
+<tr>
+<td><code>erlang</code></td>
+<td><code>23.1</code></td>
+</tr>
+<tr>
+<td><code>postgresql</code></td>
+<td><code>12</code></td>
+</tr>
+<tr>
+<td><code>rabbitmq</code></td>
+<td><code>3.8.3</code></td>
+</tr>
+<tr>
+<td><code>redis</code></td>
+<td><code>5.0.7</code></td>
+</tr>
+</tbody></table>
+<h2 id="安装前确认"><a href="#安装前确认" class="headerlink" title="安装前确认"></a>安装前确认</h2><table>
 <thead>
 <tr>
 <th>软件</th>
@@ -260,63 +300,77 @@
 <td>本手册</td>
 </tr>
 </tbody></table>
-<a id="more"></a>
-
-<h3 id="端口速查"><a href="#端口速查" class="headerlink" title="端口速查"></a>端口速查</h3><p>请提早确认以下端口没有占用</p>
+<h2 id="端口速查"><a href="#端口速查" class="headerlink" title="端口速查"></a>端口速查</h2><p>请提早确认以下端口没有占用</p>
 <table>
 <thead>
 <tr>
 <th>软件</th>
 <th>端口</th>
-<th>备注</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>geoserver</code></td>
 <td>8080</td>
-<td></td>
 </tr>
 <tr>
 <td><code>mysql</code></td>
 <td>3306</td>
-<td></td>
 </tr>
 <tr>
 <td><code>nginx</code></td>
 <td>8089</td>
-<td></td>
 </tr>
 <tr>
 <td><code>redis</code></td>
 <td>6379</td>
-<td></td>
 </tr>
 <tr>
 <td><code>minio</code></td>
 <td>9001</td>
-<td></td>
 </tr>
 <tr>
 <td><code>rabbitmq</code></td>
 <td>15672,5672</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td><code>netop-auth</code></td>
+<td>3001</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td><code>netop-gateway</code></td>
+<td>10000</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td><code>netop-upms</code></td>
+<td>4017</td>
+</tr>
+<tr>
+<td><code>netop-config</code></td>
+<td>10302</td>
+</tr>
+<tr>
+<td><code>netop-e2e</code></td>
+<td>11602</td>
+</tr>
+<tr>
+<td><code>netop-map</code></td>
+<td>10902</td>
+</tr>
+<tr>
+<td><code>netop-rabbitmq</code></td>
+<td>11202</td>
+</tr>
+<tr>
+<td><code>netop-top</code></td>
+<td>11702</td>
+</tr>
+<tr>
+<td><code>netop-visual-common-web</code></td>
+<td>11402</td>
 </tr>
 </tbody></table>
+<a id="more"></a>
+
 <h1 id="web端安装"><a href="#web端安装" class="headerlink" title="web端安装"></a>web端安装</h1><h2 id="放置版本包"><a href="#放置版本包" class="headerlink" title="放置版本包"></a>放置版本包</h2><p>将 一下<code>web</code>文件夹放到<code>/opt/package</code> 目录下</p>
 <h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h2><h3 id="iptable"><a href="#iptable" class="headerlink" title="iptable"></a>iptable</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -F</span><br><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
 
@@ -558,19 +612,6 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA查看类图</title>
-    <url>/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/</url>
-    <content><![CDATA[<h2 id="超级无敌"><a href="#超级无敌" class="headerlink" title="超级无敌"></a>超级无敌</h2><p>ctrl + shift + alt + u 父类<br>ctrl + alt + b  子类</p>
-<h2 id="看继承关系"><a href="#看继承关系" class="headerlink" title="看继承关系"></a>看继承关系</h2><p>快捷键 <code>ctrl + H</code> 查看hierarchy,只能查看向上向下继承关系，而不能看实现了哪些接口。<br>右键选择Diagrams（也可以使用快捷键 <code>ctrl+alt+u</code> ，更快捷）</p>
-<h2 id="看接口的实现关系"><a href="#看接口的实现关系" class="headerlink" title="看接口的实现关系"></a>看接口的实现关系</h2><p>快捷键 <code>ctrl + alt + B</code> 会显示出跟这个接口有关系的类。</p>
-<h2 id="查看关系类图"><a href="#查看关系类图" class="headerlink" title="查看关系类图"></a>查看关系类图</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. Ctrl + Alt + Shift + U</span><br><span class="line">2. Enter</span><br><span class="line">3. Ctrl + Alt + B</span><br><span class="line">4. Ctrl + A</span><br><span class="line">5. Enter</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/image-87.png" alt="upload successful"></p>
-]]></content>
-      <tags>
-        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -1396,6 +1437,19 @@
       </tags>
   </entry>
   <entry>
+    <title>IDEA查看类图</title>
+    <url>/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/</url>
+    <content><![CDATA[<h2 id="超级无敌"><a href="#超级无敌" class="headerlink" title="超级无敌"></a>超级无敌</h2><p>ctrl + shift + alt + u 父类<br>ctrl + alt + b  子类</p>
+<h2 id="看继承关系"><a href="#看继承关系" class="headerlink" title="看继承关系"></a>看继承关系</h2><p>快捷键 <code>ctrl + H</code> 查看hierarchy,只能查看向上向下继承关系，而不能看实现了哪些接口。<br>右键选择Diagrams（也可以使用快捷键 <code>ctrl+alt+u</code> ，更快捷）</p>
+<h2 id="看接口的实现关系"><a href="#看接口的实现关系" class="headerlink" title="看接口的实现关系"></a>看接口的实现关系</h2><p>快捷键 <code>ctrl + alt + B</code> 会显示出跟这个接口有关系的类。</p>
+<h2 id="查看关系类图"><a href="#查看关系类图" class="headerlink" title="查看关系类图"></a>查看关系类图</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. Ctrl + Alt + Shift + U</span><br><span class="line">2. Enter</span><br><span class="line">3. Ctrl + Alt + B</span><br><span class="line">4. Ctrl + A</span><br><span class="line">5. Enter</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/12/10/IDEA%E6%9F%A5%E7%9C%8B%E7%B1%BB%E5%9B%BE/image-87.png" alt="upload successful"></p>
+]]></content>
+      <tags>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux免密钥登陆</title>
     <url>/2018/01/04/Linux%E5%85%8D%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/</url>
     <content><![CDATA[<blockquote>
@@ -1425,19 +1479,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux安装ruby</title>
-    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
-    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
-<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux安装java</title>
     <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
     <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
@@ -1451,6 +1492,41 @@
       <tags>
         <tag>linux</tag>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux挂载本地实体光盘</title>
+    <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
+    <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
+<h2 id="开始挂载光盘"><a href="#开始挂载光盘" class="headerlink" title="开始挂载光盘"></a>开始挂载光盘</h2><p>从上面的操作可以看到<code>cdrom</code>是光盘的名字<br>执行挂载光盘命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;mnt&#x2F;centos7</span><br><span class="line">mount &#x2F;dev&#x2F;cdrom &#x2F;mnt&#x2F;centos7</span><br></pre></td></tr></table></figure>
+
+<h2 id="复制光盘文件"><a href="#复制光盘文件" class="headerlink" title="复制光盘文件"></a>复制光盘文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -p &#x2F;opt&#x2F;iso&#x2F;centos7</span><br><span class="line">cp -r &#x2F;mnt&#x2F;centos7&#x2F;* &#x2F;opt&#x2F;iso&#x2F;centos7</span><br></pre></td></tr></table></figure>
+<p>可以使用以下命令查看文件夹内文件总数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls -l|grep &quot;^-&quot;|wc -l</span><br></pre></td></tr></table></figure>
+
+<h2 id="对比是否复制完成"><a href="#对比是否复制完成" class="headerlink" title="对比是否复制完成"></a>对比是否复制完成</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">du -h &#x2F;opt&#x2F;iso&#x2F;</span><br><span class="line">du -h &#x2F;mnt&#x2F;iso&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载光盘"><a href="#卸载光盘" class="headerlink" title="卸载光盘"></a>卸载光盘</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">umount &#x2F;mnt&#x2F;centos7</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装ruby</title>
+    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
+    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
+<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1493,28 +1569,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux挂载本地实体光盘</title>
-    <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
-    <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
-<h2 id="开始挂载光盘"><a href="#开始挂载光盘" class="headerlink" title="开始挂载光盘"></a>开始挂载光盘</h2><p>从上面的操作可以看到<code>cdrom</code>是光盘的名字<br>执行挂载光盘命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;mnt&#x2F;centos7</span><br><span class="line">mount &#x2F;dev&#x2F;cdrom &#x2F;mnt&#x2F;centos7</span><br></pre></td></tr></table></figure>
-
-<h2 id="复制光盘文件"><a href="#复制光盘文件" class="headerlink" title="复制光盘文件"></a>复制光盘文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -p &#x2F;opt&#x2F;iso&#x2F;centos7</span><br><span class="line">cp -r &#x2F;mnt&#x2F;centos7&#x2F;* &#x2F;opt&#x2F;iso&#x2F;centos7</span><br></pre></td></tr></table></figure>
-<p>可以使用以下命令查看文件夹内文件总数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls -l|grep &quot;^-&quot;|wc -l</span><br></pre></td></tr></table></figure>
-
-<h2 id="对比是否复制完成"><a href="#对比是否复制完成" class="headerlink" title="对比是否复制完成"></a>对比是否复制完成</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">du -h &#x2F;opt&#x2F;iso&#x2F;</span><br><span class="line">du -h &#x2F;mnt&#x2F;iso&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="卸载光盘"><a href="#卸载光盘" class="headerlink" title="卸载光盘"></a>卸载光盘</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">umount &#x2F;mnt&#x2F;centos7</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MAVEN设置UTF-8</title>
     <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
     <content><![CDATA[<ol>
@@ -1528,6 +1582,21 @@
       <tags>
         <tag>java</tag>
         <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL删除重复数据</title>
+    <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>sql</tag>
       </tags>
   </entry>
   <entry>
@@ -1699,32 +1768,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL删除重复数据</title>
-    <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>sql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
-    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
-    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
-<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
-<p>增加代码如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
-<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
-<p>index.wpy 循环的例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>centos7下解决yum install mysql-server没有可用包</title>
     <url>/2018/09/03/centos7%E4%B8%8B%E8%A7%A3%E5%86%B3yum-install-mysql-server%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E5%8C%85/</url>
     <content><![CDATA[<h2 id="安装从网上下载文件的wget命令"><a href="#安装从网上下载文件的wget命令" class="headerlink" title="安装从网上下载文件的wget命令"></a>安装从网上下载文件的wget命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@master ~]# yum -y install wget</span><br></pre></td></tr></table></figure>
@@ -1739,6 +1782,22 @@
 <h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE user SET Password&#x3D;PASSWORD(&#39;root&#39;) WHERE user&#x3D;&#39;root&#39;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
+    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
+<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
+<p>增加代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
+<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
+<p>index.wpy 循环的例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>hadoop本地调试环境搭建</title>
+    <url>/2018/03/21/hadoop%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>content-type格式对照表</title>
@@ -2918,11 +2977,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hadoop本地调试环境搭建</title>
-    <url>/2018/03/21/hadoop%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/11/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==" title="https://hexo.io/">Hexo<i class="fa fa-external-link"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv" title="https://hexo.io/docs/">documentation<i class="fa fa-external-link"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=" title="https://hexo.io/docs/troubleshooting.html">troubleshooting<i class="fa fa-external-link"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==" title="https://github.com/hexojs/hexo/issues">GitHub<i class="fa fa-external-link"></i></span>.</p>
@@ -3149,6 +3203,20 @@
       </tags>
   </entry>
   <entry>
+    <title>markdeep使用</title>
+    <url>/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p><span class="exturl" data-url="aHR0cDovL2Nhc3VhbC1lZmZlY3RzLmNvbS9tYXJrZGVlcC8=" title="http://casual-effects.com/markdeep/">http://casual-effects.com/markdeep/<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<p>直接在结尾加上</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">class</span>=<span class="string">"fallback"</span>&gt;</span><span class="css"><span class="selector-tag">body</span>&#123;<span class="attribute">visibility</span>:hidden&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">markdeepOptions=&#123;tocStyle:<span class="string">'long'</span>&#125;;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Markdeep: --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://casual-effects.com/markdeep/latest/markdeep.min.js?"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>markdeep</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Maven基本概念与核心配置</title>
     <url>/2018/08/08/maven%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="maven安装与核心概念"><a href="#maven安装与核心概念" class="headerlink" title="maven安装与核心概念"></a>maven安装与核心概念</h1><ol>
@@ -3298,20 +3366,6 @@
       <tags>
         <tag>java</tag>
         <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>markdeep使用</title>
-    <url>/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p><span class="exturl" data-url="aHR0cDovL2Nhc3VhbC1lZmZlY3RzLmNvbS9tYXJrZGVlcC8=" title="http://casual-effects.com/markdeep/">http://casual-effects.com/markdeep/<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<p>直接在结尾加上</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">class</span>=<span class="string">"fallback"</span>&gt;</span><span class="css"><span class="selector-tag">body</span>&#123;<span class="attribute">visibility</span>:hidden&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">markdeepOptions=&#123;tocStyle:<span class="string">'long'</span>&#125;;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Markdeep: --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://casual-effects.com/markdeep/latest/markdeep.min.js?"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>markdeep</tag>
       </tags>
   </entry>
   <entry>
