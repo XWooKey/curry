@@ -188,7 +188,10 @@
 <td>远程协助</td>
 </tr>
 </tbody></table>
-<h3 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h3><table>
+<h3 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h3><blockquote>
+<p>所有黑色方框都对应一个脚本</p>
+</blockquote>
+<table>
 <thead>
 <tr>
 <th>数据源</th>
@@ -222,7 +225,8 @@
 <td>TODO</td>
 </tr>
 </tbody></table>
-<h3 id="大数据步"><a href="#大数据步" class="headerlink" title="大数据步"></a>大数据步</h3><p>web端导入 工参，邻区<br>数据上传（MR、XDR、OMC报表）</p>
+<h3 id="大数据步"><a href="#大数据步" class="headerlink" title="大数据步"></a>大数据步</h3><p><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201109093926911.png" alt="image-20201109093926911"></p>
+<p>&lt;! – </p>
 <ul>
 <li>数据清洗</li>
 <li>MR解析入库、回填</li>
@@ -237,6 +241,7 @@
 <li>小区栅格级MR处理</li>
 <li>基站栅格级MR处理</li>
 </ul>
+<p>–&gt;</p>
 <a id="more"></a>
 
 <h1 id="web端安装"><a href="#web端安装" class="headerlink" title="web端安装"></a>web端安装</h1><h2 id="放置版本包"><a href="#放置版本包" class="headerlink" title="放置版本包"></a>放置版本包</h2><p>将 一下<code>web</code>文件夹放到<code>/opt/package</code> 目录下</p>
@@ -501,12 +506,16 @@
 
 <h2 id="e2e"><a href="#e2e" class="headerlink" title="e2e"></a>e2e</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p e2e</span><br><span class="line">rm -rf /var/<span class="built_in">log</span>/e2e/*</span><br><span class="line">mkdir -p /var/<span class="built_in">log</span>/e2e/</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-register.jar -Dnacos.home=e2e --spring.profiles.active=dev  --server.port=8849 &gt; /var/<span class="built_in">log</span>/e2e/register.log 2&gt;&amp;1 &amp;</span><br><span class="line">sleep 40s</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-gateway.jar   --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/gateway.log 2&gt;&amp;1 &amp;</span><br><span class="line">sleep 40s</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-auth.jar   --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/auth.log 2&gt;&amp;1 &amp;</span><br><span class="line">sleep 40s</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-upms-biz.jar   --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/upms-biz.log 2&gt;&amp;1 &amp;</span><br><span class="line">sleep 40s</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-rabbitmq.jar   --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/rabbitmq.log 2&gt;&amp;1 &amp;</span><br><span class="line">sleep 30s</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-map.jar   --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/map.log 2&gt;&amp;1 &amp;</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-visual-common-web.jar   --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/visual-common-web.log 2&gt;&amp;1 &amp;</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-config.jar  --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/config.log 2&gt;&amp;1 &amp;</span><br><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar jars/netop-e2e.jar  --spring.profiles.active=dev &gt; /var/<span class="built_in">log</span>/e2e/netop-e2e.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
-<h1 id="项目权限及初始化"><a href="#项目权限及初始化" class="headerlink" title="项目权限及初始化"></a>项目权限及初始化</h1><p>登陆<code>http://172.30.100.186:8889</code>,用户名<code>admin</code>,密码<code>123456</code>,输入验证码后即可进入</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h3 id="地市"><a href="#地市" class="headerlink" title="地市"></a>地市</h3><p>TODO</p>
-<h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><p>TODO</p>
-<h3 id="新建角色"><a href="#新建角色" class="headerlink" title="新建角色"></a>新建角色</h3><p>TODO</p>
-<h3 id="绑定菜单"><a href="#绑定菜单" class="headerlink" title="绑定菜单"></a>绑定菜单</h3><p>TODO</p>
-<h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p>TODO</p>
+<h1 id="项目权限及初始化"><a href="#项目权限及初始化" class="headerlink" title="项目权限及初始化"></a>项目权限及初始化</h1><p><code>TODO</code></p>
+<p>登陆<code>http://172.30.100.186:8889</code>,用户名<code>admin</code>,密码<code>123456</code>,输入验证码后即可进入</p>
+<ul>
+<li>初始化地市数据</li>
+<li>根据客户要求创建定制角色</li>
+<li>根据客户要求给角色配置权限</li>
+<li>根据客户要求创建用户</li>
+<li>导入工参、邻区数据</li>
+<li>执行大数据脚本</li>
+</ul>
 <h1 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h1><h2 id="版本获取方式"><a href="#版本获取方式" class="headerlink" title="版本获取方式"></a>版本获取方式</h2><p>所有用到包（<code>放置版本包</code>章节）均在<code>172.30.4.179</code>的<code>/opt/package/web</code>目录下，每日自动更新一次</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── CentOS-7-x86_64-DVD-2003.iso</span><br><span class="line">├── e2e</span><br><span class="line">│   ├── dist</span><br><span class="line">│   ├── geoserver-e2e</span><br><span class="line">│   ├── jars</span><br><span class="line">│   ├── nginx</span><br><span class="line">│   └── sql</span><br><span class="line">├── jdk-8u202-linux-x64.tar.gz</span><br><span class="line">├── minio.tar.tgz</span><br><span class="line">├── mysql-8.0.22-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">├── nacos_config_export_2020-11-03\ 08-33-47.zip</span><br><span class="line">├── nginx-1.17.10.tar.gz</span><br><span class="line">├── otp_src_23.1.tar.gz</span><br><span class="line">├── percona-xtradb-cluster-shared-8.0.20-11.3.el7.x86_64.rpm</span><br><span class="line">├── pg_pathman-1.5.11.tar.gz</span><br><span class="line">├── postgresql-12.tar.tgz</span><br><span class="line">├── rabbitmq-server-generic-unix-3.8.3.tar.xz</span><br><span class="line">├── README</span><br><span class="line">└── redis-5.0.7.tar.gz</span><br></pre></td></tr></table></figure>
 
@@ -1643,22 +1652,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MAVEN设置UTF-8</title>
-    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
-    <content><![CDATA[<ol>
-<li><p>修改环境变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加pom.xml配置</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux搭建docker私有仓库与使用</title>
     <url>/2018/01/04/Linux%E6%90%AD%E5%BB%BAdocker%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
@@ -1698,15 +1691,20 @@
       </tags>
   </entry>
   <entry>
-    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
-    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
-    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
-<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
-<p>增加代码如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
-<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
-<p>index.wpy 循环的例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>MAVEN设置UTF-8</title>
+    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
+    <content><![CDATA[<ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
+      </tags>
   </entry>
   <entry>
     <title>SQL删除重复数据</title>
@@ -1722,6 +1720,17 @@
       <tags>
         <tag>sql</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
+    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
+<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
+<p>增加代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
+<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
+<p>index.wpy 循环的例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>centos7下解决yum install mysql-server没有可用包</title>
@@ -2968,16 +2977,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql设置远程登陆</title>
-    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdeep使用</title>
     <url>/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
@@ -2989,6 +2988,16 @@
 ]]></content>
       <tags>
         <tag>markdeep</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql设置远程登陆</title>
+    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
