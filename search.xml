@@ -542,6 +542,28 @@
       </tags>
   </entry>
   <entry>
+    <title>HEXO使用指南</title>
+    <url>/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v" title="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<p><img src="/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-0.png" alt="官网图片"></p>
+<h2 id="站内搜索插件"><a href="#站内搜索插件" class="headerlink" title="站内搜索插件"></a>站内搜索插件</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p>修改<code>站点配置</code>文件</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">search:</span></span><br><span class="line"><span class="function">  <span class="title">path</span>: <span class="title">search.xml</span></span></span><br><span class="line"><span class="function">  <span class="title">field</span>: <span class="title">post</span></span></span><br><span class="line"><span class="function">  <span class="title">format</span>: <span class="title">html</span></span></span><br><span class="line"><span class="function">  <span class="title">limit</span>: 10000</span></span><br></pre></td></tr></table></figure>
+<p>修改<code>主题配置</code>文件</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">local_search:</span></span><br><span class="line"><span class="function">  <span class="title">enable</span>: <span class="title">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="在线编写"><a href="#在线编写" class="headerlink" title="在线编写"></a>在线编写</h2><blockquote>
+<p>需要仔细看报错信息,并且<code>install</code>对应的模块   </p>
+</blockquote>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br><span class="line">hexo server -d</span><br><span class="line">open http://localhost:<span class="number">4000</span>/admin/</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>日常</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HEXO主题设置</title>
     <url>/2020/01/30/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<blockquote>
@@ -716,44 +738,6 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HEXO使用指南</title>
-    <url>/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<blockquote>
-<p><span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v" title="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<p><img src="/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-0.png" alt="官网图片"></p>
-<h2 id="站内搜索插件"><a href="#站内搜索插件" class="headerlink" title="站内搜索插件"></a>站内搜索插件</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<p>修改<code>站点配置</code>文件</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">search:</span></span><br><span class="line"><span class="function">  <span class="title">path</span>: <span class="title">search.xml</span></span></span><br><span class="line"><span class="function">  <span class="title">field</span>: <span class="title">post</span></span></span><br><span class="line"><span class="function">  <span class="title">format</span>: <span class="title">html</span></span></span><br><span class="line"><span class="function">  <span class="title">limit</span>: 10000</span></span><br></pre></td></tr></table></figure>
-<p>修改<code>主题配置</code>文件</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">local_search:</span></span><br><span class="line"><span class="function">  <span class="title">enable</span>: <span class="title">true</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="在线编写"><a href="#在线编写" class="headerlink" title="在线编写"></a>在线编写</h2><blockquote>
-<p>需要仔细看报错信息,并且<code>install</code>对应的模块   </p>
-</blockquote>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br><span class="line">hexo server -d</span><br><span class="line">open http://localhost:<span class="number">4000</span>/admin/</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux安装java</title>
-    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
-    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -1621,6 +1605,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux安装java</title>
+    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
+    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux挂载本地实体光盘</title>
     <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
     <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
@@ -1696,6 +1696,17 @@
         <tag>linux</tag>
         <tag>docker</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
+    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
+<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
+<p>增加代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
+<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
+<p>index.wpy 循环的例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>SQL删除重复数据</title>
@@ -2783,51 +2794,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux安装KodExplorer在线文档管理器</title>
-    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
-
-<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
-<li>右侧菜单栏里选择<code>网站</code></li>
-<li>选择<code>添加站点</code>按钮</li>
-<li>域名填<code>192.168.163.128:9999</code></li>
-<li>根目录<code>/www/wwwroot/kod</code></li>
-</ul>
-<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
-<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WxParse 插件 在循环时 cannot read property &#39;nodes&#39; of undefined </title>
-    <url>/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/</url>
-    <content><![CDATA[<p>项目使用wepy + wxparse 循环来渲染html页面</p>
-<p>支持wepy的wxparse地址:<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWJpdWJpdS93eFBhcnNl" title="https://github.com/Blubiubiu/wxParse">https://github.com/Blubiubiu/wxParse<i class="fa fa-external-link"></i></span></p>
-<p>增加代码如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">that.data[bindName] &#x3D; transData</span><br></pre></td></tr></table></figure>
-<p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
-<p>index.wpy 循环的例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>mysql设置远程登陆</title>
-    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git简易总结</title>
     <url>/2018/08/05/git%E7%AE%80%E6%98%93%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h2 id="git简易总结"><a href="#git简易总结" class="headerlink" title="git简易总结"></a>git简易总结</h2><p><img src="https://img-blog.csdn.net/20170727114820325?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzAyMjc0Mjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></p>
@@ -2951,17 +2917,27 @@
       </tags>
   </entry>
   <entry>
-    <title>markdeep使用</title>
-    <url>/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p><span class="exturl" data-url="aHR0cDovL2Nhc3VhbC1lZmZlY3RzLmNvbS9tYXJrZGVlcC8=" title="http://casual-effects.com/markdeep/">http://casual-effects.com/markdeep/<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<p>直接在结尾加上</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">class</span>=<span class="string">"fallback"</span>&gt;</span><span class="css"><span class="selector-tag">body</span>&#123;<span class="attribute">visibility</span>:hidden&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">markdeepOptions=&#123;tocStyle:<span class="string">'long'</span>&#125;;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Markdeep: --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://casual-effects.com/markdeep/latest/markdeep.min.js?"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>linux安装KodExplorer在线文档管理器</title>
+    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
 
+<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
+<li>右侧菜单栏里选择<code>网站</code></li>
+<li>选择<code>添加站点</code>按钮</li>
+<li>域名填<code>192.168.163.128:9999</code></li>
+<li>根目录<code>/www/wwwroot/kod</code></li>
+</ul>
+<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
+<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
-        <tag>markdeep</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2989,6 +2965,30 @@
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql设置远程登陆</title>
+    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdeep使用</title>
+    <url>/2020/03/06/markdeep%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p><span class="exturl" data-url="aHR0cDovL2Nhc3VhbC1lZmZlY3RzLmNvbS9tYXJrZGVlcC8=" title="http://casual-effects.com/markdeep/">http://casual-effects.com/markdeep/<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<p>直接在结尾加上</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">class</span>=<span class="string">"fallback"</span>&gt;</span><span class="css"><span class="selector-tag">body</span>&#123;<span class="attribute">visibility</span>:hidden&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">markdeepOptions=&#123;tocStyle:<span class="string">'long'</span>&#125;;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Markdeep: --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://casual-effects.com/markdeep/latest/markdeep.min.js?"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>markdeep</tag>
       </tags>
   </entry>
   <entry>
@@ -3068,6 +3068,27 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>同一台电脑多开tomcat</title>
+    <url>/2017/12/26/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E5%A4%9A%E5%BC%80tomcat/</url>
+    <content><![CDATA[<p>有些特殊情况需要在同一台电脑上多开tomcat<br>这时需要修改<code>conf\server.xml</code>文件(共3处)</p>
+<ol>
+<li><p>http访问端口　(大约69行)<br>8080  -&gt;  8888</p>
+</li>
+<li><p>shutdown端口　(大约22行)<br>8005  -&gt;  8885</p>
+</li>
+<li><p>链接服务端口　(大约116行)<br>8009  -&gt;  8889</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -3357,27 +3378,6 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同一台电脑多开tomcat</title>
-    <url>/2017/12/26/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E5%A4%9A%E5%BC%80tomcat/</url>
-    <content><![CDATA[<p>有些特殊情况需要在同一台电脑上多开tomcat<br>这时需要修改<code>conf\server.xml</code>文件(共3处)</p>
-<ol>
-<li><p>http访问端口　(大约69行)<br>8080  -&gt;  8888</p>
-</li>
-<li><p>shutdown端口　(大约22行)<br>8005  -&gt;  8885</p>
-</li>
-<li><p>链接服务端口　(大约116行)<br>8009  -&gt;  8889</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>tomcat</tag>
       </tags>
   </entry>
   <entry>
