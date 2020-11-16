@@ -718,9 +718,9 @@
     
     
     
-      <category term="hexo" scheme="http://127.0.0.1:4000/tags/hexo/"/>
-    
       <category term="日常" scheme="http://127.0.0.1:4000/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="hexo" scheme="http://127.0.0.1:4000/tags/hexo/"/>
     
   </entry>
   

@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Centos7下安装python以便使用pip工具</title>
+    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
+<ol>
+<li><p>首先安装epel扩展源：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新完成之后，就可安装pip：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成之后清除cache：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新pip工具</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HEXO使用指南</title>
+    <url>/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v" title="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<p><img src="/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-0.png" alt="官网图片"></p>
+<h2 id="站内搜索插件"><a href="#站内搜索插件" class="headerlink" title="站内搜索插件"></a>站内搜索插件</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p>修改<code>站点配置</code>文件</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">search:</span></span><br><span class="line"><span class="function">  <span class="title">path</span>: <span class="title">search.xml</span></span></span><br><span class="line"><span class="function">  <span class="title">field</span>: <span class="title">post</span></span></span><br><span class="line"><span class="function">  <span class="title">format</span>: <span class="title">html</span></span></span><br><span class="line"><span class="function">  <span class="title">limit</span>: 10000</span></span><br></pre></td></tr></table></figure>
+<p>修改<code>主题配置</code>文件</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">local_search:</span></span><br><span class="line"><span class="function">  <span class="title">enable</span>: <span class="title">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="在线编写"><a href="#在线编写" class="headerlink" title="在线编写"></a>在线编写</h2><blockquote>
+<p>需要仔细看报错信息,并且<code>install</code>对应的模块   </p>
+</blockquote>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br><span class="line">hexo server -d</span><br><span class="line">open http://localhost:<span class="number">4000</span>/admin/</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>日常</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HEXO主题设置</title>
     <url>/2020/01/30/HEXO%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<blockquote>
@@ -175,32 +223,6 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos7下安装python以便使用pip工具</title>
-    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
-<ol>
-<li><p>首先安装epel扩展源：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新完成之后，就可安装pip：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装完成之后清除cache：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新pip工具</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -742,25 +764,61 @@
       </tags>
   </entry>
   <entry>
-    <title>HEXO使用指南</title>
-    <url>/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <title>Linux免密钥登陆</title>
+    <url>/2018/01/04/Linux%E5%85%8D%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/</url>
     <content><![CDATA[<blockquote>
-<p><span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v" title="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/<i class="fa fa-external-link"></i></span></p>
+<p>核心思路： 利用<code>ssh-keygen -t rsa</code>在每台机器上产生密钥,然后把所有密钥都集中在<code>authorized_keys</code>中 把这个文件拷贝到所有的机器上</p>
 </blockquote>
-<p><img src="/2018/05/15/HEXO%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-0.png" alt="官网图片"></p>
-<h2 id="站内搜索插件"><a href="#站内搜索插件" class="headerlink" title="站内搜索插件"></a>站内搜索插件</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<p>修改<code>站点配置</code>文件</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">search:</span></span><br><span class="line"><span class="function">  <span class="title">path</span>: <span class="title">search.xml</span></span></span><br><span class="line"><span class="function">  <span class="title">field</span>: <span class="title">post</span></span></span><br><span class="line"><span class="function">  <span class="title">format</span>: <span class="title">html</span></span></span><br><span class="line"><span class="function">  <span class="title">limit</span>: 10000</span></span><br></pre></td></tr></table></figure>
-<p>修改<code>主题配置</code>文件</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">local_search:</span></span><br><span class="line"><span class="function">  <span class="title">enable</span>: <span class="title">true</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="每台机器都生成公共密钥"><a href="#每台机器都生成公共密钥" class="headerlink" title="每台机器都生成公共密钥"></a>每台机器都生成公共密钥</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># ssh-keygen -t rsa</span></span><br><span class="line">[root@guyu-hadoop opt]<span class="comment"># cd ~/.ssh</span></span><br><span class="line">[root@guyu-hadoop2 .ssh]<span class="comment"># ssh-keygen -t rsa</span></span><br><span class="line">[root@guyu-hadoop2 opt]<span class="comment"># cd ~/.ssh</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="在线编写"><a href="#在线编写" class="headerlink" title="在线编写"></a>在线编写</h2><blockquote>
-<p>需要仔细看报错信息,并且<code>install</code>对应的模块   </p>
-</blockquote>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br><span class="line">hexo server -d</span><br><span class="line">open http://localhost:<span class="number">4000</span>/admin/</span><br></pre></td></tr></table></figure>]]></content>
+<p>执行这步操作会在<code>~\.ssh</code>下生成密钥</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]<span class="comment"># ll</span></span><br><span class="line">-rw-------. 1 root root 1671 Dec 10 03:34 id_rsa</span><br><span class="line">-rw-r--r--. 1 root root  398 Dec 10 03:34 id_rsa.pub   <span class="comment">#只需要关心这个</span></span><br><span class="line">-rw-r--r--. 1 root root  400 Dec 10 03:24 known_hosts</span><br></pre></td></tr></table></figure>
+
+<h2 id="记录公共密钥"><a href="#记录公共密钥" class="headerlink" title="记录公共密钥"></a>记录公共密钥</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cd ~/.ssh</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cat id_rsa.pub &gt;&gt; authorized_keys</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># chmod 600 authorized_keys</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="拷贝到其他机器-重复这步操作"><a href="#拷贝到其他机器-重复这步操作" class="headerlink" title="拷贝到其他机器 重复这步操作"></a>拷贝到其他机器 重复这步操作</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># scp authorized_keys root@h2:~/.ssh</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="其他机器都把这个密钥存入这个文件"><a href="#其他机器都把这个密钥存入这个文件" class="headerlink" title="其他机器都把这个密钥存入这个文件"></a>其他机器都把这个密钥存入这个文件</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop2 .ssh]<span class="comment"># cat id_rsa.pub &gt;&gt; authorized_keys</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="把存着所有密码的文件分发到每台机器上"><a href="#把存着所有密码的文件分发到每台机器上" class="headerlink" title="把存着所有密码的文件分发到每台机器上"></a>把存着所有密码的文件分发到每台机器上</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop2 .ssh]<span class="comment"># scp authorized_keys root@h1:~/.ssh</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="此时他们就可以免密钥登陆啦"><a href="#此时他们就可以免密钥登陆啦" class="headerlink" title="此时他们就可以免密钥登陆啦"></a>此时他们就可以免密钥登陆啦</h2><h2 id="最后总结："><a href="#最后总结：" class="headerlink" title="最后总结："></a>最后总结：</h2><p>  其中只要ssh有密钥大集合<code>authorized_keys</code>的机器是不需要密码</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>日常</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装java</title>
+    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
+    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装ruby</title>
+    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
+    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
+<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1586,48 +1644,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux免密钥登陆</title>
-    <url>/2018/01/04/Linux%E5%85%8D%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<blockquote>
-<p>核心思路： 利用<code>ssh-keygen -t rsa</code>在每台机器上产生密钥,然后把所有密钥都集中在<code>authorized_keys</code>中 把这个文件拷贝到所有的机器上</p>
-</blockquote>
-<h2 id="每台机器都生成公共密钥"><a href="#每台机器都生成公共密钥" class="headerlink" title="每台机器都生成公共密钥"></a>每台机器都生成公共密钥</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># ssh-keygen -t rsa</span></span><br><span class="line">[root@guyu-hadoop opt]<span class="comment"># cd ~/.ssh</span></span><br><span class="line">[root@guyu-hadoop2 .ssh]<span class="comment"># ssh-keygen -t rsa</span></span><br><span class="line">[root@guyu-hadoop2 opt]<span class="comment"># cd ~/.ssh</span></span><br></pre></td></tr></table></figure>
-
-<p>执行这步操作会在<code>~\.ssh</code>下生成密钥</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]<span class="comment"># ll</span></span><br><span class="line">-rw-------. 1 root root 1671 Dec 10 03:34 id_rsa</span><br><span class="line">-rw-r--r--. 1 root root  398 Dec 10 03:34 id_rsa.pub   <span class="comment">#只需要关心这个</span></span><br><span class="line">-rw-r--r--. 1 root root  400 Dec 10 03:24 known_hosts</span><br></pre></td></tr></table></figure>
-
-<h2 id="记录公共密钥"><a href="#记录公共密钥" class="headerlink" title="记录公共密钥"></a>记录公共密钥</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cd ~/.ssh</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># cat id_rsa.pub &gt;&gt; authorized_keys</span></span><br><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># chmod 600 authorized_keys</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="拷贝到其他机器-重复这步操作"><a href="#拷贝到其他机器-重复这步操作" class="headerlink" title="拷贝到其他机器 重复这步操作"></a>拷贝到其他机器 重复这步操作</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop .ssh]<span class="comment"># scp authorized_keys root@h2:~/.ssh</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="其他机器都把这个密钥存入这个文件"><a href="#其他机器都把这个密钥存入这个文件" class="headerlink" title="其他机器都把这个密钥存入这个文件"></a>其他机器都把这个密钥存入这个文件</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop2 .ssh]<span class="comment"># cat id_rsa.pub &gt;&gt; authorized_keys</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="把存着所有密码的文件分发到每台机器上"><a href="#把存着所有密码的文件分发到每台机器上" class="headerlink" title="把存着所有密码的文件分发到每台机器上"></a>把存着所有密码的文件分发到每台机器上</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop2 .ssh]<span class="comment"># scp authorized_keys root@h1:~/.ssh</span></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="此时他们就可以免密钥登陆啦"><a href="#此时他们就可以免密钥登陆啦" class="headerlink" title="此时他们就可以免密钥登陆啦"></a>此时他们就可以免密钥登陆啦</h2><h2 id="最后总结："><a href="#最后总结：" class="headerlink" title="最后总结："></a>最后总结：</h2><p>  其中只要ssh有密钥大集合<code>authorized_keys</code>的机器是不需要密码</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux安装ruby</title>
-    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
-    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
-<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux挂载本地实体光盘</title>
     <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
     <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
@@ -1650,22 +1666,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux安装java</title>
-    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
-    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MAVEN设置UTF-8</title>
     <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
     <content><![CDATA[<ol>
@@ -1679,21 +1679,6 @@
       <tags>
         <tag>java</tag>
         <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL删除重复数据</title>
-    <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>sql</tag>
       </tags>
   </entry>
   <entry>
@@ -1745,6 +1730,21 @@
 <p>截图：<br><img src="/2018/11/12/WxParse%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF/image-76.png" alt="upload successful"></p>
 <p>index.wpy 循环的例子</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style lang=<span class="string">"less"</span>&gt;</span><br><span class="line">@<span class="keyword">import</span> <span class="string">'../wxparse/wxParse.wxss'</span>;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">  &lt;view class="container"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="default" @tap="translate"&gt;点击翻译富文本&lt;/</span>button&gt;</span><br><span class="line">    &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">      &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">html2wxml</span> <span class="attr">:parserName</span>=<span class="string">"name"</span> <span class="attr">:parserContent.sync</span>=<span class="string">"textContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">html2wxml</span>&gt;</span></span> --&gt;</span><br><span class="line">      &lt;<span class="keyword">import</span> src=<span class="string">"../wxparse/wxParse.wxml"</span> /&gt;</span><br><span class="line">      &lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;replyTemArray&#125;&#125;"</span> wx:key=<span class="string">""</span>&gt;</span><br><span class="line">        列表:&#123;&#123;index&#125;&#125;:<span class="xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"wxParse"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;wxParseData:item&#125;&#125;"</span>/&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/block&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">  &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span><br><span class="line">  <span class="keyword">import</span> WxParse <span class="keyword">from</span> <span class="string">'../wxparse/wxParse'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span><br><span class="line">    onReady() &#123;</span><br><span class="line">      <span class="built_in">console</span>.info(<span class="string">'onReady'</span>)</span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">      <span class="comment">// that.detail = this.mock2</span></span><br><span class="line">      <span class="keyword">var</span> arr = []</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      arr.push(<span class="string">`&lt;p style="color: blue;"&gt;感谢使用，您的star是对我最大的鼓励&lt;/p&gt;`</span>)</span><br><span class="line">      <span class="comment">// 调用通知接口通知组件更新数据</span></span><br><span class="line">      <span class="comment">// this.$invoke('html2wxml', 'htmlParserNotice')]</span></span><br><span class="line">      <span class="comment">// this.$apply()</span></span><br><span class="line">      <span class="built_in">console</span>.info(arr.length)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        WxParse.wxParse(<span class="string">'reply'</span> + i, <span class="string">'html'</span>, arr[i], that)</span><br><span class="line">        <span class="keyword">if</span> (i === arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.info(<span class="string">'&gt;&gt;&gt;&gt;  '</span> + i)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">'[[[  '</span> + i)</span><br><span class="line">      &#125;</span><br><span class="line">      WxParse.wxParseTemArray(<span class="string">'replyTemArray'</span>, <span class="string">'reply'</span>, arr.length - <span class="number">1</span>, that)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config = &#123;</span><br><span class="line">      navigationBarTitleText: <span class="string">'wxparseDemo'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    methods = &#123;</span><br><span class="line">      translate () &#123;</span><br><span class="line">        <span class="comment">// 此处只模仿本地环境</span></span><br><span class="line">        <span class="comment">// 获取数据</span></span><br><span class="line">        <span class="comment">// this.textContent = this.mock</span></span><br><span class="line">        <span class="comment">// 更新</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>SQL删除重复数据</title>
+    <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>sql</tag>
+      </tags>
   </entry>
   <entry>
     <title>centos7下解决yum install mysql-server没有可用包</title>
@@ -2940,30 +2940,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux安装KodExplorer在线文档管理器</title>
-    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
-
-<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
-<li>右侧菜单栏里选择<code>网站</code></li>
-<li>选择<code>添加站点</code>按钮</li>
-<li>域名填<code>192.168.163.128:9999</code></li>
-<li>根目录<code>/www/wwwroot/kod</code></li>
-</ul>
-<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
-<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux安装VNC</title>
     <url>/2018/01/04/linux%E5%AE%89%E8%A3%85VNC/</url>
     <content><![CDATA[<blockquote>
@@ -2983,6 +2959,30 @@
 <h2 id="5-下载VNC-Viewer"><a href="#5-下载VNC-Viewer" class="headerlink" title="5. 下载VNC Viewer"></a>5. 下载<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhbHZuYy5jb20vZW4vY29ubmVjdC9kb3dubG9hZC92aWV3ZXIvd2luZG93cy8=" title="https://www.realvnc.com/en/connect/download/viewer/windows/">VNC Viewer<i class="fa fa-external-link"></i></span></h2><p>看清楚下载的是<code>viewer</code> 如果不是 就根据<code>then</code>的提示去找</p>
 <h2 id="6-打开VNC-Viewer"><a href="#6-打开VNC-Viewer" class="headerlink" title="6. 打开VNC Viewer"></a>6. 打开<code>VNC Viewer</code></h2><p>输入IP地址<code>192.168.163.128:1</code><br>输入密码<code>abcd.1234</code></p>
 <h2 id="7-设置开机启动"><a href="#7-设置开机启动" class="headerlink" title="7. 设置开机启动"></a>7. 设置开机启动</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vncserver@:1.service</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux安装KodExplorer在线文档管理器</title>
+    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
+<li>右侧菜单栏里选择<code>网站</code></li>
+<li>选择<code>添加站点</code>按钮</li>
+<li>域名填<code>192.168.163.128:9999</code></li>
+<li>根目录<code>/www/wwwroot/kod</code></li>
+</ul>
+<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
+<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>学习</category>
       </categories>
@@ -3112,40 +3112,6 @@
       <tags>
         <tag>java</tag>
         <tag>tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>端口占用</title>
-    <url>/2018/07/25/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr &quot;4000&quot;	#win</span><br><span class="line">netstat -tln | grep 8080      #linux</span><br></pre></td></tr></table></figure>
-</blockquote>
-<a id="more"></a>
-<h2 id="Windows解决方案"><a href="#Windows解决方案" class="headerlink" title="Windows解决方案"></a>Windows解决方案</h2><ol>
-<li><p>查看占用端口的<code>pid</code>，这里查看端口为<code>4000</code>,得到了<code>pid</code>为<code>4108</code></p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">netstat -aon|<span class="built_in">findstr</span> "<span class="number">4000</span>"	</span><br><span class="line"></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>:<span class="number">0</span>              LISTENING       <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        CLOSE_WAIT      <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         FIN_WAIT_2      <span class="number">4108</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看<code>pid</code>为<code>4108</code>的程序，可以看到这里是360浏览器占用了4000</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">tasklist|<span class="built_in">findstr</span> "<span class="number">4108</span>"</span><br><span class="line"></span><br><span class="line">  <span class="number">360</span>se.exe                     <span class="number">4108</span> Console                    <span class="number">1</span>    <span class="number">241</span>,<span class="number">484</span> K</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀死被占用的程序</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /t /im <span class="number">360</span>se.exe</span><br><span class="line"></span><br><span class="line">  成功: 已终止 PID <span class="number">6848</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  错误: 无法终止 PID <span class="number">6952</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  原因: 拒绝访问。</span><br><span class="line">  成功: 已终止 PID <span class="number">6916</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5004</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">8108</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7984</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">9816</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5716</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4116</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">1260</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7904</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4108</span> (属于 PID <span class="number">4664</span> 子进程)的进程。</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="Linux解决方案"><a href="#Linux解决方案" class="headerlink" title="Linux解决方案"></a>Linux解决方案</h2><ol>
-<li><p>查看端口使用情况</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tln | grep 8080</span><br><span class="line"></span><br><span class="line">  tcp6       0      0:::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看端口属于哪个程序</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i :8080</span><br><span class="line"></span><br><span class="line">  COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">  java    2068 root   48u  IPv6  32752      0t0  TCP *:webcache (LISTEN)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀掉占用端口的进程</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2068</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>小技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -3435,6 +3401,40 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>端口占用</title>
+    <url>/2018/07/25/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr &quot;4000&quot;	#win</span><br><span class="line">netstat -tln | grep 8080      #linux</span><br></pre></td></tr></table></figure>
+</blockquote>
+<a id="more"></a>
+<h2 id="Windows解决方案"><a href="#Windows解决方案" class="headerlink" title="Windows解决方案"></a>Windows解决方案</h2><ol>
+<li><p>查看占用端口的<code>pid</code>，这里查看端口为<code>4000</code>,得到了<code>pid</code>为<code>4108</code></p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">netstat -aon|<span class="built_in">findstr</span> "<span class="number">4000</span>"	</span><br><span class="line"></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>:<span class="number">0</span>              LISTENING       <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        CLOSE_WAIT      <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         FIN_WAIT_2      <span class="number">4108</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看<code>pid</code>为<code>4108</code>的程序，可以看到这里是360浏览器占用了4000</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">tasklist|<span class="built_in">findstr</span> "<span class="number">4108</span>"</span><br><span class="line"></span><br><span class="line">  <span class="number">360</span>se.exe                     <span class="number">4108</span> Console                    <span class="number">1</span>    <span class="number">241</span>,<span class="number">484</span> K</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>杀死被占用的程序</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /t /im <span class="number">360</span>se.exe</span><br><span class="line"></span><br><span class="line">  成功: 已终止 PID <span class="number">6848</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  错误: 无法终止 PID <span class="number">6952</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  原因: 拒绝访问。</span><br><span class="line">  成功: 已终止 PID <span class="number">6916</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5004</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">8108</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7984</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">9816</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5716</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4116</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">1260</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7904</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4108</span> (属于 PID <span class="number">4664</span> 子进程)的进程。</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="Linux解决方案"><a href="#Linux解决方案" class="headerlink" title="Linux解决方案"></a>Linux解决方案</h2><ol>
+<li><p>查看端口使用情况</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tln | grep 8080</span><br><span class="line"></span><br><span class="line">  tcp6       0      0:::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看端口属于哪个程序</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i :8080</span><br><span class="line"></span><br><span class="line">  COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">  java    2068 root   48u  IPv6  32752      0t0  TCP *:webcache (LISTEN)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>杀掉占用端口的进程</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2068</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>小技巧</tag>
       </tags>
   </entry>
 </search>
