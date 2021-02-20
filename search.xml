@@ -27,16 +27,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux安装ruby</title>
-    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
-    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
-<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
+    <title>Linux安装java</title>
+    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
+    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
 
-<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
+<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
         <tag>linux</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -607,22 +610,6 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux安装java</title>
-    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
-    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -1448,22 +1435,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MAVEN设置UTF-8</title>
-    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
-    <content><![CDATA[<ol>
-<li><p>修改环境变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加pom.xml配置</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux挂载本地实体光盘</title>
     <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
     <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
@@ -1486,6 +1457,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux安装ruby</title>
+    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
+    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
+<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAVEN设置UTF-8</title>
+    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
+    <content><![CDATA[<ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL删除重复数据</title>
     <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
@@ -1498,6 +1498,30 @@
 ]]></content>
       <tags>
         <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux安装KodExplorer在线文档管理器</title>
+    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
+<li>右侧菜单栏里选择<code>网站</code></li>
+<li>选择<code>添加站点</code>按钮</li>
+<li>域名填<code>192.168.163.128:9999</code></li>
+<li>根目录<code>/www/wwwroot/kod</code></li>
+</ul>
+<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
+<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2582,40 +2606,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql设置远程登陆</title>
-    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux安装KodExplorer在线文档管理器</title>
-    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
-
-<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
-<li>右侧菜单栏里选择<code>网站</code></li>
-<li>选择<code>添加站点</code>按钮</li>
-<li>域名填<code>192.168.163.128:9999</code></li>
-<li>根目录<code>/www/wwwroot/kod</code></li>
-</ul>
-<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
-<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>电联版本安装手册</title>
     <url>/2020/06/23/%E7%94%B5%E8%81%94%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h1 id="手册安装版本速查"><a href="#手册安装版本速查" class="headerlink" title="手册安装版本速查"></a>手册安装版本速查</h1><table>
@@ -2903,6 +2893,16 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql设置远程登陆</title>
+    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
