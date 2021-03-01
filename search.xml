@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Centos7下安装python以便使用pip工具</title>
-    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
-<ol>
-<li><p>首先安装epel扩展源：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新完成之后，就可安装pip：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装完成之后清除cache：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新pip工具</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux安装java</title>
     <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
     <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
@@ -601,15 +575,98 @@
 <li>导入工参、邻区数据</li>
 <li>执行大数据脚本</li>
 </ul>
-<h1 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h1><h2 id="版本获取方式"><a href="#版本获取方式" class="headerlink" title="版本获取方式"></a>版本获取方式</h2><p>所有用到包（<code>放置版本包</code>章节）均在<code>172.30.4.179</code>的<code>/opt/package/web</code>目录下，每日自动更新一次</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── CentOS-7-x86_64-DVD-2003.iso</span><br><span class="line">├── e2e</span><br><span class="line">│   ├── dist</span><br><span class="line">│   ├── geoserver-e2e</span><br><span class="line">│   ├── jars</span><br><span class="line">│   ├── nginx</span><br><span class="line">│   └── sql</span><br><span class="line">├── jdk-8u202-linux-x64.tar.gz</span><br><span class="line">├── minio.tar.tgz</span><br><span class="line">├── mysql-8.0.22-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">├── nacos_config_export_2020-11-03\ 08-33-47.zip</span><br><span class="line">├── nginx-1.17.10.tar.gz</span><br><span class="line">├── otp_src_23.1.tar.gz</span><br><span class="line">├── percona-xtradb-cluster-shared-8.0.20-11.3.el7.x86_64.rpm</span><br><span class="line">├── pg_pathman-1.5.11.tar.gz</span><br><span class="line">├── postgresql-12.tar.tgz</span><br><span class="line">├── rabbitmq-server-generic-unix-3.8.3.tar.xz</span><br><span class="line">├── README</span><br><span class="line">└── redis-5.0.7.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="运维技巧"><a href="#运维技巧" class="headerlink" title="运维技巧"></a>运维技巧</h2><h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><blockquote>
-<p><code>TODO</code><br> <!-- 优化清除缓存脚本  --></p>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h1 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h1><h2 id="版本构建方式"><a href="#版本构建方式" class="headerlink" title="版本构建方式"></a>版本构建方式</h2><p>打开浏览器输入地址<code>http://172.30.100.186:8083/login?from=%2F</code>, 用户名:<code>admin</code>,密码:<code>admin</code>。<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210301101531464.png" alt="image-20210301101531464"><br>点击<code>E2E</code>项目后的<code>绿箭头+小时钟</code>开始构建服务端<br>点击<code>E2E-UI</code>项目后的<code>绿箭头+小时钟</code>开始构建网页端<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210301102217743.png" alt="image-20210301102217743"><br>构建完成之后构建状态为<code>蓝色</code>表示构建成功，可以正常获取版本。</p>
+<h2 id="版本自动化测试"><a href="#版本自动化测试" class="headerlink" title="版本自动化测试"></a>版本自动化测试</h2><blockquote>
+<p>目前只考虑针对服务端实现自动化测试，网页端暂不考虑。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;opt&#x2F;app&#x2F;redis&#x2F;src&#x2F;redis-cli -p 6380 keys *option* | xargs &#x2F;opt&#x2F;app&#x2F;redis&#x2F;src&#x2F;redis-cli -p 6380 del</span><br></pre></td></tr></table></figure>
+<h2 id="版本获取方式"><a href="#版本获取方式" class="headerlink" title="版本获取方式"></a>版本获取方式</h2><p>所有用到包（<code>放置版本包</code>章节）均在<code>172.30.4.179</code>的<code>/opt/package/web</code>目录下，每日自动更新一次</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── CentOS-7-x86_64-DVD-2003.iso</span><br><span class="line">├── e2e</span><br><span class="line">│   ├── dist</span><br><span class="line">│   ├── geoserver-e2e</span><br><span class="line">│   ├── jars</span><br><span class="line">│   ├── nginx</span><br><span class="line">│   └── sql</span><br><span class="line">├── jdk-8u202-linux-x64.tar.gz</span><br><span class="line">├── minio.tar.tgz</span><br><span class="line">├── mysql-8.0.22-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">├── nacos_config_export_2020-11-03\ 08-33-47.zip</span><br><span class="line">├── nginx-1.17.10.tar.gz</span><br><span class="line">├── otp_src_23.1.tar.gz</span><br><span class="line">├── percona-xtradb-cluster-shared-8.0.20-11.3.el7.x86_64.rpm</span><br><span class="line">├── pg_pathman-1.5.11.tar.gz</span><br><span class="line">├── postgresql-12.tar.tgz</span><br><span class="line">├── rabbitmq-server-generic-unix-3.8.3.tar.xz</span><br><span class="line">├── README</span><br><span class="line">└── redis-5.0.7.tar.gz</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h2><blockquote>
+<p><code>TODO</code><br> 如果觉得命令行不太好用，可以是用可视化工具<code>RedisDesktopManager</code>来操作redis</p>
+</blockquote>
+<!-- /opt/app/redis/src/redis-cli -p 6380 keys *option* | xargs /opt/app/redis/src/redis-cli -p 6380 del -->
+
+<p>需要清除以下keys</p>
+<ul>
+<li><code>*:option::*</code></li>
+<li><code>option::*</code></li>
+<li><code>*:dict_details::*</code></li>
+<li><code>dict_details::*</code></li>
+<li><code>*:dict_dy_details::*</code></li>
+<li><code>dict_dy_details::*</code></li>
+<li><code>*:netop_oauth:*</code></li>
+<li><code>netop_oauth:*</code></li>
+<li><code>gateway_route_key</code></li>
+<li><code>*:user_details::*</code></li>
+<li><code>*:menu_details::1_menu</code></li>
+</ul>
+<h2 id="导入省数据"><a href="#导入省数据" class="headerlink" title="导入省数据"></a>导入省数据</h2><blockquote>
+<p><code>TODO</code></p>
+</blockquote>
+<p>修改<span style="color:red;font-weight:bold">浏览器所在电脑</span>的<code>host</code>文件<br>追加<code>netop-gateway</code>他的IP地址与服务器保持一致。（管他三七二十一直接从服务器复制过来）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">172.30.100.186    netop-gateway</span><br></pre></td></tr></table></figure>
+<p>登陆<code>swagger-ui</code>页面<br>    1.打开浏览器输入地址<code>http://172.30.100.186:10000/swagger-ui.html?urls.primaryName=netop-upms-biz</code>（这里的IP地址必须和<code>hosts</code>中追加的IP一致）<br>    2. 确认当前地址栏的IP地址存在<code>hosts</code>中<br>    3. 点击右上角<code>Anthorize</code>按钮<br>    4. 在弹出面面板中输入username:<code>admin</code>,password:<code>123456</code>(即管理员密码)<br>    5. client_id:<code>test</code>,client_secret:<code>test</code>,Scopes:打勾<br>    6. 点击面板中的<code>Authorize</code></p>
+<p><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210222134649466.png" alt="image-20210222134649466"><br>成功面板如下，如果不成功请仔细查看日志分析原因<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210222142251867.png" alt="image-20210222142251867"><br>通过接口初始化当前地市数据<br>    1. 滚动鼠标找到<code>部门管理模块</code>，并点击<br>    2. 找到<code>/dept/provName/{provName}</code><br>    3. 点击<code>Try it</code>按钮,而不是<code>Cancel</code>按钮<br>    4. 在输入框中输入需要添加的省名称（所有省的正确名称都可以在<code>pg</code>中的<code>t_area_code</code>找到）<br>    5. 点击<code>Execute</code><br>    6. 返回<code>200</code>表示操作成功<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210222143047500.png" alt="image-20210222143047500"></p>
 ]]></content>
       <tags>
         <tag>电联</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7下安装python以便使用pip工具</title>
+    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
+<ol>
+<li><p>首先安装epel扩展源：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新完成之后，就可安装pip：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成之后清除cache：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新pip工具</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装ruby</title>
+    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
+    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
+<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAVEN设置UTF-8</title>
+    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
+    <content><![CDATA[<ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
       </tags>
   </entry>
   <entry>
@@ -1435,6 +1492,21 @@
       </tags>
   </entry>
   <entry>
+    <title>SQL删除重复数据</title>
+    <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux挂载本地实体光盘</title>
     <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
     <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
@@ -1457,47 +1529,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux安装ruby</title>
-    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
-    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
-<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MAVEN设置UTF-8</title>
-    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
-    <content><![CDATA[<ol>
-<li><p>修改环境变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加pom.xml配置</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+    <title>mysql设置远程登陆</title>
+    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL删除重复数据</title>
-    <url>/2020/03/06/SQL%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<h2 id="postgresql"><a href="#postgresql" class="headerlink" title="postgresql"></a>postgresql</h2><h3 id="创建测试数据"><a href="#创建测试数据" class="headerlink" title="创建测试数据"></a>创建测试数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">test</span>(<span class="keyword">id</span> <span class="built_in">int</span>,<span class="keyword">name</span> <span class="built_in">varchar</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'kenyon'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">2</span>,<span class="string">'kenyon_test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">3</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'test'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> <span class="keyword">values</span> (<span class="number">5</span>,<span class="string">'jackson'</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,2) |  1 | kenyon</span><br><span class="line"> (0,3) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,5) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line"> (0,8) |  5 | jackson</span><br><span class="line"> (8 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询要保留的数据-以min-ctid-或max-ctid-为准"><a href="#查询要保留的数据-以min-ctid-或max-ctid-为准" class="headerlink" title="查询要保留的数据,以min(ctid)或max(ctid)为准"></a>查询要保留的数据,以min(ctid)或max(ctid)为准</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># select ctid,* from test where ctid in (select min(ctid) from test group by id);</span></span><br><span class="line"> ctid  | id |    name     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (0,1) |  1 | kenyon</span><br><span class="line"> (0,4) |  2 | kenyon_test</span><br><span class="line"> (0,6) |  3 | test</span><br><span class="line"> (0,7) |  5 | test</span><br><span class="line">(4 rows)</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除重复数据-查看最后结果"><a href="#删除重复数据-查看最后结果" class="headerlink" title="删除重复数据,查看最后结果"></a>删除重复数据,查看最后结果</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">postgres=<span class="comment"># delete from test where ctid not in (select min(ctid) from test group by id);</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="number">4</span></span><br><span class="line">postgres=<span class="comment"># select ctid,* from test;</span></span><br><span class="line"> ctid  | <span class="keyword">id</span> |    <span class="keyword">name</span>     </span><br><span class="line"><span class="comment">-------+----+-------------</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">1</span>) |  <span class="number">1</span> | kenyon</span><br><span class="line"> (<span class="number">0</span>,<span class="number">4</span>) |  <span class="number">2</span> | kenyon_test</span><br><span class="line"> (<span class="number">0</span>,<span class="number">6</span>) |  <span class="number">3</span> | <span class="keyword">test</span></span><br><span class="line"> (<span class="number">0</span>,<span class="number">7</span>) |  <span class="number">5</span> | <span class="keyword">test</span></span><br><span class="line">(<span class="number">4</span> <span class="keyword">rows</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>sql</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -2606,6 +2644,40 @@
       </tags>
   </entry>
   <entry>
+    <title>端口占用</title>
+    <url>/2018/07/25/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr &quot;4000&quot;	#win</span><br><span class="line">netstat -tln | grep 8080      #linux</span><br></pre></td></tr></table></figure>
+</blockquote>
+<a id="more"></a>
+<h2 id="Windows解决方案"><a href="#Windows解决方案" class="headerlink" title="Windows解决方案"></a>Windows解决方案</h2><ol>
+<li><p>查看占用端口的<code>pid</code>，这里查看端口为<code>4000</code>,得到了<code>pid</code>为<code>4108</code></p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">netstat -aon|<span class="built_in">findstr</span> "<span class="number">4000</span>"	</span><br><span class="line"></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>:<span class="number">0</span>              LISTENING       <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        CLOSE_WAIT      <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         FIN_WAIT_2      <span class="number">4108</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看<code>pid</code>为<code>4108</code>的程序，可以看到这里是360浏览器占用了4000</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">tasklist|<span class="built_in">findstr</span> "<span class="number">4108</span>"</span><br><span class="line"></span><br><span class="line">  <span class="number">360</span>se.exe                     <span class="number">4108</span> Console                    <span class="number">1</span>    <span class="number">241</span>,<span class="number">484</span> K</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>杀死被占用的程序</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /t /im <span class="number">360</span>se.exe</span><br><span class="line"></span><br><span class="line">  成功: 已终止 PID <span class="number">6848</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  错误: 无法终止 PID <span class="number">6952</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  原因: 拒绝访问。</span><br><span class="line">  成功: 已终止 PID <span class="number">6916</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5004</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">8108</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7984</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">9816</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5716</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4116</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">1260</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7904</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4108</span> (属于 PID <span class="number">4664</span> 子进程)的进程。</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="Linux解决方案"><a href="#Linux解决方案" class="headerlink" title="Linux解决方案"></a>Linux解决方案</h2><ol>
+<li><p>查看端口使用情况</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tln | grep 8080</span><br><span class="line"></span><br><span class="line">  tcp6       0      0:::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看端口属于哪个程序</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i :8080</span><br><span class="line"></span><br><span class="line">  COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">  java    2068 root   48u  IPv6  32752      0t0  TCP *:webcache (LISTEN)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>杀掉占用端口的进程</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2068</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>小技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>电联版本安装手册</title>
     <url>/2020/06/23/%E7%94%B5%E8%81%94%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h1 id="手册安装版本速查"><a href="#手册安装版本速查" class="headerlink" title="手册安装版本速查"></a>手册安装版本速查</h1><table>
@@ -2893,50 +2965,6 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql设置远程登陆</title>
-    <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>端口占用</title>
-    <url>/2018/07/25/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr &quot;4000&quot;	#win</span><br><span class="line">netstat -tln | grep 8080      #linux</span><br></pre></td></tr></table></figure>
-</blockquote>
-<a id="more"></a>
-<h2 id="Windows解决方案"><a href="#Windows解决方案" class="headerlink" title="Windows解决方案"></a>Windows解决方案</h2><ol>
-<li><p>查看占用端口的<code>pid</code>，这里查看端口为<code>4000</code>,得到了<code>pid</code>为<code>4108</code></p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">netstat -aon|<span class="built_in">findstr</span> "<span class="number">4000</span>"	</span><br><span class="line"></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>:<span class="number">0</span>              LISTENING       <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        CLOSE_WAIT      <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         FIN_WAIT_2      <span class="number">4108</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看<code>pid</code>为<code>4108</code>的程序，可以看到这里是360浏览器占用了4000</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">tasklist|<span class="built_in">findstr</span> "<span class="number">4108</span>"</span><br><span class="line"></span><br><span class="line">  <span class="number">360</span>se.exe                     <span class="number">4108</span> Console                    <span class="number">1</span>    <span class="number">241</span>,<span class="number">484</span> K</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀死被占用的程序</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /t /im <span class="number">360</span>se.exe</span><br><span class="line"></span><br><span class="line">  成功: 已终止 PID <span class="number">6848</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  错误: 无法终止 PID <span class="number">6952</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  原因: 拒绝访问。</span><br><span class="line">  成功: 已终止 PID <span class="number">6916</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5004</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">8108</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7984</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">9816</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5716</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4116</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">1260</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7904</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4108</span> (属于 PID <span class="number">4664</span> 子进程)的进程。</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="Linux解决方案"><a href="#Linux解决方案" class="headerlink" title="Linux解决方案"></a>Linux解决方案</h2><ol>
-<li><p>查看端口使用情况</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tln | grep 8080</span><br><span class="line"></span><br><span class="line">  tcp6       0      0:::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看端口属于哪个程序</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i :8080</span><br><span class="line"></span><br><span class="line">  COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">  java    2068 root   48u  IPv6  32752      0t0  TCP *:webcache (LISTEN)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀掉占用端口的进程</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2068</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>小技巧</tag>
       </tags>
   </entry>
 </search>
