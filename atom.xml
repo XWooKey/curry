@@ -494,9 +494,9 @@
       <category term="学习" scheme="http://127.0.0.1:4000/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="linux" scheme="http://127.0.0.1:4000/tags/linux/"/>
-    
       <category term="python" scheme="http://127.0.0.1:4000/tags/python/"/>
+    
+      <category term="linux" scheme="http://127.0.0.1:4000/tags/linux/"/>
     
   </entry>
   
