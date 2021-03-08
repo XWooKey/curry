@@ -243,7 +243,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-03 18:09:15" itemprop="dateModified" datetime="2021-03-03T18:09:15+08:00">2021-03-03</time>
+                <time title="修改时间：2021-03-08 10:26:18" itemprop="dateModified" datetime="2021-03-08T10:26:18+08:00">2021-03-08</time>
               </span>
 
           <br>
@@ -528,7 +528,7 @@
 
 
 
-<h1 id="web端安装"><a href="#web端安装" class="headerlink" title="web端安装"></a>web端安装</h1><h2 id="放置版本包"><a href="#放置版本包" class="headerlink" title="放置版本包"></a>放置版本包</h2><p>将 一下<code>web</code>文件夹放到<code>/opt/package</code> 目录下</p>
+<h1 id="web端安装"><a href="#web端安装" class="headerlink" title="web端安装"></a>web端安装</h1><h2 id="放置版本包"><a href="#放置版本包" class="headerlink" title="放置版本包"></a>放置版本包</h2><p>将 一下<code>web</code>文件夹放到<code>/opt/package/e2e</code> 目录下</p>
 <h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h2><h3 id="iptable"><a href="#iptable" class="headerlink" title="iptable"></a>iptable</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -F</span><br><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
 
 <h3 id="firewalld-service"><a href="#firewalld-service" class="headerlink" title="firewalld.service"></a>firewalld.service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
@@ -555,7 +555,7 @@
 <li>使用本地挂载yum</li>
 </ul>
 <p>挂载iso文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mnt/iso</span><br><span class="line">mkdir -p /opt/iso/centos7</span><br><span class="line">mount /opt/package/web/CentOS-7-x86_64-DVD-2003.iso /mnt/iso</span><br><span class="line">cp -r /mnt/iso/* /opt/iso/centos7</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /mnt/iso</span><br><span class="line">mkdir -p /opt/iso/centos7</span><br><span class="line">mount /opt/package/e2e/web/CentOS-7-x86_64-DVD-2003.iso /mnt/iso</span><br><span class="line">cp -r /mnt/iso/* /opt/iso/centos7</span><br></pre></td></tr></table></figure>
 
 <p>备份原有<code>repo文件</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;etc&#x2F;yum.repos.d&#x2F;repo_bak</span><br><span class="line">mv &#x2F;etc&#x2F;yum.repos.d&#x2F;*.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;rebo_bak</span><br></pre></td></tr></table></figure>
@@ -568,7 +568,7 @@
 <h2 id="基础软件"><a href="#基础软件" class="headerlink" title="基础软件"></a>基础软件</h2><h3 id="基本工具"><a href="#基本工具" class="headerlink" title="基本工具"></a>基本工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vim net-tools</span><br></pre></td></tr></table></figure>
 
 <h3 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h3><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line"><span class="built_in">cd</span> /opt/app</span><br><span class="line">tar -zxvf /opt/package/web/jdk-8u202-linux-x64.tar.gz -C /opt/app</span><br><span class="line">ln -s jdk1.8.0_202 jdk</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line"><span class="built_in">cd</span> /opt/app</span><br><span class="line">tar -zxvf /opt/package/e2e/web/jdk-8u202-linux-x64.tar.gz -C /opt/app</span><br><span class="line">ln -s jdk1.8.0_202 jdk</span><br></pre></td></tr></table></figure>
 
 <p>修改 profile</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 末尾追加</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
@@ -594,7 +594,7 @@
 <p>如果已安装则卸载它</p>
 <p>再次确认<code>mysql</code>已经完全删除</p>
 <p>安装的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf /opt/package/web/mysql-8.0.22-1.el7.x86_64.rpm-bundle.tar -C /opt/package/web/mysql8</span><br><span class="line">mkdir -p /opt/package/web/mysql8</span><br><span class="line">yum install -y /opt/package/web/mysql8/*</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf /opt/package/e2e/web/mysql-8.0.22-1.el7.x86_64.rpm-bundle.tar -C /opt/package/e2e/web/mysql8</span><br><span class="line">mkdir -p /opt/package/e2e/web/mysql8</span><br><span class="line">yum install -y /opt/package/e2e/web/mysql8/*</span><br></pre></td></tr></table></figure>
 <p>修改数据目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /home/data/mysql</span><br></pre></td></tr></table></figure>
 
@@ -619,7 +619,7 @@
 
 
 <h3 id="POSTGRESQL"><a href="#POSTGRESQL" class="headerlink" title="POSTGRESQL"></a>POSTGRESQL</h3><p>安装基础包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf /opt/package/web/postgresql-12.tar.tgz -C /opt/package/web</span><br><span class="line">yum install -y wget net-tools epel-release</span><br><span class="line">yum install -y /opt/package/web/postgresql-12/*</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf /opt/package/e2e/web/postgresql-12.tar.tgz -C /opt/package/e2e/web</span><br><span class="line">yum install -y wget net-tools epel-release</span><br><span class="line">yum install -y /opt/package/e2e/web/postgresql-12/*</span><br></pre></td></tr></table></figure>
 
 <p>设置环境变量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 末尾追加</span></span><br><span class="line"><span class="built_in">export</span> PG_HOME=<span class="string">"/usr/pgsql-12"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PG_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
@@ -628,7 +628,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
 
 <p>安装插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc</span><br><span class="line">tar -zxvf /opt/package/web/pg_pathman-1.5.11.tar.gz -C /opt/package/web</span><br><span class="line"><span class="built_in">cd</span> /opt/package/web/pg_pathman-1.5.11</span><br><span class="line">make USE_PGXS=1</span><br><span class="line">make USE_PGXS=1 install</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc</span><br><span class="line">tar -zxvf /opt/package/e2e/web/pg_pathman-1.5.11.tar.gz -C /opt/package/e2e/web</span><br><span class="line"><span class="built_in">cd</span> /opt/package/e2e/web/pg_pathman-1.5.11</span><br><span class="line">make USE_PGXS=1</span><br><span class="line">make USE_PGXS=1 install</span><br></pre></td></tr></table></figure>
 
 <p>修改数据目录，这里需要将数据放到空间大的目录下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /home/data/pgsql/12.3/</span><br></pre></td></tr></table></figure>
@@ -656,7 +656,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo -i -u postgres</span><br><span class="line">psql</span><br><span class="line">create database postgis owner postgres;</span><br><span class="line">\c postgis;</span><br><span class="line">create extension postgis;</span><br><span class="line">create extension pg_pathman;</span><br><span class="line">select postgis_full_version();</span><br><span class="line">\q</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><p>安装基础包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> 基础软件</span><br><span class="line">yum install -y gcc-c++</span><br><span class="line">yum install -y pcre pcre-devel</span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line">yum install -y openssl openssl-devel</span><br><span class="line"></span><br><span class="line">tar -zxvf /opt/package/web/nginx-1.17.10.tar.gz  -C /opt/app</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> 基础软件</span><br><span class="line">yum install -y gcc-c++</span><br><span class="line">yum install -y pcre pcre-devel</span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line">yum install -y openssl openssl-devel</span><br><span class="line"></span><br><span class="line">tar -zxvf /opt/package/e2e/web/nginx-1.17.10.tar.gz  -C /opt/app</span><br></pre></td></tr></table></figure>
 
 <p>配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/app/nginx-1.17.10</span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nginx --with-http_ssl_module</span><br></pre></td></tr></table></figure>
@@ -666,7 +666,7 @@
 
 
 <h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 基础软件</span><br><span class="line">yum install -y gcc</span><br><span class="line"></span><br><span class="line">tar -zxvf /opt/package/web/redis-5.0.7.tar.gz  -C /opt/app</span><br><span class="line">ln -s /opt/app/redis-5.0.7 /opt/app/redis</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 基础软件</span><br><span class="line">yum install -y gcc</span><br><span class="line"></span><br><span class="line">tar -zxvf /opt/package/e2e/web/redis-5.0.7.tar.gz  -C /opt/app</span><br><span class="line">ln -s /opt/app/redis-5.0.7 /opt/app/redis</span><br></pre></td></tr></table></figure>
 
 <p>编译安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/app/redis</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
@@ -681,7 +681,7 @@
 
 
 <h3 id="Minio"><a href="#Minio" class="headerlink" title="Minio"></a>Minio</h3><p>解啊</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf /opt/package/web/minio.tar.tgz -C /opt/app </span><br><span class="line">chmod +x /opt/app/minio/*</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf /opt/package/e2e/web/minio.tar.tgz -C /opt/app </span><br><span class="line">chmod +x /opt/app/minio/*</span><br></pre></td></tr></table></figure>
 
 <p>创建数据存放目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /home/data/minio</span><br></pre></td></tr></table></figure>
@@ -693,7 +693,7 @@
 
 
 <h3 id="Erlang"><a href="#Erlang" class="headerlink" title="Erlang"></a>Erlang</h3><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel</span><br><span class="line">tar -zxvf /opt/package/web/otp_src_23.1.tar.gz -C /opt/app</span><br><span class="line"><span class="built_in">cd</span> /opt/app/otp_src_23.1</span><br><span class="line">mkdir /opt/app/erlang</span><br><span class="line">./configure --prefix=/opt/app/erlang</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel</span><br><span class="line">tar -zxvf /opt/package/e2e/web/otp_src_23.1.tar.gz -C /opt/app</span><br><span class="line"><span class="built_in">cd</span> /opt/app/otp_src_23.1</span><br><span class="line">mkdir /opt/app/erlang</span><br><span class="line">./configure --prefix=/opt/app/erlang</span><br></pre></td></tr></table></figure>
 <p>如果显示这个，假装没看见<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201103213022345.png" alt="image-20201103213022345"></p>
 <p>安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
@@ -711,7 +711,7 @@
 <h3 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h3><p>安装<code>xz</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y xz</span><br></pre></td></tr></table></figure>
 <p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xz -d /opt/package/web/rabbitmq-server-generic-unix-3.8.3.tar.xz</span><br><span class="line">tar -xvf /opt/package/web/rabbitmq-server-generic-unix-3.8.3.tar -C /opt/app/</span><br><span class="line">ln -s /opt/app/rabbitmq_server-3.8.3 /opt/app/rabbitmq</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xz -d /opt/package/e2e/web/rabbitmq-server-generic-unix-3.8.3.tar.xz</span><br><span class="line">tar -xvf /opt/package/e2e/web/rabbitmq-server-generic-unix-3.8.3.tar -C /opt/app/</span><br><span class="line">ln -s /opt/app/rabbitmq_server-3.8.3 /opt/app/rabbitmq</span><br></pre></td></tr></table></figure>
 
 <p>修改环境变量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> RABBITMQ_HOME=/opt/app/rabbitmq</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$RABBITMQ_HOME</span>/sbin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
@@ -734,7 +734,7 @@
 <p>登录<code>http://172.30.100.180:15672/</code><br>用户名<code>guest</code><br>密码<code>guest</code></p>
 <p>点击 <code>Admin</code> 标签，点击<code>Add a user</code>,输入用户名<code>rabbit</code> , 密码 <code>123456</code>,再次重复密码<code>123456</code>,Tags<code>administrator</code> 并设置身份 , 点击<code>Add user</code>按钮<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104092751871.png" alt="image-20201104092751871"><br>点击<code>用户名</code>设置<code>权限</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093044562.png" alt="image-20201104093044562"><br>直接点击 <code>Set permission</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093125044.png" alt="image-20201104093125044"><br>完成网页端配置<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093322984.png" alt="image-20201104093322984"></p>
 <h3 id="Geoserver"><a href="#Geoserver" class="headerlink" title="Geoserver"></a>Geoserver</h3><p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/geoserver</span><br><span class="line">unzip -d /opt/app/e2e/geoserver /opt/package/web/e2e/geoserver/geoserver.zip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/geoserver</span><br><span class="line">unzip -d /opt/app/e2e/geoserver /opt/package/e2e/web/e2e/geoserver/geoserver.zip</span><br></pre></td></tr></table></figure>
 
 
 <p>修改配置文件<code>profile</code></p>
@@ -751,7 +751,7 @@
 <!-- ```bash -->
 <!-- mkdir -p /opt/app -->
 <!-- cd /opt/app -->
-<!-- tar -zxvf /opt/package/web/nacos-server-1.4.1.tar.gz -C /opt/app 
+<!-- tar -zxvf /opt/package/e2e/web/nacos-server-1.4.1.tar.gz -C /opt/app 
 <!-- ``` -->
 
 <p>启动</p>
@@ -761,20 +761,20 @@
 
 
 <h2 id="版本部署"><a href="#版本部署" class="headerlink" title="版本部署"></a>版本部署</h2><h3 id="E2E"><a href="#E2E" class="headerlink" title="E2E"></a>E2E</h3><p>复制<code>jar</code>包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/web/e2e/jars /opt/app/e2e</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/e2e/web/e2e/jars /opt/app/e2e</span><br></pre></td></tr></table></figure>
 
 <p>复制<code>dist</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/web/e2e/dist /opt/app/e2e</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/e2e/web/e2e/dist /opt/app/e2e</span><br></pre></td></tr></table></figure>
 
 <p>复制<code>sbin</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/web/e2e/sbin /opt/app/e2e</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/</span><br><span class="line">cp -r /opt/package/e2e/web/e2e/sbin /opt/app/e2e</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置及初始化"><a href="#配置及初始化" class="headerlink" title="配置及初始化"></a>配置及初始化</h2><h3 id="导入mysql脚本"><a href="#导入mysql脚本" class="headerlink" title="导入mysql脚本"></a>导入mysql脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/package/web/e2e/sql/v2.1/full</span><br><span class="line">mysql -uroot -p</span><br><span class="line">create database netop_e2e default character <span class="built_in">set</span> utf8mb4 collate utf8mb4_unicode_ci;</span><br><span class="line">create database netop_e2e_config default character <span class="built_in">set</span> utf8mb4 collate utf8mb4_unicode_ci;</span><br><span class="line">use netop_e2e;</span><br><span class="line"><span class="built_in">source</span> mysql_netop_full.sql;</span><br><span class="line">use netop_e2e_config;</span><br><span class="line"><span class="built_in">source</span> mysql_netop_config_full.sql;</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置及初始化"><a href="#配置及初始化" class="headerlink" title="配置及初始化"></a>配置及初始化</h2><h3 id="导入mysql脚本"><a href="#导入mysql脚本" class="headerlink" title="导入mysql脚本"></a>导入mysql脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/package/e2e/web/e2e/sql/v2.1/full</span><br><span class="line">mysql -uroot -p</span><br><span class="line">create database netop_e2e default character <span class="built_in">set</span> utf8mb4 collate utf8mb4_unicode_ci;</span><br><span class="line">create database netop_e2e_config default character <span class="built_in">set</span> utf8mb4 collate utf8mb4_unicode_ci;</span><br><span class="line">use netop_e2e;</span><br><span class="line"><span class="built_in">source</span> mysql_netop_full.sql;</span><br><span class="line">use netop_e2e_config;</span><br><span class="line"><span class="built_in">source</span> mysql_netop_config_full.sql;</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="导入postgresql脚本"><a href="#导入postgresql脚本" class="headerlink" title="导入postgresql脚本"></a>导入postgresql脚本</h3><blockquote>
 <p>此处后续需要优化</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/package/web/e2e/sql/v2.1/full</span><br><span class="line">su postgres</span><br><span class="line">psql</span><br><span class="line">create database e2e owner postgres;</span><br><span class="line">\c e2e;</span><br><span class="line">create extension postgis;</span><br><span class="line">create extension pg_pathman;</span><br><span class="line">\i pg_sql_full.sql;</span><br><span class="line">\i pg_data_sql_full.sql;</span><br><span class="line">\i pg_function_full.sql;</span><br><span class="line">\q</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/package/e2e/web/e2e/sql/v2.1/full</span><br><span class="line">su postgres</span><br><span class="line">psql</span><br><span class="line">create database e2e owner postgres;</span><br><span class="line">\c e2e;</span><br><span class="line">create extension postgis;</span><br><span class="line">create extension pg_pathman;</span><br><span class="line">\i pg_sql_full.sql;</span><br><span class="line">\i pg_data_sql_full.sql;</span><br><span class="line">\i pg_function_full.sql;</span><br><span class="line">\q</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -782,13 +782,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br><span class="line"></span><br><span class="line"><span class="comment"># 末尾追加</span></span><br><span class="line">172.30.100.186    netop-redis</span><br><span class="line">172.30.100.211    netop-mysql</span><br><span class="line">172.30.100.180    netop-postgresql netop-e2e-postgresql</span><br><span class="line">172.30.100.211    netop-minio</span><br><span class="line">172.30.100.186    netop-rabbitmq</span><br><span class="line">172.30.100.211    netop-geoserver</span><br><span class="line">172.30.100.186    netop-register</span><br><span class="line">172.30.100.186    netop-gateway</span><br><span class="line">172.30.100.186    netop-auth</span><br><span class="line">172.30.100.185	  netop-hbase</span><br></pre></td></tr></table></figure>
 
 <h3 id="修改NGINX文件"><a href="#修改NGINX文件" class="headerlink" title="修改NGINX文件"></a>修改NGINX文件</h3><p>替换<code>nginx</code>配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /opt/package/web/e2e/nginx/nginx.conf /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /opt/package/e2e/web/e2e/nginx/nginx.conf /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
 
 <p>修改<code>nginx</code>配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约64行</span></span><br><span class="line">root /opt/app/e2e/dist;</span><br></pre></td></tr></table></figure>
 
 <h3 id="修改NACOS文件"><a href="#修改NACOS文件" class="headerlink" title="修改NACOS文件"></a>修改NACOS文件</h3><p>导入<code>nacos</code>配置文件</p>
-<p>打开浏览器输入<code>IP地址:8849/nacos</code>,用户名<code>nacos</code>,密码<code>nacos</code>，点击<code>提交</code>登陆<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219094303446.png" alt="image-20210219094303446"><br>上传<code>/opt/package/web/e2e/nacos/config.zip</code>压缩包<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219095345763.png" alt="image-20210219095345763"></p>
+<p>打开浏览器输入<code>IP地址:8849/nacos</code>,用户名<code>nacos</code>,密码<code>nacos</code>，点击<code>提交</code>登陆<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219094303446.png" alt="image-20210219094303446"><br>上传<code>/opt/package/e2e/web/e2e/nacos/config.zip</code>压缩包<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219095345763.png" alt="image-20210219095345763"></p>
 <h3 id="初始化MINIO"><a href="#初始化MINIO" class="headerlink" title="初始化MINIO"></a>初始化MINIO</h3><p>浏览器输入地址<code>http://172.30.100.186:9001</code>,用户名<code>minioadmin</code>,密码<code>minioadmin</code></p>
 <p>点游侠脚<code>红色叉叉</code>， 点红色叉叉上面的<code>黄色按钮</code>， 弹出框里输入 <code>avatar</code>,然后<code>回车</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201106090014904.png" alt="image-20201106090014904"><br>右侧出现<code>avatar</code>菜单，鼠标移动到<code>菜单右侧</code>出现三个点，点击<code>三个点</code>，选<code>Edit policy</code> 弹出框中输入<code>*.*</code>,选择<code>Read and Write</code>点击<code>Add</code>按钮，然后直接点 <code>叉叉</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201106090637793.png" alt="image-20201106090637793"></p>
 <p>按以上步骤分别创建</p>
@@ -799,7 +799,7 @@
 <li><code>plancheck</code></li>
 <li><code>render</code></li>
 <li><code>template</code></li>
-<li><code>upload</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201106091142791.png" alt="image-20201106091142791"><br>进入<code>upload</code>上传<code>bbcdca43b35a481f92c73f74ed14f9b5.png</code>,该文件的路径在<code>/opt/package/web/e2e/minio/upload/bbcdca43b35a481f92c73f74ed14f9b5.png</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210301161741157.png" alt="image-20210301161741157"></li>
+<li><code>upload</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201106091142791.png" alt="image-20201106091142791"><br>进入<code>upload</code>上传<code>bbcdca43b35a481f92c73f74ed14f9b5.png</code>,该文件的路径在<code>/opt/package/e2e/web/e2e/minio/upload/bbcdca43b35a481f92c73f74ed14f9b5.png</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210301161741157.png" alt="image-20210301161741157"></li>
 </ul>
 <p>安以上步骤分别上传</p>
 <ul>
@@ -823,15 +823,8 @@
 
 <h2 id="E2E-1"><a href="#E2E-1" class="headerlink" title="E2E"></a>E2E</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh /opt/app/e2e/sbin/startup_e2e.sh</span><br></pre></td></tr></table></figure>
 
-<h1 id="项目权限及初始化"><a href="#项目权限及初始化" class="headerlink" title="项目权限及初始化"></a>项目权限及初始化</h1><p>登陆<code>http://172.30.100.186:8889</code>,用户名<code>admin</code>,密码<code>123456</code>,输入验证码后即可进入</p>
-<ul>
-<li>初始化地市数据</li>
-<li>根据客户要求创建定制角色</li>
-<li>根据客户要求给角色配置权限</li>
-<li>根据客户要求创建用户</li>
-<li>导入工参、邻区数据</li>
-<li>执行大数据脚本</li>
-</ul>
+
+
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="swagger"><a href="#swagger" class="headerlink" title="swagger"></a>swagger</h2><blockquote>
 <p>可用于接口测试，或者使用未给用户开放功能。<br>修改<span style="color:red;font-weight:bold">浏览器所在电脑</span>的<code>host</code>文件<br>追加<code>netop-gateway</code>他的IP地址与服务器保持一致。（管他三七二十一直接从服务器复制过来）</p>
 </blockquote>
@@ -842,7 +835,7 @@
 <p>目前只考虑针对服务端实现自动化测试，网页端暂不考虑。</p>
 </blockquote>
 <h1 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h1><h2 id="版本构建方式"><a href="#版本构建方式" class="headerlink" title="版本构建方式"></a>版本构建方式</h2><p>打开浏览器输入地址<code>http://172.30.100.186:8083</code>, 用户名:<code>admin</code>,密码:<code>admin</code>。<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210301101531464.png" alt="image-20210301101531464"><br>点击<code>E2E</code>项目后的<code>绿箭头+小时钟</code>开始构建服务端<br>点击<code>E2E-UI</code>项目后的<code>绿箭头+小时钟</code>开始构建网页端<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210301102217743.png" alt="image-20210301102217743"><br>构建完成之后构建状态为<code>蓝色</code>表示构建成功，可以正常获取版本。</p>
-<h2 id="版本获取方式"><a href="#版本获取方式" class="headerlink" title="版本获取方式"></a>版本获取方式</h2><p>所有用到包（<code>放置版本包</code>章节）均在<code>172.30.4.179</code>的<code>/opt/package/web</code>目录下，每日自动更新一次。</p>
+<h2 id="版本获取方式"><a href="#版本获取方式" class="headerlink" title="版本获取方式"></a>版本获取方式</h2><p>所有用到包（<code>放置版本包</code>章节）均在<code>172.30.4.179</code>的<code>/opt/package/e2e/web</code>目录下，每日自动更新一次。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">├── CentOS-7-x86_64-DVD-2003.iso</span><br><span class="line">├── e2e</span><br><span class="line">│   ├── dist</span><br><span class="line">│   ├── geoserver-e2e</span><br><span class="line">│   ├── jars</span><br><span class="line">│   ├── nginx</span><br><span class="line">│   └── sql</span><br><span class="line">├── jdk-8u202-linux-x64.tar.gz</span><br><span class="line">├── minio.tar.tgz</span><br><span class="line">├── mysql-8.0.22-1.el7.x86_64.rpm-bundle.tar</span><br><span class="line">├── nacos_config_export_2020-11-03 08-33-47.zip</span><br><span class="line">├── nginx-1.17.10.tar.gz</span><br><span class="line">├── otp_src_23.1.tar.gz</span><br><span class="line">├── percona-xtradb-cluster-shared-8.0.20-11.3.el7.x86_64.rpm</span><br><span class="line">├── pg_pathman-1.5.11.tar.gz</span><br><span class="line">├── postgresql-12.tar.tgz</span><br><span class="line">├── rabbitmq-server-generic-unix-3.8.3.tar.xz</span><br><span class="line">├── README</span><br><span class="line">└── redis-5.0.7.tar.gz</span><br></pre></td></tr></table></figure>
 
 
@@ -947,7 +940,7 @@
 <!-- 购买地址：https://highcharts.com.cn/shopcart  -->
 
 
-<h3 id="自定义数据修改"><a href="#自定义数据修改" class="headerlink" title="自定义数据修改"></a>自定义数据修改</h3><p>上述中已经给出所使用的表，请获取到自定义的数据之后修改对应表即可。这里必须保证地理化信息格式正确。</p>
+<h3 id="自定义数据修改"><a href="#自定义数据修改" class="headerlink" title="自定义数据修改"></a>自定义数据修改</h3><p>上述中已经给出所使用的表，请获取到自定义的数据之后修改对应表即可。这里必须保证层级关系以及地理化信息格式正确。</p>
 <h2 id="Liscense生成与导入"><a href="#Liscense生成与导入" class="headerlink" title="Liscense生成与导入"></a>Liscense生成与导入</h2><blockquote>
 <p>暂此无需求</p>
 </blockquote>
