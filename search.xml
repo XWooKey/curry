@@ -1,61 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux安装java</title>
-    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
-    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos7下安装python以便使用pip工具</title>
-    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
-<ol>
-<li><p>首先安装epel扩展源：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新完成之后，就可安装pip：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装完成之后清除cache：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新pip工具</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux安装ruby</title>
-    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
-    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
-<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>E2E版本安装手册</title>
     <url>/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<a id="more"></a>
@@ -529,22 +474,8 @@
 <p>刷新配置</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
 
-<h3 id="NACOS"><a href="#NACOS" class="headerlink" title="NACOS"></a>NACOS</h3><blockquote>
-<p><code>TODO</code></p>
-<!-- 使用正版nacos -->
-</blockquote>
-<!-- 安装 -->
-
-<!-- ```bash -->
-<!-- mkdir -p /opt/app -->
-<!-- cd /opt/app -->
-<!-- tar -zxvf /opt/package/e2e/web/nacos-server-1.4.1.tar.gz -C /opt/app 
-<!-- ``` -->
-
-<p>启动</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar /opt/app/jars/netop-register.jar -Dnacos.home=e2e --spring.profiles.active=dev  --server.port=8849 &gt; /var/<span class="built_in">log</span>/e2e/register.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-
-
+<h3 id="NACOS"><a href="#NACOS" class="headerlink" title="NACOS"></a>NACOS</h3><p>解压</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line"><span class="built_in">cd</span> /opt/app</span><br><span class="line">tar -zxvf /opt/package/e2e/web/nacos-server-1.4.1.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
 
 
 <h2 id="版本部署"><a href="#版本部署" class="headerlink" title="版本部署"></a>版本部署</h2><h3 id="E2E"><a href="#E2E" class="headerlink" title="E2E"></a>E2E</h3><p>复制<code>jar</code>包</p>
@@ -574,8 +505,13 @@
 <p>修改<code>nginx</code>配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约64行</span></span><br><span class="line">root /opt/app/e2e/dist;</span><br></pre></td></tr></table></figure>
 
-<h3 id="修改NACOS文件"><a href="#修改NACOS文件" class="headerlink" title="修改NACOS文件"></a>修改NACOS文件</h3><p>导入<code>nacos</code>配置文件</p>
-<p>打开浏览器输入<code>IP地址:8849/nacos</code>,用户名<code>nacos</code>,密码<code>nacos</code>，点击<code>提交</code>登陆<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219094303446.png" alt="image-20210219094303446"><br>上传<code>/opt/package/e2e/web/e2e/nacos/config.zip</code>压缩包<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219095345763.png" alt="image-20210219095345763"></p>
+<h3 id="修改NACOS文件"><a href="#修改NACOS文件" class="headerlink" title="修改NACOS文件"></a>修改NACOS文件</h3><p>替换<code>nacos</code>配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp &#x2F;opt&#x2F;package&#x2F;e2e&#x2F;web&#x2F;e2e&#x2F;nacos_config&#x2F;application.properties  &#x2F;opt&#x2F;app&#x2F;nacos&#x2F;conf</span><br></pre></td></tr></table></figure>
+<p>启动<code>nacos</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;opt&#x2F;app&#x2F;nacos&#x2F;bin&#x2F;startup.sh -m standalone</span><br></pre></td></tr></table></figure>
+
+<p>导入<code>nacos</code>配置文件</p>
+<p>打开浏览器输入<code>IP地址:8849/nacos</code>,用户名<code>nacos</code>,密码<code>nacos</code>，点击<code>提交</code>登陆<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219094303446.png" alt="image-20210219094303446"><br>上传<code>/opt/package/e2e/web/e2e/nacos_import/config.zip</code>压缩包<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20210219095345763.png" alt="image-20210219095345763"></p>
 <h3 id="初始化MINIO"><a href="#初始化MINIO" class="headerlink" title="初始化MINIO"></a>初始化MINIO</h3><p>浏览器输入地址<code>http://172.30.100.186:9001</code>,用户名<code>minioadmin</code>,密码<code>minioadmin</code></p>
 <p>点游侠脚<code>红色叉叉</code>， 点红色叉叉上面的<code>黄色按钮</code>， 弹出框里输入 <code>avatar</code>,然后<code>回车</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201106090014904.png" alt="image-20201106090014904"><br>右侧出现<code>avatar</code>菜单，鼠标移动到<code>菜单右侧</code>出现三个点，点击<code>三个点</code>，选<code>Edit policy</code> 弹出框中输入<code>*.*</code>,选择<code>Read and Write</code>点击<code>Add</code>按钮，然后直接点 <code>叉叉</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201106090637793.png" alt="image-20201106090637793"></p>
 <p>按以上步骤分别创建</p>
@@ -606,11 +542,9 @@
 <h2 id="geoserver"><a href="#geoserver" class="headerlink" title="geoserver"></a>geoserver</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /opt/app/e2e/geoserver</span><br><span class="line">nohup sh /opt/app/e2e/geoserver/bin/startup.sh &gt; /var/<span class="built_in">log</span>/geoserver.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
 <h2 id="NACOS-1"><a href="#NACOS-1" class="headerlink" title="NACOS"></a>NACOS</h2><p>上面已经执行过，这里可以不执行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">BUILD_ID=dontKillMe nohup java -Dfile.encoding=utf-8 -jar /opt/app/e2e/jars/netop-register.jar -Dnacos.home=e2e --spring.profiles.active=dev  --server.port=8849 &gt; /var/<span class="built_in">log</span>/e2e/register.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/app/nacos/bin/startup.sh -m standalone</span><br></pre></td></tr></table></figure>
 
 <h2 id="E2E-1"><a href="#E2E-1" class="headerlink" title="E2E"></a>E2E</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /opt/app/e2e/sbin/startup_e2e.sh</span><br></pre></td></tr></table></figure>
-
-
 
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="swagger"><a href="#swagger" class="headerlink" title="swagger"></a>swagger</h2><blockquote>
 <p>可用于接口测试，或者使用未给用户开放功能。<br>修改<span style="color:red;font-weight:bold">浏览器所在电脑</span>的<code>host</code>文件<br>追加<code>netop-gateway</code>他的IP地址与服务器保持一致。（管他三七二十一直接从服务器复制过来）</p>
@@ -627,29 +561,11 @@
 
 
 <h2 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h2><blockquote>
-<p><code>TODO</code><br> 如果觉得命令行不太好用，可以是用可视化工具<code>RedisDesktopManager</code>来操作redis</p>
+<p> 如果觉得命令行不太好用，可以是用可视化工具<code>RedisDesktopManager</code>来操作<code>redis</code></p>
 </blockquote>
-<!-- /opt/app/redis/src/redis-cli -p 6380 keys *option* | xargs /opt/app/redis/src/redis-cli -p 6380 del -->
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys *:option::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys option::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys *:dict_details::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys dict_details::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys *:dict_dy_details::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys dict_dy_details::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys *:netop_oauth:* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys netop_oauth:* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys *:user_details::* | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br><span class="line">/opt/app/redis/src/redis-cli -p 6380 keys *:menu_details::1_menu | xargs /opt/app/redis/src/redis-cli -p 6380 del</span><br></pre></td></tr></table></figure>
 
-<p>需要清除以下keys</p>
-<ul>
-<li>翻译，控件下拉属性。一般删除这些。<ul>
-<li><code>*:option::*</code></li>
-<li><code>option::*</code></li>
-<li><code>*:dict_details::*</code></li>
-<li><code>dict_details::*</code></li>
-<li><code>*:dict_dy_details::*</code></li>
-<li><code>dict_dy_details::*</code></li>
-</ul>
-</li>
-<li>用户信息，视情况而定。<ul>
-<li><code>*:netop_oauth:*</code></li>
-<li><code>netop_oauth:*</code></li>
-<li><code>*:user_details::*</code></li>
-<li><code>*:menu_details::1_menu</code></li>
-</ul>
-</li>
-</ul>
+
 <h2 id="导入省数据"><a href="#导入省数据" class="headerlink" title="导入省数据"></a>导入省数据</h2><p>此项目仅支持单省，所以部署时需要将当前省的数据填充到下拉框控件。</p>
 <blockquote>
 <p>进入<code>swagger</code>方法可以参考<code>测试.swagger</code>章节</p>
@@ -734,6 +650,48 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux安装java</title>
+    <url>/2018/01/04/Linux%E5%AE%89%E8%A3%85java/</url>
+    <content><![CDATA[<h2 id="去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz"><a href="#去java官网下载JDK-并上传到-opt-data-jdk-8u151-linux-x64-tar-gz" class="headerlink" title="去java官网下载JDK 并上传到/opt/data/jdk-8u151-linux-x64.tar.gz"></a>去java官网下载JDK 并上传到<code>/opt/data/jdk-8u151-linux-x64.tar.gz</code></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /opt/app</span><br><span class="line">tar -zxvf /opt/data/jdk-8u151-linux-x64.tar.gz -C /opt/app</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改profile"><a href="#修改profile" class="headerlink" title="修改profile"></a>修改profile</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最后3行插入</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/app/jdk1.8.0_151</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="刷新配置并验证"><a href="#刷新配置并验证" class="headerlink" title="刷新配置并验证"></a>刷新配置并验证</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line">javac -version</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7下安装python以便使用pip工具</title>
+    <url>/2017/12/26/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python%E4%BB%A5%E4%BE%BF%E4%BD%BF%E7%94%A8pip%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>python的pip工具非常使用但是需要手动安装</p>
+<ol>
+<li><p>首先安装epel扩展源：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install epel-release</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新完成之后，就可安装pip：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum -y install python-pip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成之后清除cache：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">　　yum clean all</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新pip工具</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1559,6 +1517,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux安装ruby</title>
+    <url>/2018/01/15/Linux%E5%AE%89%E8%A3%85ruby/</url>
+    <content><![CDATA[<h2 id="前往ruby国内镜像下载ruby，并上传到linux"><a href="#前往ruby国内镜像下载ruby，并上传到linux" class="headerlink" title="前往ruby国内镜像下载ruby，并上传到linux"></a>前往ruby国内镜像下载ruby，并上传到linux</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ydWJ5LnRhb2Jhby5vcmcv" title="https://ruby.taobao.org/">https://ruby.taobao.org/<i class="fa fa-external-link"></i></span></p>
+<h2 id="解压ruby"><a href="#解压ruby" class="headerlink" title="解压ruby"></a>解压ruby</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ~]# tar -zxvf &#x2F;opt&#x2F;data&#x2F;ruby-2.3.0.tar.gz -C &#x2F;opt&#x2F;app</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置软连接-并进入"><a href="#设置软连接-并进入" class="headerlink" title="设置软连接,并进入"></a>设置软连接,并进入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop app]# cd &#x2F;opt&#x2F;app</span><br><span class="line">[root@guyu-hadoop app]# ln -s ruby-2.3.0&#x2F; ruby</span><br><span class="line">[root@guyu-hadoop app]# cd ruby</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装ruby-并查看版本号"><a href="#安装ruby-并查看版本号" class="headerlink" title="安装ruby,并查看版本号"></a>安装ruby,并查看版本号</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@guyu-hadoop ruby]# .&#x2F;configure</span><br><span class="line">[root@guyu-hadoop ruby]# make</span><br><span class="line">[root@guyu-hadoop ruby]# make install</span><br><span class="line">[root@guyu-hadoop ruby]# ruby -v</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAVEN设置UTF-8</title>
+    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
+    <content><![CDATA[<ol>
+<li><p>修改环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加pom.xml配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux挂载本地实体光盘</title>
     <url>/2018/01/04/Linux%E6%8C%82%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%AE%9E%E4%BD%93%E5%85%89%E7%9B%98/</url>
     <content><![CDATA[<h2 id="查看光盘位置"><a href="#查看光盘位置" class="headerlink" title="查看光盘位置"></a>查看光盘位置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost Desktop]# ls -l &#x2F;dev | grep cdrom</span><br><span class="line">lrwxrwxrwx.  1 root root           3 Nov  9 18:03 cdrom -&gt; sr0</span><br><span class="line">crw-rw----+  1 root cdrom    21,   1 Nov  9 18:03 sg1</span><br><span class="line">brw-rw----+  1 root cdrom    11,   0 Nov  9 18:03 sr0</span><br></pre></td></tr></table></figure>
@@ -1596,22 +1583,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MAVEN设置UTF-8</title>
-    <url>/2019/04/05/MAVEN%E8%AE%BE%E7%BD%AEUTF-8/</url>
-    <content><![CDATA[<ol>
-<li><p>修改环境变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名 MAVEN_OPTS </span><br><span class="line">变量值 -Xms256m -Xmx512m -Dfile.encoding&#x3D;UTF-8</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加pom.xml配置</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysql设置远程登陆</title>
     <url>/2018/05/12/mysql%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host,user from user;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D; &#39;root&#39;;</span><br><span class="line">select host, user from user;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
@@ -1619,6 +1590,57 @@
       <tags>
         <tag>java</tag>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux安装KodExplorer在线文档管理器</title>
+    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
+<li>右侧菜单栏里选择<code>网站</code></li>
+<li>选择<code>添加站点</code>按钮</li>
+<li>域名填<code>192.168.163.128:9999</code></li>
+<li>根目录<code>/www/wwwroot/kod</code></li>
+</ul>
+<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
+<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux安装VNC</title>
+    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85VNC/</url>
+    <content><![CDATA[<blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5saW51eGlkYy5jb20vTGludXgvMjAxNi0wNy8xMzI4MzUuaHRt" title="http://www.linuxidc.com/Linux/2016-07/132835.htm">http://www.linuxidc.com/Linux/2016-07/132835.htm<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<h2 id="1-安装vnc-server（或者去官网下载-VNC-Connect）"><a href="#1-安装vnc-server（或者去官网下载-VNC-Connect）" class="headerlink" title="1. 安装vnc server（或者去官网下载 VNC Connect）"></a>1. 安装vnc server（或者去官网下载 <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhbHZuYy5jb20vZW4vY29ubmVjdC9kb3dubG9hZC92bmMvd2luZG93cy8=" title="https://www.realvnc.com/en/connect/download/vnc/windows/">VNC Connect<i class="fa fa-external-link"></i></span>）</h2><p>看清楚下载的是<code>server</code> 如果不是 就根据<code>then</code>的提示去找</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install vnc *vnc-server*</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-更具提示输入密码"><a href="#2-更具提示输入密码" class="headerlink" title="2. 更具提示输入密码"></a>2. 更具提示输入密码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">abcd.1234</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vncserver :1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>停止服务<br>vncserver -kill :1</p>
+</blockquote>
+<h2 id="4-安装GNOME桌面"><a href="#4-安装GNOME桌面" class="headerlink" title="4. 安装GNOME桌面"></a>4. 安装<code>GNOME</code>桌面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum groupinstall &quot;GNOME Desktop&quot; &quot;Graphical Administration Tools&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-下载VNC-Viewer"><a href="#5-下载VNC-Viewer" class="headerlink" title="5. 下载VNC Viewer"></a>5. 下载<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhbHZuYy5jb20vZW4vY29ubmVjdC9kb3dubG9hZC92aWV3ZXIvd2luZG93cy8=" title="https://www.realvnc.com/en/connect/download/viewer/windows/">VNC Viewer<i class="fa fa-external-link"></i></span></h2><p>看清楚下载的是<code>viewer</code> 如果不是 就根据<code>then</code>的提示去找</p>
+<h2 id="6-打开VNC-Viewer"><a href="#6-打开VNC-Viewer" class="headerlink" title="6. 打开VNC Viewer"></a>6. 打开<code>VNC Viewer</code></h2><p>输入IP地址<code>192.168.163.128:1</code><br>输入密码<code>abcd.1234</code></p>
+<h2 id="7-设置开机启动"><a href="#7-设置开机启动" class="headerlink" title="7. 设置开机启动"></a>7. 设置开机启动</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vncserver@:1.service</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2676,91 +2698,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux安装KodExplorer在线文档管理器</title>
-    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85KodExplorer%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装"><a href="#必须保证已经安装了php环境-如果没有安装可以使用宝塔来安装" class="headerlink" title="必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装"></a>必须保证已经安装了php环境 如果没有安装可以使用宝塔来安装</h2><h2 id="创建kod目录"><a href="#创建kod目录" class="headerlink" title="创建kod目录"></a>创建kod目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /www/wwwroot/kod</span><br><span class="line"><span class="built_in">cd</span> /www/wwwroot/kod</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载kod-https-kodcloud-com"><a href="#下载kod-https-kodcloud-com" class="headerlink" title="下载kod https://kodcloud.com/"></a>下载kod <span class="exturl" data-url="aHR0cHM6Ly9rb2RjbG91ZC5jb20v" title="https://kodcloud.com/">https://kodcloud.com/<i class="fa fa-external-link"></i></span></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://static.kodcloud.com/update/download/kodexplorer4.22.zip</span><br><span class="line">unzip kodexplorer4.22.zip</span><br><span class="line">chmod -Rf 777 ./*</span><br></pre></td></tr></table></figure>
-
-<h2 id="利用宝塔来启动服务"><a href="#利用宝塔来启动服务" class="headerlink" title="利用宝塔来启动服务"></a>利用宝塔来启动服务</h2><ul>
-<li>右侧菜单栏里选择<code>网站</code></li>
-<li>选择<code>添加站点</code>按钮</li>
-<li>域名填<code>192.168.163.128:9999</code></li>
-<li>根目录<code>/www/wwwroot/kod</code></li>
-</ul>
-<p>这样就把 <code>192.168.163.128:9999</code>与<code>/www/wwwroot/kod</code>互相绑定了<br>只要在浏览器输入<code>192.168.163.128:9999</code>就可以看到kod的界面了</p>
-<h2 id="给kod增加根目录权限"><a href="#给kod增加根目录权限" class="headerlink" title="给kod增加根目录权限"></a>给kod增加根目录权限</h2><p>修改<code>open_basedir</code>在最后增加/表示可以读取根目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /www/wwwroot/kod/.user.ini</span><br><span class="line"></span><br><span class="line">open_basedir=/www/wwwroot/kod/:/tmp/:/proc/:/</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux安装VNC</title>
-    <url>/2018/01/04/linux%E5%AE%89%E8%A3%85VNC/</url>
-    <content><![CDATA[<blockquote>
-<p><span class="exturl" data-url="aHR0cDovL3d3dy5saW51eGlkYy5jb20vTGludXgvMjAxNi0wNy8xMzI4MzUuaHRt" title="http://www.linuxidc.com/Linux/2016-07/132835.htm">http://www.linuxidc.com/Linux/2016-07/132835.htm<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<h2 id="1-安装vnc-server（或者去官网下载-VNC-Connect）"><a href="#1-安装vnc-server（或者去官网下载-VNC-Connect）" class="headerlink" title="1. 安装vnc server（或者去官网下载 VNC Connect）"></a>1. 安装vnc server（或者去官网下载 <span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhbHZuYy5jb20vZW4vY29ubmVjdC9kb3dubG9hZC92bmMvd2luZG93cy8=" title="https://www.realvnc.com/en/connect/download/vnc/windows/">VNC Connect<i class="fa fa-external-link"></i></span>）</h2><p>看清楚下载的是<code>server</code> 如果不是 就根据<code>then</code>的提示去找</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install vnc *vnc-server*</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-更具提示输入密码"><a href="#2-更具提示输入密码" class="headerlink" title="2. 更具提示输入密码"></a>2. 更具提示输入密码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">abcd.1234</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vncserver :1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>停止服务<br>vncserver -kill :1</p>
-</blockquote>
-<h2 id="4-安装GNOME桌面"><a href="#4-安装GNOME桌面" class="headerlink" title="4. 安装GNOME桌面"></a>4. 安装<code>GNOME</code>桌面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum groupinstall &quot;GNOME Desktop&quot; &quot;Graphical Administration Tools&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-下载VNC-Viewer"><a href="#5-下载VNC-Viewer" class="headerlink" title="5. 下载VNC Viewer"></a>5. 下载<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhbHZuYy5jb20vZW4vY29ubmVjdC9kb3dubG9hZC92aWV3ZXIvd2luZG93cy8=" title="https://www.realvnc.com/en/connect/download/viewer/windows/">VNC Viewer<i class="fa fa-external-link"></i></span></h2><p>看清楚下载的是<code>viewer</code> 如果不是 就根据<code>then</code>的提示去找</p>
-<h2 id="6-打开VNC-Viewer"><a href="#6-打开VNC-Viewer" class="headerlink" title="6. 打开VNC Viewer"></a>6. 打开<code>VNC Viewer</code></h2><p>输入IP地址<code>192.168.163.128:1</code><br>输入密码<code>abcd.1234</code></p>
-<h2 id="7-设置开机启动"><a href="#7-设置开机启动" class="headerlink" title="7. 设置开机启动"></a>7. 设置开机启动</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vncserver@:1.service</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>端口占用</title>
-    <url>/2018/07/25/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr &quot;4000&quot;	#win</span><br><span class="line">netstat -tln | grep 8080      #linux</span><br></pre></td></tr></table></figure>
-</blockquote>
-<a id="more"></a>
-<h2 id="Windows解决方案"><a href="#Windows解决方案" class="headerlink" title="Windows解决方案"></a>Windows解决方案</h2><ol>
-<li><p>查看占用端口的<code>pid</code>，这里查看端口为<code>4000</code>,得到了<code>pid</code>为<code>4108</code></p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">netstat -aon|<span class="built_in">findstr</span> "<span class="number">4000</span>"	</span><br><span class="line"></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>:<span class="number">0</span>              LISTENING       <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        CLOSE_WAIT      <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         FIN_WAIT_2      <span class="number">4108</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看<code>pid</code>为<code>4108</code>的程序，可以看到这里是360浏览器占用了4000</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">tasklist|<span class="built_in">findstr</span> "<span class="number">4108</span>"</span><br><span class="line"></span><br><span class="line">  <span class="number">360</span>se.exe                     <span class="number">4108</span> Console                    <span class="number">1</span>    <span class="number">241</span>,<span class="number">484</span> K</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀死被占用的程序</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /t /im <span class="number">360</span>se.exe</span><br><span class="line"></span><br><span class="line">  成功: 已终止 PID <span class="number">6848</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  错误: 无法终止 PID <span class="number">6952</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  原因: 拒绝访问。</span><br><span class="line">  成功: 已终止 PID <span class="number">6916</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5004</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">8108</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7984</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">9816</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5716</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4116</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">1260</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7904</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4108</span> (属于 PID <span class="number">4664</span> 子进程)的进程。</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="Linux解决方案"><a href="#Linux解决方案" class="headerlink" title="Linux解决方案"></a>Linux解决方案</h2><ol>
-<li><p>查看端口使用情况</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tln | grep 8080</span><br><span class="line"></span><br><span class="line">  tcp6       0      0:::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看端口属于哪个程序</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i :8080</span><br><span class="line"></span><br><span class="line">  COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">  java    2068 root   48u  IPv6  32752      0t0  TCP *:webcache (LISTEN)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀掉占用端口的进程</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2068</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>小技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>电联版本安装手册</title>
     <url>/2020/06/23/%E7%94%B5%E8%81%94%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h1 id="手册安装版本速查"><a href="#手册安装版本速查" class="headerlink" title="手册安装版本速查"></a>手册安装版本速查</h1><table>
@@ -3048,6 +2985,40 @@
 ]]></content>
       <tags>
         <tag>电联</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>端口占用</title>
+    <url>/2018/07/25/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr &quot;4000&quot;	#win</span><br><span class="line">netstat -tln | grep 8080      #linux</span><br></pre></td></tr></table></figure>
+</blockquote>
+<a id="more"></a>
+<h2 id="Windows解决方案"><a href="#Windows解决方案" class="headerlink" title="Windows解决方案"></a>Windows解决方案</h2><ol>
+<li><p>查看占用端口的<code>pid</code>，这里查看端口为<code>4000</code>,得到了<code>pid</code>为<code>4108</code></p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">netstat -aon|<span class="built_in">findstr</span> "<span class="number">4000</span>"	</span><br><span class="line"></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>:<span class="number">0</span>              LISTENING       <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        CLOSE_WAIT      <span class="number">2044</span></span><br><span class="line">  TCP    <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">14863</span>        <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">4000</span>         FIN_WAIT_2      <span class="number">4108</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看<code>pid</code>为<code>4108</code>的程序，可以看到这里是360浏览器占用了4000</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">tasklist|<span class="built_in">findstr</span> "<span class="number">4108</span>"</span><br><span class="line"></span><br><span class="line">  <span class="number">360</span>se.exe                     <span class="number">4108</span> Console                    <span class="number">1</span>    <span class="number">241</span>,<span class="number">484</span> K</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>杀死被占用的程序</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /t /im <span class="number">360</span>se.exe</span><br><span class="line"></span><br><span class="line">  成功: 已终止 PID <span class="number">6848</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  错误: 无法终止 PID <span class="number">6952</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  原因: 拒绝访问。</span><br><span class="line">  成功: 已终止 PID <span class="number">6916</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5004</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">8108</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7984</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">9816</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">5716</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4116</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">1260</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">7904</span> (属于 PID <span class="number">4108</span> 子进程)的进程。</span><br><span class="line">  成功: 已终止 PID <span class="number">4108</span> (属于 PID <span class="number">4664</span> 子进程)的进程。</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="Linux解决方案"><a href="#Linux解决方案" class="headerlink" title="Linux解决方案"></a>Linux解决方案</h2><ol>
+<li><p>查看端口使用情况</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tln | grep 8080</span><br><span class="line"></span><br><span class="line">  tcp6       0      0:::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看端口属于哪个程序</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i :8080</span><br><span class="line"></span><br><span class="line">  COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">  java    2068 root   48u  IPv6  32752      0t0  TCP *:webcache (LISTEN)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>杀掉占用端口的进程</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2068</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>小技巧</tag>
       </tags>
   </entry>
 </search>
