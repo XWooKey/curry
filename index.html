@@ -243,7 +243,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-10 15:02:09" itemprop="dateModified" datetime="2021-03-10T15:02:09+08:00">2021-03-10</time>
+                <time title="修改时间：2021-03-11 09:09:12" itemprop="dateModified" datetime="2021-03-11T09:09:12+08:00">2021-03-11</time>
               </span>
 
           <br>
@@ -719,20 +719,7 @@
 <p>刷新环境变量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
 
-<p>创建配置目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/rabbitmq</span><br></pre></td></tr></table></figure>
 
-<p>安装web插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins <span class="built_in">enable</span> rabbitmq_management</span><br></pre></td></tr></table></figure>
-
-<p>修改<code>rabbit.app</code>,删除<code>loopback_users</code>中的<code>&lt;&lt;&quot;guest&quot;&gt;&gt;</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /opt/app/rabbitmq/ebin/rabbit.app</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改39行</span></span><br><span class="line">&#123;loopback_users, []&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>启动<code>rabbitmq</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-server -detached</span><br></pre></td></tr></table></figure>
-
-<p>登录<code>http://172.30.100.180:15672/</code><br>用户名<code>guest</code><br>密码<code>guest</code></p>
-<p>点击 <code>Admin</code> 标签，点击<code>Add a user</code>,输入用户名<code>rabbit</code> , 密码 <code>123456</code>,再次重复密码<code>123456</code>,Tags<code>administrator</code> 并设置身份 , 点击<code>Add user</code>按钮<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104092751871.png" alt="image-20201104092751871"><br>点击<code>用户名</code>设置<code>权限</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093044562.png" alt="image-20201104093044562"><br>直接点击 <code>Set permission</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093125044.png" alt="image-20201104093125044"><br>完成网页端配置<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093322984.png" alt="image-20201104093322984"></p>
 <h3 id="Geoserver"><a href="#Geoserver" class="headerlink" title="Geoserver"></a>Geoserver</h3><p>解压</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/e2e/geoserver</span><br><span class="line">unzip -d /opt/app/e2e/geoserver /opt/package/e2e/web/e2e/geoserver/geoserver.zip</span><br></pre></td></tr></table></figure>
 
@@ -773,6 +760,21 @@
 <p>修改<code>nginx</code>配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 大约64行</span></span><br><span class="line">root /opt/app/e2e/dist;</span><br></pre></td></tr></table></figure>
 
+
+<p>创建配置目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/rabbitmq</span><br></pre></td></tr></table></figure>
+
+<p>安装web插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins <span class="built_in">enable</span> rabbitmq_management</span><br></pre></td></tr></table></figure>
+
+<p>修改<code>rabbit.app</code>,删除<code>loopback_users</code>中的<code>&lt;&lt;&quot;guest&quot;&gt;&gt;</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /opt/app/rabbitmq/ebin/rabbit.app</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改39行</span></span><br><span class="line">&#123;loopback_users, []&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>启动<code>rabbitmq</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-server -detached</span><br></pre></td></tr></table></figure>
+
+<p>登录<code>http://172.30.100.180:15672/</code><br>用户名<code>guest</code><br>密码<code>guest</code></p>
+<p>点击 <code>Admin</code> 标签，点击<code>Add a user</code>,输入用户名<code>rabbit</code> , 密码 <code>123456</code>,再次重复密码<code>123456</code>,Tags<code>administrator</code> 并设置身份 , 点击<code>Add user</code>按钮<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104092751871.png" alt="image-20201104092751871"><br>点击<code>用户名</code>设置<code>权限</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093044562.png" alt="image-20201104093044562"><br>直接点击 <code>Set permission</code><br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093125044.png" alt="image-20201104093125044"><br>完成网页端配置<br><img src="/2020/11/23/E2E%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C/image-20201104093322984.png" alt="image-20201104093322984"></p>
 <h3 id="修改NACOS文件"><a href="#修改NACOS文件" class="headerlink" title="修改NACOS文件"></a>修改NACOS文件</h3><p>替换<code>nacos</code>配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yes| cp &#x2F;opt&#x2F;package&#x2F;e2e&#x2F;web&#x2F;e2e&#x2F;nacos_config&#x2F;application.properties  &#x2F;opt&#x2F;app&#x2F;nacos&#x2F;conf</span><br></pre></td></tr></table></figure>
 <p>启动<code>nacos</code></p>
@@ -2979,7 +2981,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
