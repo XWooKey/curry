@@ -1095,7 +1095,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-30 15:54:26" itemprop="dateModified" datetime="2021-07-30T15:54:26+08:00">2021-07-30</time>
+                <time title="修改时间：2021-08-03 09:31:31" itemprop="dateModified" datetime="2021-08-03T09:31:31+08:00">2021-08-03</time>
               </span>
 
           <br>
@@ -1126,7 +1126,10 @@
           <a id="more"></a>
 
 <blockquote>
-<p>快速安装版正在紧张刺激的研发中。。。<br>自动化测试也即将到来啦</p>
+<ul>
+<li>快速安装版正在紧张刺激的研发中。。。</li>
+<li>自动化测试部分想法已经验证，也会在不久的将来与大家见面。</li>
+</ul>
 </blockquote>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="速查信息"><a href="#速查信息" class="headerlink" title="速查信息"></a>速查信息</h2><h3 id="手册软件安装版本"><a href="#手册软件安装版本" class="headerlink" title="手册软件安装版本"></a>手册软件安装版本</h3><table>
 <thead>
@@ -1761,8 +1764,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/aparecium/</span><br><span class="line">cp -r /opt/package/aparecium/web/aparecium/jars /opt/app/aparecium</span><br></pre></td></tr></table></figure>
 
 <p>复制<code>dist</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/aparecium/</span><br><span class="line">cp -r /opt/package/aparecium/web/aparecium/dist /opt/app/aparecium</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/aparecium/dist</span><br><span class="line">cp -r /opt/package/aparecium/web/aparecium/opplus_dist /opt/app/aparecium/dist</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>巡检、OPPLUS 前台版本有所区别，根据当前部署版本进行区分（后台jar不做区分）<br>OPPLUS版本包：/opt/package/aparecium/web/aparecium/opplus_dist<br>巡检版本包：       /opt/package/aparecium/web/aparecium/aparecium_dist </p>
+</blockquote>
 <p>复制<code>sbin</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/aparecium/</span><br><span class="line">cp -r /opt/package/aparecium/web/aparecium/sbin /opt/app/aparecium</span><br></pre></td></tr></table></figure>
 
@@ -1978,6 +1983,9 @@
 <h3 id="自定义数据修改"><a href="#自定义数据修改" class="headerlink" title="自定义数据修改"></a>自定义数据修改</h3><p>上述中已经给出所使用的表，请获取到自定义的数据之后修改对应表即可。这里必须保证层级关系以及地理化信息格式正确。例如在本系统中将所有省名都改为2字。（该操作在SQL脚本中完成）</p>
 <h2 id="Liscense生成与导入"><a href="#Liscense生成与导入" class="headerlink" title="Liscense生成与导入"></a>Liscense生成与导入</h2><blockquote>
 <p>暂此无需求</p>
+</blockquote>
+<h1 id="极速安装"><a href="#极速安装" class="headerlink" title="极速安装"></a>极速安装</h1><blockquote>
+<p>TODO</p>
 </blockquote>
 
       
