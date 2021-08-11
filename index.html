@@ -1095,7 +1095,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-11 16:06:15" itemprop="dateModified" datetime="2021-08-11T16:06:15+08:00">2021-08-11</time>
+                <time title="修改时间：2021-08-11 16:44:35" itemprop="dateModified" datetime="2021-08-11T16:44:35+08:00">2021-08-11</time>
               </span>
 
           <br>
@@ -1744,9 +1744,9 @@
 
 
 <h3 id="Geoserver"><a href="#Geoserver" class="headerlink" title="Geoserver"></a>Geoserver</h3><blockquote>
-<p>Geoserver 配置不需要改，直接启动就行！！！别再问了！！！[发火]<br>解压</p>
+<p>Geoserver 配置不需要改，直接启动就行！！！别再问了！！！[发火]</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/aparecium/geoserver</span><br><span class="line">unzip -d /opt/app/aparecium/geoserver /opt/package/aparecium/web/aparecium/geoserver/geoserver.zip</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/app/aparecium</span><br><span class="line">unzip -d /opt/app/aparecium /opt/package/aparecium/web/aparecium/geoserver/geoserver.zip</span><br></pre></td></tr></table></figure>
 
 
 <p>修改配置文件<code>profile</code></p>
@@ -1849,7 +1849,7 @@
 
 <h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/app/redis/src/redis-server /opt/app/redis/redis.conf</span><br></pre></td></tr></table></figure>
 
-<h2 id="geoserver"><a href="#geoserver" class="headerlink" title="geoserver"></a>geoserver</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh /opt/app/e2e/aparecium/bin/startup.sh &gt; /var/<span class="built_in">log</span>/geoserver.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+<h2 id="geoserver"><a href="#geoserver" class="headerlink" title="geoserver"></a>geoserver</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh /opt/app/aparecium/geoserver/bin/startup.sh &gt; /var/<span class="built_in">log</span>/geoserver.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
 <h2 id="nacos"><a href="#nacos" class="headerlink" title="nacos"></a>nacos</h2><p>上面已经执行过，这里可以不执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/app/nacos/bin/startup.sh -m standalone</span><br></pre></td></tr></table></figure>
