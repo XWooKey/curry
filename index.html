@@ -1095,7 +1095,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-27 09:53:43" itemprop="dateModified" datetime="2021-10-27T09:53:43+08:00">2021-10-27</time>
+                <time title="修改时间：2021-10-27 11:13:03" itemprop="dateModified" datetime="2021-10-27T11:13:03+08:00">2021-10-27</time>
               </span>
 
           <br>
@@ -1104,14 +1104,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>18k</span>
+              <span>21k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>16 分钟</span>
+              <span>19 分钟</span>
             </span>
 
         </div>
@@ -2027,7 +2027,22 @@
 <h2 id="Liscense生成与导入"><a href="#Liscense生成与导入" class="headerlink" title="Liscense生成与导入"></a>Liscense生成与导入</h2><blockquote>
 <p>暂此无需求</p>
 </blockquote>
-<h2 id="整合Aparecium方案"><a href="#整合Aparecium方案" class="headerlink" title="整合Aparecium方案"></a>整合Aparecium方案</h2><h1 id="极速安装"><a href="#极速安装" class="headerlink" title="极速安装"></a>极速安装</h1><blockquote>
+<h2 id="整合Aparecium方案"><a href="#整合Aparecium方案" class="headerlink" title="整合Aparecium方案"></a>整合Aparecium方案</h2><h2 id="整合Aparecium增量升级方案"><a href="#整合Aparecium增量升级方案" class="headerlink" title="整合Aparecium增量升级方案"></a>整合Aparecium增量升级方案</h2><blockquote>
+<p>暂不考虑直接升级，目前采用曲线救国方式<br>总体思路，重新部署环境，修改配置文件，将历史解析结果迁移至新数据库</p>
+</blockquote>
+<p>在旧数据库备份数据库表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_detail <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_detail_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_statics <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_statics_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_alarm_statics <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_alarm_statics_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_alarm_ori <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_alarm_ori_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_exception_ori <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_exception_ori_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_netboard_ori <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_netboard_ori_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_gnb_ori <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_gnb_ori_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_netrru_ori <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_netrru_ori_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_nrcellcfg_ori <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_nrcellcfg_ori_back;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_aparecium_fileinfo <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_fileinfo_back;</span><br></pre></td></tr></table></figure>
+
+<p>旧数据导出为文件(记得替换<code>olddatabase</code>为旧数据库名)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pg_dump -Fc -t t_aparecium_detail_back -f t_aparecium_detail_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_statics_back -f t_aparecium_statics_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_alarm_statics_back -f t_aparecium_alarm_statics_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_alarm_ori_back -f t_aparecium_alarm_ori_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_exception_ori_back -f t_aparecium_exception_ori_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_netboard_ori_back -f t_aparecium_netboard_ori_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_gnb_ori_back -f t_aparecium_gnb_ori_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_netrru_ori_back -f t_aparecium_netrru_ori_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_nrcellcfg_ori_back -f t_aparecium_nrcellcfg_ori_back.sql olddatabase;</span><br><span class="line">pg_dump -Fc -t t_aparecium_fileinfo_back -f t_aparecium_fileinfo_back.sql olddatabase;</span><br></pre></td></tr></table></figure>
+
+<p>将文件导入新数据库(记得替换<code>newdatabase</code>为新数据库名)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pg_restore -t t_aparecium_detail_back -d newdatabase t_aparecium_detail_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_statics_back -d newdatabase t_aparecium_statics_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_alarm_statics_back -d newdatabase t_aparecium_alarm_statics_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_alarm_ori_back -d newdatabase t_aparecium_alarm_ori_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_exception_ori_back -d newdatabase t_aparecium_exception_ori_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_netboard_ori_back -d newdatabase t_aparecium_netboard_ori_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_gnb_ori_back -d newdatabase t_aparecium_gnb_ori_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_netrru_ori_back -d newdatabase t_aparecium_netrru_ori_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_nrcellcfg_ori_back -d newdatabase t_aparecium_nrcellcfg_ori_back.sql;</span><br><span class="line">pg_restore -t t_aparecium_fileinfo_back -d newdatabase t_aparecium_fileinfo_back.sql;</span><br></pre></td></tr></table></figure>
+
+<p>再插入新数据库表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_detail <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_detail_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_statics <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_statics_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_alarm_statics <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_alarm_statics_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_alarm_ori <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_alarm_ori_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_exception_ori <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_exception_ori_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_netboard_ori <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_netboard_ori_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_gnb_ori <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_gnb_ori_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_netrru_ori <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_netrru_ori_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_nrcellcfg_ori <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_nrcellcfg_ori_back;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_aparecium_fileinfo <span class="keyword">select</span> * <span class="keyword">from</span> t_aparecium_fileinfo_back;</span><br></pre></td></tr></table></figure>
+
+<h1 id="极速安装"><a href="#极速安装" class="headerlink" title="极速安装"></a>极速安装</h1><blockquote>
 <p>TODO</p>
 </blockquote>
 
@@ -3119,13 +3134,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">58k</span>
+    <span title="站点总字数">62k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">53 分钟</span>
+    <span title="站点阅读时长">56 分钟</span>
 </div>
 
         
