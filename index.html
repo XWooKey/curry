@@ -1095,7 +1095,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-05 14:50:45" itemprop="dateModified" datetime="2021-11-05T14:50:45+08:00">2021-11-05</time>
+                <time title="修改时间：2021-12-15 09:22:54" itemprop="dateModified" datetime="2021-12-15T09:22:54+08:00">2021-12-15</time>
               </span>
 
           <br>
@@ -1104,7 +1104,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>22k</span>
+              <span>23k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1130,8 +1130,8 @@
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="速查信息"><a href="#速查信息" class="headerlink" title="速查信息"></a>速查信息</h2><h3 id="手册软件安装版本"><a href="#手册软件安装版本" class="headerlink" title="手册软件安装版本"></a>手册软件安装版本</h3><table>
 <thead>
 <tr>
-<th>软件</th>
-<th>端口</th>
+<th>软件(部署)</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -1156,7 +1156,15 @@
 </tr>
 <tr>
 <td><code>postgresql</code></td>
-<td><code>12</code></td>
+<td><code>12.3</code></td>
+</tr>
+<tr>
+<td><code>postgis</code>(pg)</td>
+<td><code>3.0.1</code></td>
+</tr>
+<tr>
+<td><code>pathman</code>(pg)</td>
+<td><code>1.5.11</code></td>
 </tr>
 <tr>
 <td><code>rabbitmq</code></td>
@@ -1165,6 +1173,38 @@
 <tr>
 <td><code>redis</code></td>
 <td><code>5.0.7</code></td>
+</tr>
+<tr>
+<td><code>geoserver</code></td>
+<td><code>2.15.2</code></td>
+</tr>
+<tr>
+<td><code>nacos</code></td>
+<td><code>1.4.1</code></td>
+</tr>
+<tr>
+<td><code>minio</code></td>
+<td><code>RELEASE.2021-11-24T23-19-33Z</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>node</code></td>
+<td><code>v12.15.0</code></td>
+</tr>
+<tr>
+<td><code>maven</code></td>
+<td><code>3.6.3</code></td>
+</tr>
+<tr>
+<td><code>npm</code></td>
+<td><code>6.13.4</code></td>
 </tr>
 </tbody></table>
 <h3 id="端口速查"><a href="#端口速查" class="headerlink" title="端口速查"></a>端口速查</h3><p>请提早确认以下端口没有占用</p>
@@ -1185,7 +1225,7 @@
 </tr>
 <tr>
 <td><code>nginx</code></td>
-<td>8089</td>
+<td>8889</td>
 </tr>
 <tr>
 <td><code>redis</code></td>
@@ -1194,6 +1234,10 @@
 <tr>
 <td><code>minio</code></td>
 <td>9001</td>
+</tr>
+<tr>
+<td><code>nacos</code></td>
+<td>8849</td>
 </tr>
 <tr>
 <td><code>rabbitmq</code></td>
@@ -1840,6 +1884,9 @@
 </ul>
 <p><img src="/curry/2021/06/09/OPPLUS/image-20201106091142791.png" alt="image-20201106091142791"><br>进入<code>upload</code>上传<code>bbcdca43b35a481f92c73f74ed14f9b5.png</code>,该文件的路径在<code>/opt/package/e2e/web/e2e/minio/upload/bbcdca43b35a481f92c73f74ed14f9b5.png</code><br><img src="/curry/2021/06/09/OPPLUS/image-20210301161741157.png" alt="image-20210301161741157"></p>
 <p>安以上步骤分别上传</p>
+<blockquote>
+<p>文件均在<code>/opt/package/opplus/web/opplus/minio/</code>目录下</p>
+</blockquote>
 <ul>
 <li><code>template/45G共站址基站清单模板.csv</code></li>
 <li><code>template/参数核查模板.xlsx</code></li>
@@ -1853,10 +1900,7 @@
 <li><code>template/5G_5G邻小区关系模板.csv</code></li>
 <li><code>template/5G工参模板.csv</code></li>
 <li><code>template/扫频数据模板.csv</code></li>
-<li><code>upload/bbcdca43b35a481f92c73f74ed14f9b5.png</code><blockquote>
-<p>文件均在<code>/opt/package/opplus/web/opplus/minio/</code>目录下</p>
-</blockquote>
-</li>
+<li><code>upload/bbcdca43b35a481f92c73f74ed14f9b5.png</code></li>
 </ul>
 <h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
 
@@ -2205,9 +2249,13 @@
 <p>删除无用数据(新库旧库都删)</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_detail;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_statics_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_alarm_statics_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_alarm_ori_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_exception_ori_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_netboard_ori_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_gnb_ori_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_netrru_ori_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_nrcellcfg_ori_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_fileinfo_back;</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> t_aparecium_softwareversion_ori_back;</span><br></pre></td></tr></table></figure>
 
-<h1 id="极速安装"><a href="#极速安装" class="headerlink" title="极速安装"></a>极速安装</h1><blockquote>
+<h2 id="同一服务器多环境方案"><a href="#同一服务器多环境方案" class="headerlink" title="同一服务器多环境方案"></a>同一服务器多环境方案</h2><h1 id="极速安装"><a href="#极速安装" class="headerlink" title="极速安装"></a>极速安装</h1><blockquote>
 <p>TODO</p>
 </blockquote>
+<!-- 巡检108
+wget http://172.30.4.179:9010/opplus/web/opplus/aparecium_dist/?download=zip -O /opt/app/aparecium/aparecium_dist.zip ;unzip /opt/app/aparecium/aparecium_dist.zip; rm -rf /opt/app/aparecium/dist ; mv /opt/app/aparecium/aparecium_dist /opt/app/aparecium/dist
+-->
+
 
       
     </div>
